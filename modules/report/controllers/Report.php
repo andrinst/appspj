@@ -2793,4 +2793,5 @@ class Report extends MX_Controller{
 		return $name_of_day;
 	}	
 }
+//asd
 /* End of file Report.php */
