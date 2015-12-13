@@ -222,6 +222,20 @@ class Report extends MX_Controller{
 		$tentangNotaDinas 	= $resultNotaDinas[2];
 		$isExtraNotes		= $resultNotaDinas[3];
 		
+		//Set alokasi anggaran
+		$resultAlokasiAnggaran 	= $this->mr->getAlokasiAnggaran();
+		$nomorAnggaran = $resultAlokasiAnggaran[0];
+		$tanggalAnggaran = $resultAlokasiAnggaran[1];
+		$kodeKegiatanAnggaran = $resultAlokasiAnggaran[2];
+		$subKegiatanAnggaran = $resultAlokasiAnggaran[3];
+		$mak1 = $resultAlokasiAnggaran[4];
+		$mak1_ket = $resultAlokasiAnggaran[5];
+		$mak2 = $resultAlokasiAnggaran[6];
+		$mak2_ket = $resultAlokasiAnggaran[7];
+		$mak3 = $resultAlokasiAnggaran[8];
+		$mak3_ket = $resultAlokasiAnggaran[9];
+		
+		
 		$this->fpdf->SetTextColor(0, 0, 0);
 		$this->fpdf->SetFont('Arial','U',12);
 		$this->fpdf->Text(6.8,5.3,'SURAT PERINTAH PELAKSANAAN TUGAS');		
@@ -233,44 +247,110 @@ class Report extends MX_Controller{
 		$this->fpdf->MultiCell(0.6,0.5,'A.','');
 		$this->fpdf->setXY(3.3,6.8);
 		$this->fpdf->MultiCell(6.5,0.5,'Pejabat Pemberi Tugas','');
-		$this->fpdf->setXY(8.5,6.8);
+		$this->fpdf->setXY(9.7,6.8);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(9.2,6.8);
+		$this->fpdf->setXY(10.2,6.8);
 		$this->fpdf->MultiCell(9.3,0.5,'KEPALA BALAI BESAR PENGUJIAN PERANGKAT TELEKOMUNIKASI','');
 		
-		//for Single Staff
 		$this->fpdf->setXY(2.6,7.8);
 		$this->fpdf->MultiCell(0.6,0.5,'B.','');
 		$this->fpdf->setXY(3.3,7.8);
-		$this->fpdf->MultiCell(6.5,0.5,'Dasar Pelaksanaan Tugas','');
-		$this->fpdf->setXY(8.5,7.8);
-		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->MultiCell(6.5,0.5,'Penggunaan Alokasi Anggaran','');
+		//$this->fpdf->setXY(8.5,7.8);
+		//$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(3.3,8.4);			
+		$this->fpdf->MultiCell(5.6,0.5,'1. Nomor dan tanggal DIPA',0);
+		$this->fpdf->setXY(9.7,8.4);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(10.2,8.4);
+		$this->fpdf->MultiCell(8,0.5,'Nomor');
+		$this->fpdf->setXY(12.7,8.4);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,8.4);
+		$this->fpdf->MultiCell(8,0.5,$nomorAnggaran);
+		$this->fpdf->setXY(10.2,8.9);
+		$this->fpdf->MultiCell(5,0.5,'Tanggal DIPA');
+		$this->fpdf->setXY(12.7,8.9);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,8.9);
+		$this->fpdf->MultiCell(8,0.5,day($tanggalAnggaran));
+		$this->fpdf->setXY(3.3,9.4);
+		$this->fpdf->MultiCell(6.5,0.5,'2. Kode Kegiatan / Sub Kegiatan / MAK');
+		$this->fpdf->setXY(9.7,9.4);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(10.2,9.4);
+		$this->fpdf->MultiCell(7.5,0.5,'Kode Kegiatan');
+		$this->fpdf->setXY(12.7,9.4);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,9.4);
+		$this->fpdf->MultiCell(8,0.5,$kodeKegiatanAnggaran);
+		$this->fpdf->setXY(10.2,9.9);
+		$this->fpdf->MultiCell(7.5,0.5,'Sub Kegiatan');
+		$this->fpdf->setXY(12.7,9.9);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,9.9);
+		$this->fpdf->MultiCell(5.5,0.5,$subKegiatanAnggaran);
+		//$this->fpdf->Ln();
+		$y1 = $this->fpdf->GetY();
+		$this->fpdf->setXY(10.2,$y1);
+		$this->fpdf->MultiCell(7.5,0.5,'MAK');
+		$this->fpdf->setXY(12.7,$y1);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,$y1);
+		$this->fpdf->MultiCell(2,0.5,$mak1);
+		$this->fpdf->setXY(15,$y1);
+		$this->fpdf->MultiCell(5.5,0.5,$mak1_ket);
+		$y2 = $this->fpdf->GetY();
+		$this->fpdf->setXY(13,$y2);
+		$this->fpdf->MultiCell(2,0.5,$mak2);
+		$this->fpdf->setXY(15,$y2);
+		$this->fpdf->MultiCell(5.5,0.5,$mak2_ket);
+		$y3 = $this->fpdf->GetY();
+		$this->fpdf->setXY(13,$y3);
+		$this->fpdf->MultiCell(2,0.5,$mak3);
+		$this->fpdf->setXY(15,$y3);
+		$this->fpdf->MultiCell(5.5,0.5,$mak3_ket);		
+		
+		//for Single Staff
+		$y3 = $this->fpdf->GetY();
+		$this->fpdf->setXY(2.6,$y3);
+		$this->fpdf->MultiCell(0.6,0.5,'C.','');
+		$this->fpdf->setXY(3.3,$y3);
+		$this->fpdf->MultiCell(6.5,0.5,'Dasar Pelaksanaan Tugas','');
+		
+		$y4 = $this->fpdf->GetY();
+		$this->fpdf->setXY(3.3,$y4);			
 		$this->fpdf->MultiCell(5.6,0.5,'1. Undangan',0);
-		$this->fpdf->setXY(8.5,8.4);
+		$this->fpdf->setXY(9.7,$y4);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(9.3,8.4);
+		$this->fpdf->setXY(10.2,$y4);
 		$this->fpdf->MultiCell(2,0.5,'Nomor');
-		$this->fpdf->setXY(11.1,8.4);
+		$this->fpdf->setXY(12.7,$y4);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(11.4,8.4);
+		$this->fpdf->setXY(13,$y4);
 		$this->fpdf->MultiCell(8,0.5,$nomorNotaDinas);
-		$this->fpdf->setXY(9.3,8.9);
+		
+		$y5 = $this->fpdf->GetY();
+		$this->fpdf->setXY(10.2,$y5);
 		$this->fpdf->MultiCell(2,0.5,'Tanggal');
-		$this->fpdf->setXY(11.1,8.9);
+		$this->fpdf->setXY(12.7,$y5);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(11.4,8.9);
+		$this->fpdf->setXY(13,$y5);
 		$this->fpdf->MultiCell(8,0.5,day($tanggalNotaDinas));
-		$this->fpdf->setXY(9.3,9.4);
+		
+		$y6 = $this->fpdf->GetY();
+		$this->fpdf->setXY(10.2,$y6);
 		$this->fpdf->MultiCell(2,0.5,'Tentang');
-		$this->fpdf->setXY(11.1,9.4);
+		$this->fpdf->setXY(12.7,$y6);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(11.4,9.4);
+		$this->fpdf->setXY(13,$y6);
 		$this->fpdf->MultiCell(7.5,0.5,$tentangNotaDinas);
+		$this->fpdf->Ln();
 		
 		/**
 		 * add nota tambahan(Rutin/Undangan [Internal or Eksternal],Rutin,)Kontrak , SK TIM)
 		 */
+		/*
 		$headerNote = '';
 		if(!empty($isExtraNotes))
 		{
@@ -316,48 +396,55 @@ class Report extends MX_Controller{
 		}else{
 			$koorY = 10.9;
 			$rs = 0.5;
-		}
+		}*/
 		$rs = 1;
 		$koorY = $koorY +$rs;//15.9;
-		$rr = 2.5;		
-		$this->fpdf->setXY(2.6,$koorY);
-		$this->fpdf->MultiCell(0.6,0.5,'C.','');
-		$this->fpdf->setXY(3.3,$koorY);
+		$rr = 2.5;	
+		
+		$y7 = $this->fpdf->GetY();
+		$this->fpdf->setXY(2.6,$y7);
+		$this->fpdf->MultiCell(0.6,0.5,'D.','');
+		$this->fpdf->setXY(3.3,$y7);
 		$this->fpdf->MultiCell(6.5,0.5,'Pegawai yang ditugaskan','');
-		$this->fpdf->setXY(8.5,$koorY);
+		$this->fpdf->setXY(8.5,$y7);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$koorY = $koorY + $rs;
-		$this->fpdf->setXY(2.5,$koorY);
+		
+		$y8 = $this->fpdf->GetY();
+		$this->fpdf->setXY(2.5,$y8);
 		$this->fpdf->MultiCell(1,1,'NO','LTRB','C');
-		$this->fpdf->setXY(3.5,$koorY);
+		$this->fpdf->setXY(3.5,$y8);
 		$this->fpdf->MultiCell(4.5,1,'N   A   M   A  ','TB','C');
-		$this->fpdf->setXY(8,$koorY);
+		$this->fpdf->setXY(8,$y8);
 		$this->fpdf->MultiCell(5.5,1,'GOL / NIP','LTB','C');
-		$this->fpdf->setXY(13.5,$koorY);
+		$this->fpdf->setXY(13.5,$y8);
 		$this->fpdf->MultiCell(6,1,'JABATAN','LTRB','C');
 		$this->fpdf->Ln();
+		
+		$y9 = $y8 +1;
 		$rs =0.5;
 		$koorX = array(2.5, 3.5, 8, 8, 13.5); 
 		$rr = 1;
 		$koorY = $koorY + $rr;
-		$this->fpdf->setXY($koorX[0],$koorY);
+		$this->fpdf->setXY($koorX[0],$y9);
 		$this->fpdf->Cell(1,1,'1.','LRB','C');
-		$this->fpdf->setX($koorX[1],$koorY);
+		$this->fpdf->setX($koorX[1],$y9);
 		$this->fpdf->Cell(4.5,1,' '.ucwords(mb_strtolower($namaStaff)),'B','L');
-		$this->fpdf->setX($koorX[2],$koorY);
+		$this->fpdf->setX($koorX[2],$y9);
 		$this->fpdf->Cell(5.5,0.5,' '.$pangkat.' '.$golongan,'L','L');
-		$this->fpdf->setXY($koorX[3],$koorY + $rs);
+		$this->fpdf->setXY($koorX[3],$y9 + $rs);
 		$this->fpdf->Cell(5.5,0.5,' '.'NIP : '.$nip,'LB','L');
-		$this->fpdf->setXY($koorX[4],$koorY);
+		$this->fpdf->setXY($koorX[4],$y9);
 		if(strlen($jabatan) < 28){
 			$this->fpdf->MultiCell(6,1,$jabatan,'LRB','L');
 		}else{
 			$this->fpdf->MultiCell(6,0.5,$jabatan,'LRB','L');
 		}
-		$koorY = $koorY + 1.2;
+		
+		$koorY = $y9 + 1.2;
 		$this->fpdf->Ln();
 		$this->fpdf->setXY(2.6,$koorY );
-		$this->fpdf->Cell(0.6,0.5,'D.','');		
+		$this->fpdf->Cell(0.6,0.5,'E.','');		
 		$this->fpdf->Cell(5.3,0.5,'Maksud dan Tujuan Penugasan','');		
 		$this->fpdf->Cell(0.5,0.5,':');		
 		
@@ -401,7 +488,8 @@ class Report extends MX_Controller{
 				$this->setTransportasi("Pesawat Udara")
 			);
 		
-			$koorY = $koorY + (2.5 * $rt);			
+			$koorY = $koorY + (2.5 * $rt);	
+			$koorY=$this->fpdf->GetY()+0.5;
 			$this->fpdf->Text(3.25,$koorY,'4. Alat Transportasi');
 			$this->fpdf->Text(8,$koorY,':');
 			$this->fpdf->Text(8.3,$koorY,$this->TRANSPORTASI);
@@ -409,7 +497,7 @@ class Report extends MX_Controller{
 		
 		$koorY = $koorY+$rt;
 		$this->fpdf->setXY(2.6,$koorY);
-		$this->fpdf->Cell(0.6,0.5,'E.','');		
+		$this->fpdf->Cell(0.6,0.5,'F.','');		
 		$this->fpdf->Cell(4.7,0.5,'Keterangan lain-lain','');		
 		$this->fpdf->Cell(0.5,0.5,':');
 		$koorY = $koorY+$rt;
@@ -417,7 +505,8 @@ class Report extends MX_Controller{
 		$this->fpdf->Cell(0.6,0.5,'1.','');
 		$this->fpdf->MultiCell(15.5,0.5,'Melaporkan hasil pelaksanaan tugas selambat-lambatnya 7 (tujuh) hari kerja setelah pelaksanaan dengan melampirkan dokumen pendukung administrasi lainnya sesuai peraturan perundang - undangan yang berlaku.','');
 		$rt = 2;
-		$koorY = $koorY+$rt;
+		//$koorY = $koorY+$rt;
+		$koorY = $this->fpdf->GetY();
 		$this->fpdf->setXY(3.2,$koorY);
 		$this->fpdf->Cell(0.6,0.5,'2.','');
 		$this->fpdf->MultiCell(15.5,0.5,'Para nama pegawai yang ditugaskan agar melaksanakan tugas ini dengan penuh tanggung jawab dan berlaku sejak tanggal ditetapkan.','');
@@ -426,8 +515,9 @@ class Report extends MX_Controller{
 		$this->fpdf->Cell(0.6,0.5,'3.','');
 		$this->fpdf->MultiCell(15.5,0.5,'Segala biaya yang dikeluarkan berkenaan dengan pelaksanaan kegiatan ini dibebankan pada kegiatan tersebut diatas.','');
 		//Footer
-		$this->fpdf->AddPage();
+		/*$this->fpdf->AddPage();
 		$this->fpdf->Ln();
+		
 		$this->fpdf->setFont('Arial','',11);
 		$this->fpdf->Text(12,3,'Ditetapkan');
 		$this->fpdf->Text(15,3,':');
@@ -463,7 +553,87 @@ class Report extends MX_Controller{
 		$this->fpdf->Text(3,9.5,'Mohon menyiapkan SPPD/DOP bagi ybs');
 		$this->fpdf->Text(2.6,10,'2. Yth. Sdr Bendahara BBPPT,');		
 		$this->fpdf->Text(3,10.5,'usulan pendanaan bagi ybs');
+		*/
+		$rr = 1;
+		$GetYCur  = $this->fpdf->GetY();
+		$koorY = $GetY + $rr;
+			if ($GetYCur  > 17){
+				$this->fpdf->AddPage();
+				$koorY = $this->fpdf->GetY();;
+				$rr = 3;
+				$koorY = $rr;
+				//$this->fpdf->SetTopMargin(3);
+			}else {
+				$GetY = $this->fpdf->GetY(); //
+				$rr = 2;
+				$koorY = $GetY + $rr;  
+			}
+		$this->fpdf->Ln();
+		$this->fpdf->setFont('Arial','',11);
+		$this->fpdf->SetXY(11.5,$koorY);
+		$this->fpdf->MultiCell(2.5,0.5,'Ditetapkan');
+		$this->fpdf->SetXY(14.5,$koorY);
+		$this->fpdf->MultiCell(1,0.5,':');
+		$this->fpdf->SetXY(15,$koorY);
+		$this->fpdf->MultiCell(3,0.5,'    BEKASI');
+		$rr = 0;
+		$GetY= $this->fpdf->GetY();
+		$koorY = $GetY;		
+		$this->fpdf->setFont('Arial','',11);
+		$this->fpdf->SetXY(11.5,$koorY);
+		$this->fpdf->Cell(3,0.5,'Pada tanggal','B');
+		$this->fpdf->SetXY(14.5,$koorY);
+		$this->fpdf->Cell(0.2,0.5,':','B');
+		$this->fpdf->SetXY(14.7,$koorY);
+		$this->fpdf->Cell(3.6,0.5,'       '.month(date("m")).' '.date("Y "),'B');
 		
+				
+		$GetY = $this->fpdf->GetY();
+		$rr = 1.5; 
+		$koorY = $GetY + $rr;
+		$this->fpdf->setFont('Arial','B',10);
+		$this->fpdf->Text(12,$koorY,'KEPALA BALAI BESAR PENGUJIAN');
+		$GetY = $this->fpdf->GetY();
+		$rr = 2.0; 
+		$koorY = $GetY + $rr;
+		$this->fpdf->setFont('Arial','B',10);
+		$this->fpdf->Text(12,$koorY,'   PERANGKAT TELEKOMUNIKASI');
+		$GetY= $this->fpdf->GetY();
+		$rr = 4.5;
+		$koorY = $GetY + $rr;
+		if($namaStaff === "MOCHAMAD RUS\'AN"){$TTD = $this->NAMA_PLT;}
+		else {$TTD = $this->NAMA_DIREKTUR;}
+		
+		$this->fpdf->SetXY(12,$koorY);
+		$this->fpdf->Cell(6,0.5,$TTD,0,'','C');
+		$GetY= $this->fpdf->GetY();
+		$rr = 1;
+		$koorY = $GetY + $rr;
+		$this->fpdf->Ln();		
+		$this->fpdf->setFont('Verdana','B',9);
+		$this->fpdf->Text(2.6,$koorY,'Tembusan :');
+		$this->fpdf->Text(2.6,$koorY+0.05,'_________');
+		$this->fpdf->setFont('Verdana','',9);
+		$GetY= $this->fpdf->GetY();
+		$rr = 1;
+		$koorY = $GetY + $rr;
+		$this->fpdf->Text(2.6,$koorY,'Disampaikan Yth. Kepada :');
+		$GetY = $this->fpdf->GetY();
+		$rr = 1.5;
+		$koorY = $GetY + $rr;
+		$this->fpdf->Text(2.6,$koorY,'1. Yth. Sdr Kabag TU BBPPT');
+		$GetY= $this->fpdf->GetY();
+		$rr = 2.05;
+		$koorY = $GetY + $rr;
+		$this->fpdf->Text(3,$koorY,'Mohon menyiapkan SPPD/DOP bagi ybs');
+		$GetY = $this->fpdf->GetY();
+		$rr = 2.5;
+		$koorY = $GetY + $rr;
+		$this->fpdf->Text(2.6,$koorY,'2. Yth. Sdr Bendahara BBPPT');
+		$GetY= $this->fpdf->GetY();
+		$rr = 3;
+		$koorY = $GetY + $rr;		
+		$this->fpdf->Text(3,$koorY,'usulan pendanaan bagi ybs');
 		/*****
 		//Insert Page Number
 		$this->fpdf->setFont('Arial','',7);				
@@ -552,6 +722,19 @@ class Report extends MX_Controller{
 		$tanggalNotaDinas	= $resultNotaDinas[1];
 		$tentangNotaDinas 	= $resultNotaDinas[2];
 		$isExtraNotes		= $resultNotaDinas[3];
+		
+		//Set alokasi anggaran
+		$resultAlokasiAnggaran 	= $this->mr->getAlokasiAnggaran();
+		$nomorAnggaran = $resultAlokasiAnggaran[0];
+		$tanggalAnggaran = $resultAlokasiAnggaran[1];
+		$kodeKegiatanAnggaran = $resultAlokasiAnggaran[2];
+		$subKegiatanAnggaran = $resultAlokasiAnggaran[3];
+		$mak1 = $resultAlokasiAnggaran[4];
+		$mak1_ket = $resultAlokasiAnggaran[5];
+		$mak2 = $resultAlokasiAnggaran[6];
+		$mak2_ket = $resultAlokasiAnggaran[7];
+		$mak3 = $resultAlokasiAnggaran[8];
+		$mak3_ket = $resultAlokasiAnggaran[9];
 				
 		$this->fpdf->SetTextColor(0, 0, 0);
 		$this->fpdf->SetFont('Arial','U',12);
@@ -569,36 +752,100 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(9.2,6.8);
 		$this->fpdf->MultiCell(9.3,0.5,'KEPALA BALAI BESAR PENGUJIAN PERANGKAT TELEKOMUNIKASI','');
 		
-		
-		//for Multi Staff
 		$this->fpdf->setXY(2.6,7.8);
 		$this->fpdf->MultiCell(0.6,0.5,'B.','');
 		$this->fpdf->setXY(3.3,7.8);
-		$this->fpdf->MultiCell(6.5,0.5,'Dasar Pelaksanaan Tugas','');
-		$this->fpdf->setXY(8.5,7.8);
-		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->MultiCell(6.5,0.5,'Penggunaan Alokasi Anggaran','');
+		//$this->fpdf->setXY(8.5,7.8);
+		//$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(3.3,8.4);			
+		$this->fpdf->MultiCell(5.6,0.5,'1. Nomor dan tanggal DIPA',0);
+		$this->fpdf->setXY(9.7,8.4);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(10.2,8.4);
+		$this->fpdf->MultiCell(8,0.5,'Nomor');
+		$this->fpdf->setXY(12.7,8.4);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,8.4);
+		$this->fpdf->MultiCell(8,0.5,$nomorAnggaran);
+		$this->fpdf->setXY(10.2,8.9);
+		$this->fpdf->MultiCell(5,0.5,'Tanggal DIPA');
+		$this->fpdf->setXY(12.7,8.9);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,8.9);
+		$this->fpdf->MultiCell(8,0.5,day($tanggalAnggaran));
+		$this->fpdf->setXY(3.3,9.4);
+		$this->fpdf->MultiCell(6.5,0.5,'2. Kode Kegiatan / Sub Kegiatan / MAK');
+		$this->fpdf->setXY(9.7,9.4);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(10.2,9.4);
+		$this->fpdf->MultiCell(7.5,0.5,'Kode Kegiatan');
+		$this->fpdf->setXY(12.7,9.4);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,9.4);
+		$this->fpdf->MultiCell(8,0.5,$kodeKegiatanAnggaran);
+		$this->fpdf->setXY(10.2,9.9);
+		$this->fpdf->MultiCell(7.5,0.5,'Sub Kegiatan');
+		$this->fpdf->setXY(12.7,9.9);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,9.9);
+		$this->fpdf->MultiCell(5.5,0.5,$subKegiatanAnggaran);
+		//$this->fpdf->Ln();
+		$y1 = $this->fpdf->GetY();
+		$this->fpdf->setXY(10.2,$y1);
+		$this->fpdf->MultiCell(7.5,0.5,'MAK');
+		$this->fpdf->setXY(12.7,$y1);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,$y1);
+		$this->fpdf->MultiCell(2,0.5,$mak1);
+		$this->fpdf->setXY(15,$y1);
+		$this->fpdf->MultiCell(5.5,0.5,$mak1_ket);
+		$y2 = $this->fpdf->GetY();
+		$this->fpdf->setXY(13,$y2);
+		$this->fpdf->MultiCell(2,0.5,$mak2);
+		$this->fpdf->setXY(15,$y2);
+		$this->fpdf->MultiCell(5.5,0.5,$mak2_ket);
+		$y3 = $this->fpdf->GetY();
+		$this->fpdf->setXY(13,$y3);
+		$this->fpdf->MultiCell(2,0.5,$mak3);
+		$this->fpdf->setXY(15,$y3);
+		$this->fpdf->MultiCell(5.5,0.5,$mak3_ket);	
+		
+		//for Multi Staff
+		$y3 = $this->fpdf->GetY();
+		$this->fpdf->setXY(2.6,$y3);
+		$this->fpdf->MultiCell(0.6,0.5,'C.','');
+		$this->fpdf->setXY(3.3,$y3);
+		$this->fpdf->MultiCell(6.5,0.5,'Dasar Pelaksanaan Tugas','');
+
+		$y4 = $this->fpdf->GetY();
+		$this->fpdf->setXY(3.3,$y4);			
 		$this->fpdf->MultiCell(5.6,0.5,'1. Undangan',0);
-		$this->fpdf->setXY(8.5,8.4);
+		$this->fpdf->setXY(9.7,$y4);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(9.3,8.4);
+		$this->fpdf->setXY(10.2,$y4);
 		$this->fpdf->MultiCell(2,0.5,'Nomor');
-		$this->fpdf->setXY(11.1,8.4);
+		$this->fpdf->setXY(12.7,$y4);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(11.4,8.4);
+		$this->fpdf->setXY(13,$y4);
 		$this->fpdf->MultiCell(8,0.5,$nomorNotaDinas);
-		$this->fpdf->setXY(9.3,8.9);
+
+		$y5 = $this->fpdf->GetY();
+		$this->fpdf->setXY(10.2,$y5);
 		$this->fpdf->MultiCell(2,0.5,'Tanggal');
-		$this->fpdf->setXY(11.1,8.9);
+		$this->fpdf->setXY(12.7,$y5);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(11.4,8.9);
+		$this->fpdf->setXY(13,$y5);
 		$this->fpdf->MultiCell(8,0.5,day($tanggalNotaDinas));
-		$this->fpdf->setXY(9.3,9.4);
+
+		$y6 = $this->fpdf->GetY();
+		$this->fpdf->setXY(10.2,$y6);
 		$this->fpdf->MultiCell(2,0.5,'Tentang');
-		$this->fpdf->setXY(11.1,9.4);
+		$this->fpdf->setXY(12.7,$y6);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(11.4,9.4);
+		$this->fpdf->setXY(13,$y6);
 		$this->fpdf->MultiCell(7.5,0.5,$tentangNotaDinas);
+		$this->fpdf->Ln();
 		
 		/**
 		 * add nota tambahan(Rutin/Undangan [Internal or Eksternal],Rutin,)Kontrak , SK TIM)
@@ -651,25 +898,31 @@ class Report extends MX_Controller{
 		}
 		$rr = 2.5;
 		$koorY = $koorY + $rr;
-		$this->fpdf->setXY(2.6,$koorY);
-		$this->fpdf->MultiCell(0.6,0.5,'C.','');
-		$this->fpdf->setXY(3.3,$koorY);
+		
+		$y7 = $this->fpdf->GetY();
+		$this->fpdf->setXY(2.6,$y7);
+		$this->fpdf->MultiCell(0.6,0.5,'D.','');
+		$this->fpdf->setXY(3.3,$y7);
 		$this->fpdf->MultiCell(6.5,0.5,'Pegawai yang ditugaskan','');
-		$this->fpdf->setXY(8.5,$koorY);
+		$this->fpdf->setXY(8.5,$y7);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$koorY = $koorY + $rs;
-		$this->fpdf->setXY(2.5,$koorY);
-		$this->fpdf->MultiCell(1,1,'NO','LTR','C');
-		$this->fpdf->setXY(3.5,$koorY);
-		$this->fpdf->MultiCell(4.5,1,'N   A   M   A  ','T','C');
-		$this->fpdf->setXY(8,$koorY);
-		$this->fpdf->MultiCell(5.5,1,'GOL / NIP','LT','C');
-		$this->fpdf->setXY(13.5,$koorY);
-		$this->fpdf->MultiCell(6,1,'JABATAN','LTR','C');
+		
+		$y8 = $this->fpdf->GetY();
+		$this->fpdf->setXY(2.5,$y8);
+		$this->fpdf->MultiCell(1,1,'NO','LTRB','C');
+		$this->fpdf->setXY(3.5,$y8);
+		$this->fpdf->MultiCell(4.5,1,'N   A   M   A  ','TB','C');
+		$this->fpdf->setXY(8,$y8);
+		$this->fpdf->MultiCell(5.5,1,'GOL / NIP','LTB','C');
+		$this->fpdf->setXY(13.5,$y8);
+		$this->fpdf->MultiCell(6,1,'JABATAN','LTRB','C');
 		$this->fpdf->Ln();
+		
+		$y9 = $y8 +1;
 		$rs = 1;
 		//$koorY = $this->fpdf->getY();
-		$koorY = $koorY +$rs;//15.9;
+		$koorY = $y8 +$rs;//15.9;
 		$no = 1;
 		$counter = 0;		
 		for($i = 0 ; $i < sizeof($namaStaff);$i++){
@@ -712,7 +965,7 @@ class Report extends MX_Controller{
 		}
 		$this->fpdf->Ln();
 		$this->fpdf->setXY(2.6,$koorY );
-		$this->fpdf->Cell(0.6,0.5,'D.','');		
+		$this->fpdf->Cell(0.6,0.5,'E.','');		
 		$this->fpdf->Cell(5.3,0.5,'Maksud dan Tujuan Penugasan','');		
 		$this->fpdf->Cell(0.5,0.5,':');
 		$GetY= $this->fpdf->GetY();
@@ -765,6 +1018,7 @@ class Report extends MX_Controller{
 			);
 		
 			$koorY = $GetY + $rr;
+			$koorY=$this->fpdf->GetY()+0.5;
 			$this->fpdf->Text(3.25,$koorY,'4. Alat Transportasi');
 			$this->fpdf->Text(8,$koorY,':');
 			$this->fpdf->Text(8.3,$koorY,$this->TRANSPORTASI);
@@ -774,7 +1028,7 @@ class Report extends MX_Controller{
 		$koorY = $GetY + $rr;
 		$this->fpdf->Ln();
 		$this->fpdf->setXY(2.6,$koorY);
-		$this->fpdf->Cell(0.6,0.5,'E.','');		
+		$this->fpdf->Cell(0.6,0.5,'F.','');		
 		$this->fpdf->Cell(4.7,0.5,'Keterangan lain-lain','');		
 		$this->fpdf->Cell(0.5,0.5,':');
 		$GetY= $this->fpdf->GetY(); //
@@ -1740,6 +1994,7 @@ class Report extends MX_Controller{
 	}
 	//akhir fungsi cetak kwitansi
 	function cetakSppd() {
+		
 		$id = $this->uri->segment(3);
 		$this->mr->setID($id);
 		
@@ -1814,6 +2069,18 @@ class Report extends MX_Controller{
 		}
 		
 		$this->mr->setIdPerjalanan($idPerjalanan);
+		$resultAlokasiAnggaran 	= $this->mr->getAlokasiAnggaran();
+		$nomorAnggaran = $resultAlokasiAnggaran[0];
+		$tanggalAnggaran = $resultAlokasiAnggaran[1];
+		$kodeKegiatanAnggaran = $resultAlokasiAnggaran[2];
+		$subKegiatanAnggaran = $resultAlokasiAnggaran[3];
+		$mak1 = $resultAlokasiAnggaran[4];
+		$mak1_ket = $resultAlokasiAnggaran[5];
+		$mak2 = $resultAlokasiAnggaran[6];
+		$mak2_ket = $resultAlokasiAnggaran[7];
+		$mak3 = $resultAlokasiAnggaran[8];
+		$mak3_ket = $resultAlokasiAnggaran[9];
+		
 		$this->fpdf->setFont('Arial','',10);
 		$this->fpdf->SetXY(3,7.8);	
 		$this->fpdf->Cell(0.7,0.5,'2. ','LBR',0,'L');
@@ -1958,10 +2225,49 @@ class Report extends MX_Controller{
 			$this->fpdf->Ln();
 			
 			$this->fpdf->SetX(3);	
+			$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
+			$this->fpdf->Cell(7.6,0.5,'b. Mata Anggaran 	','R',0,'L');
+			$this->fpdf->Cell(7.7,0.5,'DIPA Ditjen SDPPI Tahun '.date('Y'),'R',0,'L');
+			$this->fpdf->Ln();	
+
+			$this->fpdf->SetX(3);	
+			$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
+			$this->fpdf->Cell(7.6,0.5,'c. Nomer dan Tanggal DIPA	','R',0,'L');
+			$this->fpdf->Cell(7.7,0.5,$nomorAnggaran.' tanggal '.$tanggalAnggaran,'R',0,'L');
+			$this->fpdf->Ln();
+			
+			$this->fpdf->SetX(3);	
+			$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
+			$this->fpdf->Cell(7.6,0.5,'d. Kode kegiatan / Sub kegiatan / MAK 	','R',0,'L');
+			$this->fpdf->Cell(7.7,0.5,$kodeKegiatanAnggaran,'R',0,'L');
+			$this->fpdf->Ln();
+			
+			$this->fpdf->SetX(3);	
+			$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
+			$this->fpdf->Cell(7.6,0.5,' ','R',0,'L');
+			$this->fpdf->Cell(7.7,0.5,$subKegiatanAnggaran,'R',0,'L');
+			$this->fpdf->Ln();
+			
+			$this->fpdf->SetX(3);	
+			$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
+			$this->fpdf->Cell(7.6,0.5,' ','R',0,'L');
+			$this->fpdf->Cell(2,0.5,$mak1,'L',0,'L');
+			$this->fpdf->Cell(5.7,0.5,$mak1_ket,'R',0,'L');
+			$this->fpdf->Ln();
+			
+			$this->fpdf->SetX(3);	
+			$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
+			$this->fpdf->Cell(7.6,0.5,' ','R',0,'L');
+			$this->fpdf->Cell(2,0.5,$mak2,'L',0,'L');
+			$this->fpdf->Cell(5.7,0.5,$mak2_ket,'R',0,'L');
+			$this->fpdf->Ln();
+			
+			$this->fpdf->SetX(3);	
 			$this->fpdf->Cell(0.7,0.5,'  ','LBR',0,'L');
-			$this->fpdf->Cell(7.6,0.5,'b. Mata Anggaran :	','BR',0,'L');
-			$this->fpdf->Cell(7.7,0.5,'DIPA Ditjen SDPPI Tahun '.date('Y'),'BR',0,'L');
-		$this->fpdf->Ln();					
+			$this->fpdf->Cell(7.6,0.5,' ','RB',0,'L');
+			$this->fpdf->Cell(2,0.5,$mak3,'LB',0,'L');
+			$this->fpdf->Cell(5.7,0.5,$mak3_ket,'RB',0,'L');
+			$this->fpdf->Ln();
 		
 		$this->fpdf->SetX(3);	
 		$this->fpdf->Cell(0.7,1.4,'10. ','LBR',0,'L');
@@ -1969,25 +2275,35 @@ class Report extends MX_Controller{
 		$this->fpdf->MultiCell(7.7,0.7,$this->KET_SPPD,'BR','L');				
 		
 		//Footer
+		$this->fpdf->SetX(3);
+		$koorY = $this->fpdf->GetY();
+		$koorY = $koorY+1;
 		$this->fpdf->setFont('Arial','',11);
-		$this->fpdf->Text(10.7,22.5,'Dikeluarkan di');
-		$this->fpdf->Text(13.5,22.5,':');
-		$this->fpdf->Text(14.4,22.5,'B E K A S I');
+		$this->fpdf->Text(10.7,$koorY,'Dikeluarkan di');
+		$this->fpdf->Text(13.5,$koorY,':');
+		$this->fpdf->Text(14.4,$koorY,'B E K A S I');
 		
-		$this->fpdf->Text(10.7,23.1,'Pada Tanggal');
-		$this->fpdf->Text(13.5,23.1,':');
-		$this->fpdf->Text(14.4,23.1,month(date('m')).' '.date('Y'));		
-		$this->fpdf->Text(10.7,23.2,'_________________________________');
+		$koorY = $koorY + 0.6;
+		$this->fpdf->Text(10.7,$koorY,'Pada Tanggal');
+		$this->fpdf->Text(13.5,$koorY,':');
+		$this->fpdf->Text(14.4,$koorY,month(date('m')).' '.date('Y'));		
+		$koorY = $koorY + 0.1;
+		$this->fpdf->Text(10.7,$koorY,'_________________________________');
 		
+		$koorY = $koorY + 0.6;
 		$this->fpdf->setFont('Arial','B',11);
-		$this->fpdf->Text(10.7,23.8,'A.N. KUASA PENGGUNA ANGGARAN /');
-		$this->fpdf->Text(11.2,24.4,'PEJABAT PEMBUAT KOMITMEN');
+		$this->fpdf->Text(10.7,$koorY,'A.N. KUASA PENGGUNA ANGGARAN /');
+		$koorY = $koorY + 0.6;
+		$this->fpdf->Text(11.2,$koorY,'PEJABAT PEMBUAT KOMITMEN');
 		
+		$koorY = $koorY + 1.1;
 		$this->fpdf->setFont('Arial','BU',11);
-		$this->fpdf->SetXY(11,26.5);
+		$this->fpdf->SetXY(11,$koorY);
 		$this->fpdf->Cell(6.5,0.5,$this->NAMA_PPK,0,'','C');		
 		$this->fpdf->setFont('Arial','B',11);
-		$this->fpdf->SetXY(11,27);		
+		
+		$koorY = $koorY + 0.5;
+		$this->fpdf->SetXY(11,$koorY);		
 		$this->fpdf->Cell(6.5,0.5,'NIP : '.$this->NIP_PPK,0,'','C');
 		
 			
@@ -2060,6 +2376,19 @@ class Report extends MX_Controller{
 		$tentangNotaDinas 	= $resultNotaDinas[2];
 		$isExtraNotes		= $resultNotaDinas[3];
 		
+		//Set alokasi anggaran
+		$resultAlokasiAnggaran 	= $this->mr->getAlokasiAnggaran();
+		$nomorAnggaran = $resultAlokasiAnggaran[0];
+		$tanggalAnggaran = $resultAlokasiAnggaran[1];
+		$kodeKegiatanAnggaran = $resultAlokasiAnggaran[2];
+		$subKegiatanAnggaran = $resultAlokasiAnggaran[3];
+		$mak1 = $resultAlokasiAnggaran[4];
+		$mak1_ket = $resultAlokasiAnggaran[5];
+		$mak2 = $resultAlokasiAnggaran[6];
+		$mak2_ket = $resultAlokasiAnggaran[7];
+		$mak3 = $resultAlokasiAnggaran[8];
+		$mak3_ket = $resultAlokasiAnggaran[9];
+		
 		$this->fpdf->SetTextColor(0, 0, 0);
 		$this->fpdf->SetFont('Arial','U',12);
 		$this->fpdf->Text(6.8,5.3,'SURAT PERINTAH PELAKSANAAN TUGAS');		
@@ -2071,40 +2400,105 @@ class Report extends MX_Controller{
 		$this->fpdf->MultiCell(0.6,0.5,'A.','');
 		$this->fpdf->setXY(3.3,6.8);
 		$this->fpdf->MultiCell(6.5,0.5,'Pejabat Pemberi Tugas','');
-		$this->fpdf->setXY(8.5,6.8);
+		$this->fpdf->setXY(9.7,6.8);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(9.2,6.8);
+		$this->fpdf->setXY(10.2,6.8);
 		$this->fpdf->MultiCell(9.3,0.5,'KEPALA BALAI BESAR PENGUJIAN PERANGKAT TELEKOMUNIKASI','');
 		
-		//for Single Staff
 		$this->fpdf->setXY(2.6,7.8);
 		$this->fpdf->MultiCell(0.6,0.5,'B.','');
 		$this->fpdf->setXY(3.3,7.8);
-		$this->fpdf->MultiCell(6.5,0.5,'Dasar Pelaksanaan Tugas','');
-		$this->fpdf->setXY(8.5,7.8);
-		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->MultiCell(6.5,0.5,'Penggunaan Alokasi Anggaran','');
+		//$this->fpdf->setXY(8.5,7.8);
+		//$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(3.3,8.4);			
+		$this->fpdf->MultiCell(5.6,0.5,'1. Nomor dan tanggal DIPA',0);
+		$this->fpdf->setXY(9.7,8.4);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(10.2,8.4);
+		$this->fpdf->MultiCell(8,0.5,'Nomor');
+		$this->fpdf->setXY(12.7,8.4);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,8.4);
+		$this->fpdf->MultiCell(8,0.5,$nomorAnggaran);
+		$this->fpdf->setXY(10.2,8.9);
+		$this->fpdf->MultiCell(5,0.5,'Tanggal DIPA');
+		$this->fpdf->setXY(12.7,8.9);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,8.9);
+		$this->fpdf->MultiCell(8,0.5,day($tanggalAnggaran));
+		$this->fpdf->setXY(3.3,9.4);
+		$this->fpdf->MultiCell(6.5,0.5,'2. Kode Kegiatan / Sub Kegiatan / MAK');
+		$this->fpdf->setXY(9.7,9.4);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(10.2,9.4);
+		$this->fpdf->MultiCell(7.5,0.5,'Kode Kegiatan');
+		$this->fpdf->setXY(12.7,9.4);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,9.4);
+		$this->fpdf->MultiCell(8,0.5,$kodeKegiatanAnggaran);
+		$this->fpdf->setXY(10.2,9.9);
+		$this->fpdf->MultiCell(7.5,0.5,'Sub Kegiatan');
+		$this->fpdf->setXY(12.7,9.9);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,9.9);
+		$this->fpdf->MultiCell(5.5,0.5,$subKegiatanAnggaran);
+		//$this->fpdf->Ln();
+		$y1 = $this->fpdf->GetY();
+		$this->fpdf->setXY(10.2,$y1);
+		$this->fpdf->MultiCell(7.5,0.5,'MAK');
+		$this->fpdf->setXY(12.7,$y1);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,$y1);
+		$this->fpdf->MultiCell(2,0.5,$mak1);
+		$this->fpdf->setXY(15,$y1);
+		$this->fpdf->MultiCell(5.5,0.5,$mak1_ket);
+		$y2 = $this->fpdf->GetY();
+		$this->fpdf->setXY(13,$y2);
+		$this->fpdf->MultiCell(2,0.5,$mak2);
+		$this->fpdf->setXY(15,$y2);
+		$this->fpdf->MultiCell(5.5,0.5,$mak2_ket);
+		$y3 = $this->fpdf->GetY();
+		$this->fpdf->setXY(13,$y3);
+		$this->fpdf->MultiCell(2,0.5,$mak3);
+		$this->fpdf->setXY(15,$y3);
+		$this->fpdf->MultiCell(5.5,0.5,$mak3_ket);	
+		
+		//for Single Staff
+		$y3 = $this->fpdf->GetY();
+		$this->fpdf->setXY(2.6,$y3);
+		$this->fpdf->MultiCell(0.6,0.5,'C.','');
+		$this->fpdf->setXY(3.3,$y3);
+		$this->fpdf->MultiCell(6.5,0.5,'Dasar Pelaksanaan Tugas','');
+
+		$y4 = $this->fpdf->GetY();
+		$this->fpdf->setXY(3.3,$y4);			
 		$this->fpdf->MultiCell(5.6,0.5,'1. Undangan',0);
-		$this->fpdf->setXY(8.5,8.4);
+		$this->fpdf->setXY(9.7,$y4);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(9.3,8.4);
+		$this->fpdf->setXY(10.2,$y4);
 		$this->fpdf->MultiCell(2,0.5,'Nomor');
-		$this->fpdf->setXY(11.1,8.4);
+		$this->fpdf->setXY(12.7,$y4);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(11.4,8.4);
+		$this->fpdf->setXY(13,$y4);
 		$this->fpdf->MultiCell(8,0.5,$nomorNotaDinas);
-		$this->fpdf->setXY(9.3,8.9);
+
+		$y5 = $this->fpdf->GetY();
+		$this->fpdf->setXY(10.2,$y5);
 		$this->fpdf->MultiCell(2,0.5,'Tanggal');
-		$this->fpdf->setXY(11.1,8.9);
+		$this->fpdf->setXY(12.7,$y5);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(11.4,8.9);
+		$this->fpdf->setXY(13,$y5);
 		$this->fpdf->MultiCell(8,0.5,day($tanggalNotaDinas));
-		$this->fpdf->setXY(9.3,9.4);
+
+		$y6 = $this->fpdf->GetY();
+		$this->fpdf->setXY(10.2,$y6);
 		$this->fpdf->MultiCell(2,0.5,'Tentang');
-		$this->fpdf->setXY(11.1,9.4);
+		$this->fpdf->setXY(12.7,$y6);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(11.4,9.4);
+		$this->fpdf->setXY(13,$y6);
 		$this->fpdf->MultiCell(7.5,0.5,$tentangNotaDinas);
+		$this->fpdf->Ln();
 		
 		/**
 		 * add nota tambahan(Rutin/Undangan [Internal or Eksternal],Rutin,)Kontrak , SK TIM)
@@ -2158,46 +2552,56 @@ class Report extends MX_Controller{
 		$rs = 1;
 		$koorY = $koorY +$rs;//15.9;
 		$rr = 2.5;		
-		$this->fpdf->setXY(2.6,$koorY);
-		$this->fpdf->MultiCell(0.6,0.5,'C.','');
-		$this->fpdf->setXY(3.3,$koorY);
+		
+		
+		$y7 = $this->fpdf->GetY();
+		$this->fpdf->setXY(2.6,$y7);
+		$this->fpdf->MultiCell(0.6,0.5,'D.','');
+		$this->fpdf->setXY(3.3,$y7);
 		$this->fpdf->MultiCell(6.5,0.5,'Pegawai yang ditugaskan','');
-		$this->fpdf->setXY(8.5,$koorY);
+		$this->fpdf->setXY(8.5,$y7);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$koorY = $koorY + $rs;
-		$this->fpdf->setXY(2.5,$koorY);
+		
+		$y8 = $this->fpdf->GetY();
+		$this->fpdf->setXY(2.5,$y8);
 		$this->fpdf->MultiCell(1,1,'NO','LTRB','C');
-		$this->fpdf->setXY(3.5,$koorY);
+		$this->fpdf->setXY(3.5,$y8);
 		$this->fpdf->MultiCell(4.5,1,'N   A   M   A  ','TB','C');
-		$this->fpdf->setXY(8,$koorY);
+		$this->fpdf->setXY(8,$y8);
 		$this->fpdf->MultiCell(5.5,1,'GOL / NIP','LTB','C');
-		$this->fpdf->setXY(13.5,$koorY);
+		$this->fpdf->setXY(13.5,$y8);
 		$this->fpdf->MultiCell(6,1,'JABATAN','LTRB','C');
 		$this->fpdf->Ln();
+		
+		
+		$y9 = $y8 +1;
 		$rs =0.5;
 		$koorX = array(2.5, 3.5, 8, 8, 13.5); 
 		$rr = 1;
 		$koorY = $koorY + $rr;
-		$this->fpdf->setXY($koorX[0],$koorY);
+		$this->fpdf->setXY($koorX[0],$y9);
 		$this->fpdf->Cell(1,1,'1.','LRB','C');
-		$this->fpdf->setX($koorX[1],$koorY);
+		$this->fpdf->setX($koorX[1],$y9);
 		$this->fpdf->Cell(4.5,1,' '.ucwords(mb_strtolower($namaStaff)),'B','L');
-		$this->fpdf->setX($koorX[2],$koorY);
+		$this->fpdf->setX($koorX[2],$y9);
 		$this->fpdf->Cell(5.5,0.5,' '.$pangkat.' '.$golongan,'L','L');
-		$this->fpdf->setXY($koorX[3],$koorY + $rs);
+		$this->fpdf->setXY($koorX[3],$y9 + $rs);
 		$this->fpdf->Cell(5.5,0.5,' '.'NIP : '.$nip,'LB','L');
-		$this->fpdf->setXY($koorX[4],$koorY);
+		$this->fpdf->setXY($koorX[4],$y9);
 		if(strlen($jabatan) < 28){
 			$this->fpdf->MultiCell(6,1,$jabatan,'LRB','L');
 		}else{
 			$this->fpdf->MultiCell(6,0.5,$jabatan,'LRB','L');
 		}
-		$koorY = $koorY + 1.2;
+		
+		
+		$koorY = $y9 + 1.2;
 		$this->fpdf->Ln();
 		$this->fpdf->setXY(2.6,$koorY );
-		$this->fpdf->Cell(0.6,0.5,'D.','');		
+		$this->fpdf->Cell(0.6,0.5,'E.','');		
 		$this->fpdf->Cell(5.3,0.5,'Maksud dan Tujuan Penugasan','');		
-		$this->fpdf->Cell(0.5,0.5,':');		
+		$this->fpdf->Cell(0.5,0.5,':');	
 		
 		$sql = ("SELECT d.berangkat,d.kembali from perjalanan_multi p inner join dinas d on p.dinas = d.id where p.id = '".$idPerjalanan."'");
 		$query = $this->db->query($sql);
@@ -2239,7 +2643,9 @@ class Report extends MX_Controller{
 				$this->setTransportasi("Pesawat Udara")
 			);
 		
-			$koorY = $koorY + (2.5 * $rt);			
+			$koorY = $koorY + (2.5 * $rt);	
+			$koorY=$this->fpdf->GetY()+0.5;
+			//$this->fpdf->Ln();
 			$this->fpdf->Text(3.25,$koorY,'4. Alat Transportasi');
 			$this->fpdf->Text(8,$koorY,':');
 			$this->fpdf->Text(8.3,$koorY,$this->TRANSPORTASI);
@@ -2247,7 +2653,7 @@ class Report extends MX_Controller{
 		
 		$koorY = $koorY+$rt;
 		$this->fpdf->setXY(2.6,$koorY);
-		$this->fpdf->Cell(0.6,0.5,'E.','');		
+		$this->fpdf->Cell(0.6,0.5,'F.','');		
 		$this->fpdf->Cell(4.7,0.5,'Keterangan lain-lain','');		
 		$this->fpdf->Cell(0.5,0.5,':');
 		$koorY = $koorY+$rt;
@@ -2264,7 +2670,7 @@ class Report extends MX_Controller{
 		$this->fpdf->Cell(0.6,0.5,'3.','');
 		$this->fpdf->MultiCell(15.5,0.5,'Segala biaya yang dikeluarkan berkenaan dengan pelaksanaan kegiatan ini dibebankan pada kegiatan tersebut diatas.','');
 		//Footer
-		$this->fpdf->AddPage();
+		/*$this->fpdf->AddPage();
 		$this->fpdf->Ln();
 		$this->fpdf->setFont('Arial','',11);
 		$this->fpdf->Text(12,3,'Ditetapkan');
@@ -2289,8 +2695,8 @@ class Report extends MX_Controller{
 			$this->fpdf->Text(12.5,5.0,substr($JAB_PLT,29));
 		}	
 		
-		$this->fpdf->SetXY(12.7,6.5);
-		$this->fpdf->Cell(6,0.5,$TTD,0,'','C');
+		$this->fpdf->SetXY(12.5,6.7);
+		$this->fpdf->Cell(5.5,0.5,$TTD,0,'','C');
 		
 		$this->fpdf->Ln();		
 		$this->fpdf->setFont('Verdana','B',9);
@@ -2301,7 +2707,87 @@ class Report extends MX_Controller{
 		$this->fpdf->Text(2.6,9,'1. Yth. Sdr Kabag TU BBPPT,');
 		$this->fpdf->Text(3,9.5,'Mohon menyiapkan SPPD/DOP bagi ybs');
 		$this->fpdf->Text(2.6,10,'2. Yth. Sdr Bendahara BBPPT,');		
-		$this->fpdf->Text(3,10.5,'usulan pendanaan bagi ybs');
+		$this->fpdf->Text(3,10.5,'usulan pendanaan bagi ybs');*/
+		$rr = 1;
+		$GetYCur  = $this->fpdf->GetY();
+		$koorY = $GetY + $rr;
+			if ($GetYCur  > 17){
+				$this->fpdf->AddPage();
+				$koorY = $this->fpdf->GetY();;
+				$rr = 3;
+				$koorY = $rr;
+				//$this->fpdf->SetTopMargin(3);
+			}else {
+				$GetY = $this->fpdf->GetY(); //
+				$rr = 2;
+				$koorY = $GetY + $rr;  
+			}
+		$this->fpdf->Ln();
+		$this->fpdf->setFont('Arial','',11);
+		$this->fpdf->SetXY(11.5,$koorY);
+		$this->fpdf->MultiCell(2.5,0.5,'Ditetapkan');
+		$this->fpdf->SetXY(14.5,$koorY);
+		$this->fpdf->MultiCell(1,0.5,':');
+		$this->fpdf->SetXY(15,$koorY);
+		$this->fpdf->MultiCell(3,0.5,'    BEKASI');
+		$rr = 0;
+		$GetY= $this->fpdf->GetY();
+		$koorY = $GetY;		
+		$this->fpdf->setFont('Arial','',11);
+		$this->fpdf->SetXY(11.5,$koorY);
+		$this->fpdf->Cell(3,0.5,'Pada tanggal','B');
+		$this->fpdf->SetXY(14.5,$koorY);
+		$this->fpdf->Cell(0.2,0.5,':','B');
+		$this->fpdf->SetXY(14.7,$koorY);
+		$this->fpdf->Cell(3.6,0.5,'       '.month(date("m")).' '.date("Y "),'B');
+		
+				
+		$GetY = $this->fpdf->GetY();
+		$rr = 1.5; 
+		$koorY = $GetY + $rr;
+		$this->fpdf->setFont('Arial','B',10);
+		$this->fpdf->Text(12,$koorY,'KEPALA BALAI BESAR PENGUJIAN');
+		$GetY = $this->fpdf->GetY();
+		$rr = 2.0; 
+		$koorY = $GetY + $rr;
+		$this->fpdf->setFont('Arial','B',10);
+		$this->fpdf->Text(12,$koorY,'   PERANGKAT TELEKOMUNIKASI');
+		$GetY= $this->fpdf->GetY();
+		$rr = 4.5;
+		$koorY = $GetY + $rr;
+		if($namaStaff === "MOCHAMAD RUS\'AN"){$TTD = $this->NAMA_PLT;}
+		else {$TTD = $this->NAMA_DIREKTUR;}
+		
+		$this->fpdf->SetXY(12,$koorY);
+		$this->fpdf->Cell(6,0.5,$TTD,0,'','C');
+		$GetY= $this->fpdf->GetY();
+		$rr = 1;
+		$koorY = $GetY + $rr;
+		$this->fpdf->Ln();		
+		$this->fpdf->setFont('Verdana','B',9);
+		$this->fpdf->Text(2.6,$koorY,'Tembusan :');
+		$this->fpdf->Text(2.6,$koorY+0.05,'_________');
+		$this->fpdf->setFont('Verdana','',9);
+		$GetY= $this->fpdf->GetY();
+		$rr = 1;
+		$koorY = $GetY + $rr;
+		$this->fpdf->Text(2.6,$koorY,'Disampaikan Yth. Kepada :');
+		$GetY = $this->fpdf->GetY();
+		$rr = 1.5;
+		$koorY = $GetY + $rr;
+		$this->fpdf->Text(2.6,$koorY,'1. Yth. Sdr Kabag TU BBPPT');
+		$GetY= $this->fpdf->GetY();
+		$rr = 2.05;
+		$koorY = $GetY + $rr;
+		$this->fpdf->Text(3,$koorY,'Mohon menyiapkan SPPD/DOP bagi ybs');
+		$GetY = $this->fpdf->GetY();
+		$rr = 2.5;
+		$koorY = $GetY + $rr;
+		$this->fpdf->Text(2.6,$koorY,'2. Yth. Sdr Bendahara BBPPT');
+		$GetY= $this->fpdf->GetY();
+		$rr = 3;
+		$koorY = $GetY + $rr;		
+		$this->fpdf->Text(3,$koorY,'usulan pendanaan bagi ybs');
 		
 		/*****
 		//Insert Page Number
@@ -2391,12 +2877,25 @@ class Report extends MX_Controller{
 		$tanggalNotaDinas	= $resultNotaDinas[1];
 		$tentangNotaDinas 	= $resultNotaDinas[2];
 		$isExtraNotes		= $resultNotaDinas[3];
+		
+		//Set alokasi anggaran
+		$resultAlokasiAnggaran 	= $this->mr->getAlokasiAnggaran();
+		$nomorAnggaran = $resultAlokasiAnggaran[0];
+		$tanggalAnggaran = $resultAlokasiAnggaran[1];
+		$kodeKegiatanAnggaran = $resultAlokasiAnggaran[2];
+		$subKegiatanAnggaran = $resultAlokasiAnggaran[3];
+		$mak1 = $resultAlokasiAnggaran[4];
+		$mak1_ket = $resultAlokasiAnggaran[5];
+		$mak2 = $resultAlokasiAnggaran[6];
+		$mak2_ket = $resultAlokasiAnggaran[7];
+		$mak3 = $resultAlokasiAnggaran[8];
+		$mak3_ket = $resultAlokasiAnggaran[9];
 				
 		$this->fpdf->SetTextColor(0, 0, 0);
 		$this->fpdf->SetFont('Arial','U',12);
 		$this->fpdf->Text(6.8,5.3,'SURAT PERINTAH PELAKSANAAN TUGAS');		
 		$this->fpdf->setFont('Arial','',12);
-		$this->fpdf->Text(6.3,5.9,'Nomor :    '.$noSpt[0],'L');		
+		$this->fpdf->Text(6.9,5.9,'Nomor :    '.$noSpt[0],'C');		
 		
 		$this->fpdf->setFont('Arial','',10);
 		$this->fpdf->setXY(2.6,6.8);
@@ -2408,36 +2907,100 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(9.2,6.8);
 		$this->fpdf->MultiCell(9.3,0.5,'KEPALA BALAI BESAR PENGUJIAN PERANGKAT TELEKOMUNIKASI','');
 		
-		
-		//for Multi Staff
 		$this->fpdf->setXY(2.6,7.8);
 		$this->fpdf->MultiCell(0.6,0.5,'B.','');
 		$this->fpdf->setXY(3.3,7.8);
-		$this->fpdf->MultiCell(6.5,0.5,'Dasar Pelaksanaan Tugas','');
-		$this->fpdf->setXY(8.5,7.8);
-		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->MultiCell(6.5,0.5,'Penggunaan Alokasi Anggaran','');
+		//$this->fpdf->setXY(8.5,7.8);
+		//$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(3.3,8.4);			
+		$this->fpdf->MultiCell(5.6,0.5,'1. Nomor dan tanggal DIPA',0);
+		$this->fpdf->setXY(9.7,8.4);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(10.2,8.4);
+		$this->fpdf->MultiCell(8,0.5,'Nomor');
+		$this->fpdf->setXY(12.7,8.4);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,8.4);
+		$this->fpdf->MultiCell(8,0.5,$nomorAnggaran);
+		$this->fpdf->setXY(10.2,8.9);
+		$this->fpdf->MultiCell(5,0.5,'Tanggal DIPA');
+		$this->fpdf->setXY(12.7,8.9);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,8.9);
+		$this->fpdf->MultiCell(8,0.5,day($tanggalAnggaran));
+		$this->fpdf->setXY(3.3,9.4);
+		$this->fpdf->MultiCell(6.5,0.5,'2. Kode Kegiatan / Sub Kegiatan / MAK');
+		$this->fpdf->setXY(9.7,9.4);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(10.2,9.4);
+		$this->fpdf->MultiCell(7.5,0.5,'Kode Kegiatan');
+		$this->fpdf->setXY(12.7,9.4);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,9.4);
+		$this->fpdf->MultiCell(8,0.5,$kodeKegiatanAnggaran);
+		$this->fpdf->setXY(10.2,9.9);
+		$this->fpdf->MultiCell(7.5,0.5,'Sub Kegiatan');
+		$this->fpdf->setXY(12.7,9.9);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,9.9);
+		$this->fpdf->MultiCell(5.5,0.5,$subKegiatanAnggaran);
+		//$this->fpdf->Ln();
+		$y1 = $this->fpdf->GetY();
+		$this->fpdf->setXY(10.2,$y1);
+		$this->fpdf->MultiCell(7.5,0.5,'MAK');
+		$this->fpdf->setXY(12.7,$y1);
+		$this->fpdf->MultiCell(0.5,0.5,':');
+		$this->fpdf->setXY(13,$y1);
+		$this->fpdf->MultiCell(2,0.5,$mak1);
+		$this->fpdf->setXY(15,$y1);
+		$this->fpdf->MultiCell(5.5,0.5,$mak1_ket);
+		$y2 = $this->fpdf->GetY();
+		$this->fpdf->setXY(13,$y2);
+		$this->fpdf->MultiCell(2,0.5,$mak2);
+		$this->fpdf->setXY(15,$y2);
+		$this->fpdf->MultiCell(5.5,0.5,$mak2_ket);
+		$y3 = $this->fpdf->GetY();
+		$this->fpdf->setXY(13,$y3);
+		$this->fpdf->MultiCell(2,0.5,$mak3);
+		$this->fpdf->setXY(15,$y3);
+		$this->fpdf->MultiCell(5.5,0.5,$mak3_ket);	
+		
+		//for Multi Staff
+		$y3 = $this->fpdf->GetY();
+		$this->fpdf->setXY(2.6,$y3);
+		$this->fpdf->MultiCell(0.6,0.5,'C.','');
+		$this->fpdf->setXY(3.3,$y3);
+		$this->fpdf->MultiCell(6.5,0.5,'Dasar Pelaksanaan Tugas','');
+
+		$y4 = $this->fpdf->GetY();
+		$this->fpdf->setXY(3.3,$y4);			
 		$this->fpdf->MultiCell(5.6,0.5,'1. Undangan',0);
-		$this->fpdf->setXY(8.5,8.4);
+		$this->fpdf->setXY(9.7,$y4);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(9.3,8.4);
+		$this->fpdf->setXY(10.2,$y4);
 		$this->fpdf->MultiCell(2,0.5,'Nomor');
-		$this->fpdf->setXY(11.1,8.4);
+		$this->fpdf->setXY(12.7,$y4);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(11.4,8.4);
+		$this->fpdf->setXY(13,$y4);
 		$this->fpdf->MultiCell(8,0.5,$nomorNotaDinas);
-		$this->fpdf->setXY(9.3,8.9);
+
+		$y5 = $this->fpdf->GetY();
+		$this->fpdf->setXY(10.2,$y5);
 		$this->fpdf->MultiCell(2,0.5,'Tanggal');
-		$this->fpdf->setXY(11.1,8.9);
+		$this->fpdf->setXY(12.7,$y5);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(11.4,8.9);
+		$this->fpdf->setXY(13,$y5);
 		$this->fpdf->MultiCell(8,0.5,day($tanggalNotaDinas));
-		$this->fpdf->setXY(9.3,9.4);
+
+		$y6 = $this->fpdf->GetY();
+		$this->fpdf->setXY(10.2,$y6);
 		$this->fpdf->MultiCell(2,0.5,'Tentang');
-		$this->fpdf->setXY(11.1,9.4);
+		$this->fpdf->setXY(12.7,$y6);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(11.4,9.4);
+		$this->fpdf->setXY(13,$y6);
 		$this->fpdf->MultiCell(7.5,0.5,$tentangNotaDinas);
+		$this->fpdf->Ln();
 		
 		/**
 		 * add nota tambahan(Rutin/Undangan [Internal or Eksternal],Rutin,)Kontrak , SK TIM)
@@ -2490,25 +3053,31 @@ class Report extends MX_Controller{
 		}
 		$rr = 2.5;
 		$koorY = $koorY + $rr;
-		$this->fpdf->setXY(2.6,$koorY);
-		$this->fpdf->MultiCell(0.6,0.5,'C.','');
-		$this->fpdf->setXY(3.3,$koorY);
+		
+		$y7 = $this->fpdf->GetY();
+		$this->fpdf->setXY(2.6,$y7);
+		$this->fpdf->MultiCell(0.6,0.5,'D.','');
+		$this->fpdf->setXY(3.3,$y7);
 		$this->fpdf->MultiCell(6.5,0.5,'Pegawai yang ditugaskan','');
-		$this->fpdf->setXY(8.5,$koorY);
+		$this->fpdf->setXY(8.5,$y7);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$koorY = $koorY + $rs;
-		$this->fpdf->setXY(2.5,$koorY);
-		$this->fpdf->MultiCell(1,1,'NO','LTR','C');
-		$this->fpdf->setXY(3.5,$koorY);
-		$this->fpdf->MultiCell(4.5,1,'N   A   M   A  ','T','C');
-		$this->fpdf->setXY(8,$koorY);
-		$this->fpdf->MultiCell(5.5,1,'GOL / NIP','LT','C');
-		$this->fpdf->setXY(13.5,$koorY);
-		$this->fpdf->MultiCell(6,1,'JABATAN','LTR','C');
+		
+		$y8 = $this->fpdf->GetY();
+		$this->fpdf->setXY(2.5,$y8);
+		$this->fpdf->MultiCell(1,1,'NO','LTRB','C');
+		$this->fpdf->setXY(3.5,$y8);
+		$this->fpdf->MultiCell(4.5,1,'N   A   M   A  ','TB','C');
+		$this->fpdf->setXY(8,$y8);
+		$this->fpdf->MultiCell(5.5,1,'GOL / NIP','LTB','C');
+		$this->fpdf->setXY(13.5,$y8);
+		$this->fpdf->MultiCell(6,1,'JABATAN','LTRB','C');
 		$this->fpdf->Ln();
+		
+		$y9 = $y8 +1;
 		$rs = 1;
 		//$koorY = $this->fpdf->getY();
-		$koorY = $koorY +$rs;//15.9;
+		$koorY = $y8 +$rs;//15.9;
 		$no = 1;
 		$counter = 0;		
 		for($i = 0 ; $i < sizeof($namaStaff);$i++){
@@ -2551,7 +3120,7 @@ class Report extends MX_Controller{
 		}
 		$this->fpdf->Ln();
 		$this->fpdf->setXY(2.6,$koorY );
-		$this->fpdf->Cell(0.6,0.5,'D.','');		
+		$this->fpdf->Cell(0.6,0.5,'E.','');		
 		$this->fpdf->Cell(5.3,0.5,'Maksud dan Tujuan Penugasan','');		
 		$this->fpdf->Cell(0.5,0.5,':');
 		$GetY= $this->fpdf->GetY();
@@ -2604,6 +3173,7 @@ class Report extends MX_Controller{
 			);
 		
 			$koorY = $GetY + $rr;
+			$koorY=$this->fpdf->GetY()+0.5;
 			$this->fpdf->Text(3.25,$koorY,'4. Alat Transportasi');
 			$this->fpdf->Text(8,$koorY,':');
 			$this->fpdf->Text(8.3,$koorY,$this->TRANSPORTASI);
@@ -2613,7 +3183,7 @@ class Report extends MX_Controller{
 		$koorY = $GetY + $rr;
 		$this->fpdf->Ln();
 		$this->fpdf->setXY(2.6,$koorY);
-		$this->fpdf->Cell(0.6,0.5,'E.','');		
+		$this->fpdf->Cell(0.6,0.5,'F.','');		
 		$this->fpdf->Cell(4.7,0.5,'Keterangan lain-lain','');		
 		$this->fpdf->Cell(0.5,0.5,':');
 		$GetY= $this->fpdf->GetY(); //
@@ -2696,7 +3266,7 @@ class Report extends MX_Controller{
 		$GetY= $this->fpdf->GetY();
 		$rr = 1;
 		$koorY = $GetY + $rr;
-		$this->fpdf->Text(2.6,$koorY,'Disampaikan Yth. kepada :');
+		$this->fpdf->Text(2.6,$koorY,'Disampaikan Yth. Kepada :');
 		$GetY = $this->fpdf->GetY();
 		$rr = 1.5;
 		$koorY = $GetY + $rr;
@@ -2731,8 +3301,7 @@ class Report extends MX_Controller{
 		$year 	= $split[0];		
 		return $date.' '.$month.' '.$year;
 	}
-	function month($month)
-	{
+	function month($month)	{
 		switch ($month)
 		{
 			case 1:
@@ -2772,7 +3341,7 @@ class Report extends MX_Controller{
 				return "Desember";
 				break;
 		}
-	}   
+	}  
    function day_name($date) {
 		$change = gmdate($date, time() + 60 * 60 * 8);
 		$split = explode("-",$change);

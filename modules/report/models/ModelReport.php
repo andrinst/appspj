@@ -78,6 +78,30 @@
 		}		
 		return $result;
 	}
+	function getAlokasiAnggaran() {
+		$sql 	= ("SELECT aa.nomor,aa.tanggal,aa.kode_kegiatan,aa.sub_kegiatan,aa.mak1,aa.mak1_ket,aa.mak2,aa.mak2_ket,aa.mak3,aa.mak3_ket
+					FROM perjalanan_multi pm, dinas d, alokasi_anggaran aa
+					WHERE 
+					aa.id = d.alokasi_anggaran and
+					d.id = pm.dinas and
+					pm.id = '".$this->ID_PERJALANAN."'");
+		$query 	= $this->db->query($sql);
+		$result = array();		
+		foreach ($query->result_array() as $row) {
+			$result [0]	= $row['nomor'];
+			$result	[1]	= $row['tanggal'];
+			$result	[2]	= $row['kode_kegiatan'];
+			$result	[3]	= $row['sub_kegiatan'];
+			$result	[4]	= $row['mak1'];
+			$result	[5]	= $row['mak1_ket'];
+			$result	[6]	= $row['mak2'];
+			$result	[7]	= $row['mak2_ket'];
+			$result	[8]	= $row['mak3'];
+			$result	[9]	= $row['mak3_ket'];
+		}		
+		return $result;
+	}
+	
 	function getJenisNotaDinasExtra() {
 		$sql 	= ("SELECT jn.jenis_undangan FROM jenis_surat jn INNER JOIN dinas d on jn.id = d.nota_dinas_1 INNER JOIN 
 					perjalanan_multi pm on d.id = pm.dinas WHERE pm.id = '".$this->ID_PERJALANAN."'");

@@ -216,6 +216,7 @@ class Master extends MX_Controller {
 				  -> set_relation('id_subdit', 'subdit', '{subdit}')
 				  -> set_relation('nota_dinas', 'nota_dinas', '{nomor}')
 				  -> set_relation('nota_dinas_1', 'jenis_surat', '{nomor}')
+				  -> set_relation('alokasi_anggaran', 'alokasi_anggaran', '{nomor}')
 				  -> columns('maksud', 'berangkat', 'kembali','id_subdit','kota_tujuan')
 				  -> required_fields('maksud')
 				  -> field_type('create_date', 'hidden',$today)

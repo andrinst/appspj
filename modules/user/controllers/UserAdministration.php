@@ -78,6 +78,43 @@ class UserAdministration extends MX_Controller {
 			show_error($e -> getMessage() . ' --- ' . $e -> getTraceAsString());
 		}
 	}
+	function alokasiAnggaran() {
+		try {
+			$crud = new grocery_CRUD();
+			$crud -> set_theme('datatables')
+				  -> set_table('alokasi_anggaran')
+				  -> set_subject('Alokasi Anggaran')				  
+				  -> fields('nomor','tanggal', 'kode_kegiatan', 'sub_kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')
+				  -> required_fields('nomor','tanggal', 'kode_kegiatan', 'sub_kegiatan')			 				 				  
+				  -> unset_export()
+				  -> unset_print();
+			$output = $crud -> render();
+			$this->_userAdministration_output($output);			
+		} catch(Exception $e) {
+			show_error($e -> getMessage() . ' --- ' . $e -> getTraceAsString());
+		}
+	}
+	/*
+	function mak() {
+		try {
+			$crud = new grocery_CRUD();
+			$crud -> set_theme('datatables')
+				  -> set_table('mak')
+				  -> set_subject('MAK')	
+				  -> set_relation('fk_anggaran', 'alokasi_anggaran', 'nomor')				  
+				  -> fields('fk_anggaran','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')
+				  -> required_fields('fk_anggaran')			 				 				  
+				  -> display_as('fk_anggaran','Nomor Anggaran')
+				  //-> display_as('mak1','')
+				  -> unset_export()
+				  -> unset_print();
+			$output = $crud -> render();
+			$this->_userAdministration_output($output);			
+		} catch(Exception $e) {
+			show_error($e -> getMessage() . ' --- ' . $e -> getTraceAsString());
+		}
+	}*/
+	
 	function subdit() {
 		try {
 			$crud = new grocery_CRUD();
