@@ -85,7 +85,7 @@ class UserAdministration extends MX_Controller {
 				  -> set_table('alokasi_anggaran')
 				  -> set_subject('Alokasi Anggaran')				  
 				  -> fields('nomor','tanggal', 'kode_kegiatan', 'sub_kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')
-				  -> required_fields('nomor','tanggal', 'kode_kegiatan', 'sub_kegiatan')			 				 				  
+				  -> required_fields('nomor','tanggal', 'kode_kegiatan', 'sub_kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')			 				 				  
 				  -> unset_export()
 				  -> unset_print();
 			$output = $crud -> render();

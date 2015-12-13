@@ -218,7 +218,7 @@ class Master extends MX_Controller {
 				  -> set_relation('nota_dinas_1', 'jenis_surat', '{nomor}')
 				  -> set_relation('alokasi_anggaran', 'alokasi_anggaran', '{nomor}')
 				  -> columns('maksud', 'berangkat', 'kembali','id_subdit','kota_tujuan')
-				  -> required_fields('maksud')
+				  -> required_fields('maksud', 'alokasi_anggaran', 'nota_dinas', 'id_subdit','berangkat','kembali','kota_asal','kota_tujuan')
 				  -> field_type('create_date', 'hidden',$today)
 				  -> field_type('update_date', 'hidden',$today)
 				  -> display_as('maksud', 'Maksud Dinas')
@@ -291,7 +291,7 @@ class Master extends MX_Controller {
 				  -> where('status LIKE','%Declined%')
 				  -> order_by('id','desc')	  
 				  -> columns('dinas','personel','status','tiket1')
-				  -> required_fields('dinas','uang_saku')  
+				  -> required_fields('dinas','uang_saku', 'personel', 'tgl_spt')  
 				  -> field_type('create_date', 'hidden')
 				  -> field_type('update_date', 'hidden')
 				  -> field_type('status', 'hidden',$status) //http://www.grocerycrud.com/documentation/options_functions/field_type				  
