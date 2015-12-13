@@ -747,9 +747,9 @@ class Report extends MX_Controller{
 		$this->fpdf->MultiCell(0.6,0.5,'A.','');
 		$this->fpdf->setXY(3.3,6.8);
 		$this->fpdf->MultiCell(6.5,0.5,'Pejabat Pemberi Tugas','');
-		$this->fpdf->setXY(8.5,6.8);
+		$this->fpdf->setXY(9.7,6.8);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(9.2,6.8);
+		$this->fpdf->setXY(10.2,6.8);
 		$this->fpdf->MultiCell(9.3,0.5,'KEPALA BALAI BESAR PENGUJIAN PERANGKAT TELEKOMUNIKASI','');
 		
 		$this->fpdf->setXY(2.6,7.8);
