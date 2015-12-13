@@ -2253,6 +2253,7 @@ class Report extends MX_Controller{
 			$this->fpdf->Cell(7.6,0.5,' ','R',0,'L');
 			$this->fpdf->Cell(2,0.5,$mak1,'L',0,'L');
 			$this->fpdf->Cell(5.7,0.5,$mak1_ket,'R',0,'L');
+			//$this->fpdf->MultiCell(5.7,0.5,$mak1_ket,'BR','L');
 			$this->fpdf->Ln();
 			
 			$this->fpdf->SetX(3);	
