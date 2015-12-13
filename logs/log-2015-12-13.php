@@ -10622,3 +10622,2335 @@ DEBUG - 2015-12-13 17:31:20 --> File loaded: appspj/modules/master/models/modelm
 DEBUG - 2015-12-13 17:31:20 --> Upload Class Initialized
 DEBUG - 2015-12-13 17:31:20 --> Final output sent to browser
 DEBUG - 2015-12-13 17:31:20 --> Total execution time: 0.1490
+ERROR - 2015-12-13 17:34:34 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:34:34 --> Config Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:34:34 --> URI Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> Router Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> Output Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> Security Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> Input Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:34:34 --> Language Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:34:34 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:34:34 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:34:34 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:34:34 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:34:34 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:34:34 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:34:34 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:34:34 --> Session Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:34:34 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:34:34 --> Session routines successfully run
+DEBUG - 2015-12-13 17:34:34 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> Model Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> Model Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> Language Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> Config Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:34:34 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:34:34 --> Model Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:34:34 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:34:34 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:34:34 --> Final output sent to browser
+DEBUG - 2015-12-13 17:34:34 --> Total execution time: 0.1480
+ERROR - 2015-12-13 17:34:58 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:34:58 --> Config Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:34:58 --> URI Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> Router Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> Output Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> Security Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> Input Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:34:58 --> Language Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:34:58 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:34:58 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:34:58 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:34:58 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:34:58 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:34:58 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:34:58 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:34:58 --> Session Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:34:58 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:34:58 --> Session routines successfully run
+DEBUG - 2015-12-13 17:34:58 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> Model Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> Model Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> Language Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> Config Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:34:58 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:34:58 --> Model Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:34:58 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:34:58 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:34:58 --> Final output sent to browser
+DEBUG - 2015-12-13 17:34:58 --> Total execution time: 0.1390
+ERROR - 2015-12-13 17:35:32 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:35:32 --> Config Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:35:32 --> URI Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> Router Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> Output Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> Security Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> Input Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:35:32 --> Language Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:35:32 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:35:32 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:35:32 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:35:32 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:35:32 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:35:32 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:35:32 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:35:32 --> Session Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:35:32 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:35:32 --> Session routines successfully run
+DEBUG - 2015-12-13 17:35:32 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> Model Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> Model Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> Language Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> Config Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:35:32 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:35:32 --> Model Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:35:32 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:35:32 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:35:32 --> Final output sent to browser
+DEBUG - 2015-12-13 17:35:32 --> Total execution time: 0.1360
+ERROR - 2015-12-13 17:36:08 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:36:08 --> Config Class Initialized
+DEBUG - 2015-12-13 17:36:08 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:36:08 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:36:08 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:36:08 --> URI Class Initialized
+DEBUG - 2015-12-13 17:36:08 --> Router Class Initialized
+DEBUG - 2015-12-13 17:36:08 --> Output Class Initialized
+DEBUG - 2015-12-13 17:36:08 --> Security Class Initialized
+DEBUG - 2015-12-13 17:36:08 --> Input Class Initialized
+DEBUG - 2015-12-13 17:36:08 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:36:08 --> Language Class Initialized
+DEBUG - 2015-12-13 17:36:08 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:36:08 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:36:08 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:36:08 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:36:08 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:36:08 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:36:08 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:36:08 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:36:08 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:36:08 --> Session Class Initialized
+DEBUG - 2015-12-13 17:36:08 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:36:08 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:36:09 --> Session routines successfully run
+DEBUG - 2015-12-13 17:36:09 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:36:09 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:36:09 --> Model Class Initialized
+DEBUG - 2015-12-13 17:36:09 --> Model Class Initialized
+DEBUG - 2015-12-13 17:36:09 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:36:09 --> Language Class Initialized
+DEBUG - 2015-12-13 17:36:09 --> Config Class Initialized
+DEBUG - 2015-12-13 17:36:09 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:36:09 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:36:09 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:36:09 --> Model Class Initialized
+DEBUG - 2015-12-13 17:36:09 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:36:09 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:36:09 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:36:09 --> Final output sent to browser
+DEBUG - 2015-12-13 17:36:09 --> Total execution time: 0.1270
+ERROR - 2015-12-13 17:37:53 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:37:53 --> Config Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:37:53 --> URI Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> Router Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> Output Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> Security Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> Input Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:37:53 --> Language Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:37:53 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:37:53 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:37:53 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:37:53 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:37:53 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:37:53 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:37:53 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:37:53 --> Session Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:37:53 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:37:53 --> Session routines successfully run
+DEBUG - 2015-12-13 17:37:53 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> Model Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> Model Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> Language Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> Config Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:37:53 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:37:53 --> Model Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:37:53 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:37:53 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:37:53 --> Final output sent to browser
+DEBUG - 2015-12-13 17:37:53 --> Total execution time: 0.1260
+ERROR - 2015-12-13 17:38:11 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:38:11 --> Config Class Initialized
+DEBUG - 2015-12-13 17:38:11 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:38:11 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:38:11 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:38:12 --> URI Class Initialized
+DEBUG - 2015-12-13 17:38:12 --> Router Class Initialized
+DEBUG - 2015-12-13 17:38:12 --> Output Class Initialized
+DEBUG - 2015-12-13 17:38:12 --> Security Class Initialized
+DEBUG - 2015-12-13 17:38:12 --> Input Class Initialized
+DEBUG - 2015-12-13 17:38:12 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:38:12 --> Language Class Initialized
+DEBUG - 2015-12-13 17:38:12 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:38:12 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:38:12 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:38:12 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:38:12 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:38:12 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:38:12 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:38:12 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:38:12 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:38:12 --> Session Class Initialized
+DEBUG - 2015-12-13 17:38:12 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:38:12 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:38:12 --> Session routines successfully run
+DEBUG - 2015-12-13 17:38:12 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:38:12 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:38:12 --> Model Class Initialized
+DEBUG - 2015-12-13 17:38:12 --> Model Class Initialized
+DEBUG - 2015-12-13 17:38:12 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:38:12 --> Language Class Initialized
+DEBUG - 2015-12-13 17:38:12 --> Config Class Initialized
+DEBUG - 2015-12-13 17:38:12 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:38:12 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:38:12 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:38:12 --> Model Class Initialized
+DEBUG - 2015-12-13 17:38:12 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:38:12 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:38:12 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:38:12 --> Final output sent to browser
+DEBUG - 2015-12-13 17:38:12 --> Total execution time: 0.1150
+ERROR - 2015-12-13 17:38:27 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:38:27 --> Config Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:38:27 --> URI Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> Router Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> Output Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> Security Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> Input Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:38:27 --> Language Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:38:27 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:38:27 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:38:27 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:38:27 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:38:27 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:38:27 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:38:27 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:38:27 --> Session Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:38:27 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:38:27 --> Session routines successfully run
+DEBUG - 2015-12-13 17:38:27 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> Model Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> Model Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> Language Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> Config Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:38:27 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:38:27 --> Model Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:38:27 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:38:27 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:38:27 --> Final output sent to browser
+DEBUG - 2015-12-13 17:38:27 --> Total execution time: 0.1320
+ERROR - 2015-12-13 17:39:05 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:39:05 --> Config Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:39:05 --> URI Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> Router Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> Output Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> Security Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> Input Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:39:05 --> Language Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:39:05 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:39:05 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:39:05 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:39:05 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:39:05 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:39:05 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:39:05 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:39:05 --> Session Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:39:05 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:39:05 --> Session routines successfully run
+DEBUG - 2015-12-13 17:39:05 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> Model Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> Model Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> Language Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> Config Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:39:05 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:39:05 --> Model Class Initialized
+DEBUG - 2015-12-13 17:39:05 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:39:05 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:39:05 --> Upload Class Initialized
+ERROR - 2015-12-13 17:39:05 --> Severity: Notice  --> Undefined property: CI::$setID C:\xampp\htdocs\unlock\appspj\system\core\Model.php 51
+DEBUG - 2015-12-13 17:39:05 --> Final output sent to browser
+DEBUG - 2015-12-13 17:39:05 --> Total execution time: 0.1640
+ERROR - 2015-12-13 17:39:14 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:39:14 --> Config Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:39:14 --> URI Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> Router Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> Output Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> Security Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> Input Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:39:14 --> Language Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:39:14 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:39:14 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:39:14 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:39:14 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:39:14 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:39:14 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:39:14 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:39:14 --> Session Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:39:14 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:39:14 --> Session routines successfully run
+DEBUG - 2015-12-13 17:39:14 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> Model Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> Model Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> Language Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> Config Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:39:14 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:39:14 --> Model Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:39:14 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:39:14 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:39:14 --> Final output sent to browser
+DEBUG - 2015-12-13 17:39:14 --> Total execution time: 0.1320
+ERROR - 2015-12-13 17:41:25 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:41:25 --> Config Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:41:25 --> URI Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> Router Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> Output Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> Security Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> Input Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:41:25 --> Language Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:41:25 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:41:25 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:41:25 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:41:25 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:41:25 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:41:25 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:41:25 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:41:25 --> Session Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:41:25 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:41:25 --> Session routines successfully run
+DEBUG - 2015-12-13 17:41:25 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> Model Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> Model Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> Language Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> Config Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:41:25 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:41:25 --> Model Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:41:25 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:41:25 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:41:25 --> Final output sent to browser
+DEBUG - 2015-12-13 17:41:25 --> Total execution time: 0.1320
+ERROR - 2015-12-13 17:41:29 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:41:29 --> Config Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:41:29 --> URI Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> Router Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> Output Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> Security Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> Input Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:41:29 --> Language Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:41:29 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:41:29 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:41:29 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:41:29 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:41:29 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:41:29 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:41:29 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:41:29 --> Session Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:41:29 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:41:29 --> Session routines successfully run
+DEBUG - 2015-12-13 17:41:29 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> Model Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> Model Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> Language Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> Config Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:41:29 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:41:29 --> Model Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:41:29 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:41:29 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:41:29 --> Final output sent to browser
+DEBUG - 2015-12-13 17:41:29 --> Total execution time: 0.1220
+ERROR - 2015-12-13 17:42:04 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:42:04 --> Config Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:42:04 --> URI Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> Router Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> Output Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> Security Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> Input Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:42:04 --> Language Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:42:04 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:42:04 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:42:04 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:42:04 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:42:04 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:42:04 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:42:04 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:42:04 --> Session Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:42:04 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:42:04 --> Session routines successfully run
+DEBUG - 2015-12-13 17:42:04 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> Model Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> Model Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> Language Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> Config Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:42:04 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:42:04 --> Model Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:42:04 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:42:04 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:42:04 --> Final output sent to browser
+DEBUG - 2015-12-13 17:42:04 --> Total execution time: 0.1370
+ERROR - 2015-12-13 17:42:27 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:42:27 --> Config Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:42:27 --> URI Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> Router Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> Output Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> Security Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> Input Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:42:27 --> Language Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:42:27 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:42:27 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:42:27 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:42:27 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:42:27 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:42:27 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:42:27 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:42:27 --> Session Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:42:27 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:42:27 --> Session routines successfully run
+DEBUG - 2015-12-13 17:42:27 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> Model Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> Model Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> Language Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> Config Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:42:27 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:42:27 --> Model Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:42:27 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:42:27 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:42:27 --> Final output sent to browser
+DEBUG - 2015-12-13 17:42:27 --> Total execution time: 0.1410
+ERROR - 2015-12-13 17:42:49 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:42:49 --> Config Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:42:49 --> URI Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> Router Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> Output Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> Security Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> Input Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:42:49 --> Language Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:42:49 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:42:49 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:42:49 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:42:49 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:42:49 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:42:49 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:42:49 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:42:49 --> Session Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:42:49 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:42:49 --> Session routines successfully run
+DEBUG - 2015-12-13 17:42:49 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> Model Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> Model Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> Language Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> Config Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:42:49 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:42:49 --> Model Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:42:49 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:42:49 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:42:49 --> Final output sent to browser
+DEBUG - 2015-12-13 17:42:49 --> Total execution time: 0.1610
+ERROR - 2015-12-13 17:43:10 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:43:10 --> Config Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:43:10 --> URI Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> Router Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> Output Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> Security Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> Input Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:43:10 --> Language Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:43:10 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:43:10 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:43:10 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:43:10 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:43:10 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:43:10 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:43:10 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:43:10 --> Session Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:43:10 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:43:10 --> Session routines successfully run
+DEBUG - 2015-12-13 17:43:10 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> Model Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> Model Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> Language Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> Config Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:43:10 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:43:10 --> Model Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:43:10 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:43:10 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:43:10 --> Final output sent to browser
+DEBUG - 2015-12-13 17:43:10 --> Total execution time: 0.1350
+ERROR - 2015-12-13 17:43:27 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:43:27 --> Config Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:43:27 --> URI Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> Router Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> Output Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> Security Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> Input Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:43:27 --> Language Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:43:27 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:43:27 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:43:27 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:43:27 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:43:27 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:43:27 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:43:27 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:43:27 --> Session Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:43:27 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:43:27 --> Session routines successfully run
+DEBUG - 2015-12-13 17:43:27 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> Model Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> Model Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> Language Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> Config Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:43:27 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:43:27 --> Model Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:43:27 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:43:27 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:43:27 --> Final output sent to browser
+DEBUG - 2015-12-13 17:43:27 --> Total execution time: 0.1350
+ERROR - 2015-12-13 17:43:42 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:43:42 --> Config Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:43:42 --> URI Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> Router Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> Output Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> Security Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> Input Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:43:42 --> Language Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:43:42 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:43:42 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:43:42 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:43:42 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:43:42 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:43:42 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:43:42 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:43:42 --> Session Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:43:42 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:43:42 --> Session routines successfully run
+DEBUG - 2015-12-13 17:43:42 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> Model Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> Model Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> Language Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> Config Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:43:42 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:43:42 --> Model Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:43:42 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:43:42 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:43:42 --> Final output sent to browser
+DEBUG - 2015-12-13 17:43:42 --> Total execution time: 0.1240
+ERROR - 2015-12-13 17:43:48 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:43:48 --> Config Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:43:48 --> URI Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> Router Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> Output Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> Security Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> Input Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:43:48 --> Language Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:43:48 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:43:48 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:43:48 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:43:48 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:43:48 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:43:48 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:43:48 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:43:48 --> Session Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:43:48 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:43:48 --> Session routines successfully run
+DEBUG - 2015-12-13 17:43:48 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> Model Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> Model Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> Language Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> Config Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:43:48 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:43:48 --> Model Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:43:48 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:43:48 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:43:48 --> Final output sent to browser
+DEBUG - 2015-12-13 17:43:48 --> Total execution time: 0.1200
+ERROR - 2015-12-13 17:44:05 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:44:05 --> Config Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:44:05 --> URI Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> Router Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> Output Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> Security Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> Input Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:44:05 --> Language Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:44:05 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:44:05 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:44:05 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:44:05 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:44:05 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:44:05 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:44:05 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:44:05 --> Session Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:44:05 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:44:05 --> Session routines successfully run
+DEBUG - 2015-12-13 17:44:05 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> Model Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> Model Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> Language Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> Config Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:44:05 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:44:05 --> Model Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:44:05 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:44:05 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:44:05 --> Final output sent to browser
+DEBUG - 2015-12-13 17:44:05 --> Total execution time: 0.1390
+ERROR - 2015-12-13 17:44:22 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:44:22 --> Config Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:44:22 --> URI Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> Router Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> Output Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> Security Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> Input Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:44:22 --> Language Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:44:22 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:44:22 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:44:22 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:44:22 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:44:22 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:44:22 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:44:22 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:44:22 --> Session Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:44:22 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:44:22 --> Session routines successfully run
+DEBUG - 2015-12-13 17:44:22 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> Model Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> Model Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> Language Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> Config Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:44:22 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:44:22 --> Model Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:44:22 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:44:22 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:44:22 --> Final output sent to browser
+DEBUG - 2015-12-13 17:44:22 --> Total execution time: 0.1380
+ERROR - 2015-12-13 17:45:32 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:45:32 --> Config Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:45:32 --> URI Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> Router Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> Output Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> Security Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> Input Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:45:32 --> Language Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:45:32 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:45:32 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:45:32 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:45:32 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:45:32 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:45:32 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:45:32 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:45:32 --> Session Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:45:32 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:45:32 --> Session routines successfully run
+DEBUG - 2015-12-13 17:45:32 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> Model Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> Model Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> Language Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> Config Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:45:32 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:45:32 --> Model Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:45:32 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:45:32 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:45:32 --> Final output sent to browser
+DEBUG - 2015-12-13 17:45:32 --> Total execution time: 0.1400
+ERROR - 2015-12-13 17:46:27 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:46:27 --> Config Class Initialized
+DEBUG - 2015-12-13 17:46:27 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:46:27 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:46:27 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:46:27 --> URI Class Initialized
+DEBUG - 2015-12-13 17:46:28 --> Router Class Initialized
+DEBUG - 2015-12-13 17:46:28 --> Output Class Initialized
+DEBUG - 2015-12-13 17:46:28 --> Security Class Initialized
+DEBUG - 2015-12-13 17:46:28 --> Input Class Initialized
+DEBUG - 2015-12-13 17:46:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:46:28 --> Language Class Initialized
+DEBUG - 2015-12-13 17:46:28 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:46:28 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:46:28 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:46:28 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:46:28 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:46:28 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:46:28 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:46:28 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:46:28 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:46:28 --> Session Class Initialized
+DEBUG - 2015-12-13 17:46:28 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:46:28 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:46:28 --> Session routines successfully run
+DEBUG - 2015-12-13 17:46:28 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:46:28 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:46:28 --> Model Class Initialized
+DEBUG - 2015-12-13 17:46:28 --> Model Class Initialized
+DEBUG - 2015-12-13 17:46:28 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:46:28 --> Language Class Initialized
+DEBUG - 2015-12-13 17:46:28 --> Config Class Initialized
+DEBUG - 2015-12-13 17:46:28 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:46:28 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:46:28 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:46:28 --> Model Class Initialized
+DEBUG - 2015-12-13 17:46:28 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:46:28 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:46:28 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:46:28 --> Final output sent to browser
+DEBUG - 2015-12-13 17:46:28 --> Total execution time: 0.1320
+ERROR - 2015-12-13 17:46:56 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:46:56 --> Config Class Initialized
+DEBUG - 2015-12-13 17:46:56 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:46:56 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:46:56 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:46:56 --> URI Class Initialized
+DEBUG - 2015-12-13 17:46:56 --> Router Class Initialized
+DEBUG - 2015-12-13 17:46:56 --> Output Class Initialized
+DEBUG - 2015-12-13 17:46:56 --> Security Class Initialized
+DEBUG - 2015-12-13 17:46:56 --> Input Class Initialized
+DEBUG - 2015-12-13 17:46:56 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:46:56 --> Language Class Initialized
+DEBUG - 2015-12-13 17:46:56 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:46:56 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:46:56 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:46:56 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:46:56 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:46:56 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:46:56 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:46:56 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:46:56 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:46:56 --> Session Class Initialized
+DEBUG - 2015-12-13 17:46:56 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:46:56 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:46:56 --> Session routines successfully run
+DEBUG - 2015-12-13 17:46:56 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:46:56 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:46:56 --> Model Class Initialized
+DEBUG - 2015-12-13 17:46:57 --> Model Class Initialized
+DEBUG - 2015-12-13 17:46:57 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:46:57 --> Language Class Initialized
+DEBUG - 2015-12-13 17:46:57 --> Config Class Initialized
+DEBUG - 2015-12-13 17:46:57 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:46:57 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:46:57 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:46:57 --> Model Class Initialized
+DEBUG - 2015-12-13 17:46:57 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:46:57 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:46:57 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:46:57 --> Final output sent to browser
+DEBUG - 2015-12-13 17:46:57 --> Total execution time: 0.1860
+ERROR - 2015-12-13 17:47:19 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:47:19 --> Config Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:47:19 --> URI Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> Router Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> Output Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> Security Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> Input Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:47:19 --> Language Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:47:19 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:47:19 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:47:19 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:47:19 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:47:19 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:47:19 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:47:19 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:47:19 --> Session Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:47:19 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:47:19 --> Session routines successfully run
+DEBUG - 2015-12-13 17:47:19 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> Model Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> Model Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> Language Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> Config Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:47:19 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:47:19 --> Model Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:47:19 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:47:19 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:47:19 --> Final output sent to browser
+DEBUG - 2015-12-13 17:47:19 --> Total execution time: 0.1480
+ERROR - 2015-12-13 17:48:18 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:48:18 --> Config Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:48:18 --> URI Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> Router Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> Output Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> Security Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> Input Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:48:18 --> Language Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:48:18 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:48:18 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:48:18 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:48:18 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:48:18 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:48:18 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:48:18 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:48:18 --> Session Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:48:18 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:48:18 --> Session routines successfully run
+DEBUG - 2015-12-13 17:48:18 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> Model Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> Model Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> Language Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> Config Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:48:18 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:48:18 --> Model Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:48:18 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:48:18 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:48:18 --> Final output sent to browser
+DEBUG - 2015-12-13 17:48:18 --> Total execution time: 0.1450
+ERROR - 2015-12-13 17:49:52 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:49:52 --> Config Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:49:52 --> URI Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Router Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Output Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Security Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Input Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:49:52 --> Language Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:49:52 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:49:52 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:49:52 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:49:52 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:49:52 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:49:52 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:49:52 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:49:52 --> Session Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:49:52 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:49:52 --> Session routines successfully run
+DEBUG - 2015-12-13 17:49:52 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Model Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Model Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Language Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Config Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:49:52 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:49:52 --> Model Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:49:52 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:49:52 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:49:52 --> Model Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> Model Class Initialized
+DEBUG - 2015-12-13 17:49:52 --> File loaded: appspj/views/header.php
+DEBUG - 2015-12-13 17:49:52 --> File loaded: appspj/views/main.php
+DEBUG - 2015-12-13 17:49:52 --> File loaded: appspj/modules/report/views/ViewReport.php
+DEBUG - 2015-12-13 17:49:52 --> File loaded: appspj/views/footer.php
+DEBUG - 2015-12-13 17:49:52 --> Final output sent to browser
+DEBUG - 2015-12-13 17:49:52 --> Total execution time: 0.2090
+ERROR - 2015-12-13 17:49:55 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:49:55 --> Config Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:49:55 --> URI Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> Router Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> Output Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> Security Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> Input Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:49:55 --> Language Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:49:55 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:49:55 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:49:55 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:49:55 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:49:55 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:49:55 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:49:55 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:49:55 --> Session Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:49:55 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:49:55 --> Session routines successfully run
+DEBUG - 2015-12-13 17:49:55 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> Model Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> Model Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> Language Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> Config Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> SubReport MX_Controller Initialized
+DEBUG - 2015-12-13 17:49:55 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:49:55 --> Model Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:49:55 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:49:55 --> Model Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> Model Class Initialized
+DEBUG - 2015-12-13 17:49:55 --> File loaded: appspj/views/header.php
+DEBUG - 2015-12-13 17:49:55 --> File loaded: appspj/views/main.php
+DEBUG - 2015-12-13 17:49:55 --> File loaded: appspj/modules/report/views/ViewReportSingle.php
+DEBUG - 2015-12-13 17:49:55 --> File loaded: appspj/views/footer.php
+DEBUG - 2015-12-13 17:49:55 --> Final output sent to browser
+DEBUG - 2015-12-13 17:49:55 --> Total execution time: 0.1260
+ERROR - 2015-12-13 17:49:58 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:49:58 --> Config Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:49:58 --> URI Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> Router Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> Output Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> Security Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> Input Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:49:58 --> Language Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:49:58 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:49:58 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:49:58 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:49:58 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:49:58 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:49:58 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:49:58 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:49:58 --> Session Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:49:58 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:49:58 --> Session routines successfully run
+DEBUG - 2015-12-13 17:49:58 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> Model Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> Model Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> Language Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> Config Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:49:58 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:49:58 --> Model Class Initialized
+DEBUG - 2015-12-13 17:49:58 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:49:58 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:49:58 --> Upload Class Initialized
+ERROR - 2015-12-13 17:49:58 --> Severity: Notice  --> Undefined variable: koorY C:\xampp\htdocs\unlock\appspj\appspj\modules\report\controllers\Report.php 401
+ERROR - 2015-12-13 17:49:58 --> Severity: Notice  --> Undefined variable: GetY C:\xampp\htdocs\unlock\appspj\appspj\modules\report\controllers\Report.php 559
+DEBUG - 2015-12-13 17:49:58 --> Final output sent to browser
+DEBUG - 2015-12-13 17:49:58 --> Total execution time: 0.1380
+ERROR - 2015-12-13 17:50:11 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:50:11 --> Config Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:50:11 --> URI Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> Router Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> Output Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> Security Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> Input Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:50:11 --> Language Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:50:11 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:50:11 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:50:11 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:50:11 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:50:11 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:50:11 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:50:11 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:50:11 --> Session Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:50:11 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:50:11 --> Session routines successfully run
+DEBUG - 2015-12-13 17:50:11 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> Model Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> Model Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> Language Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> Config Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:50:11 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:50:11 --> Model Class Initialized
+DEBUG - 2015-12-13 17:50:11 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:50:11 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:50:11 --> Upload Class Initialized
+ERROR - 2015-12-13 17:50:11 --> Severity: Notice  --> Undefined variable: koorY C:\xampp\htdocs\unlock\appspj\appspj\modules\report\controllers\Report.php 401
+ERROR - 2015-12-13 17:50:11 --> Severity: Notice  --> Undefined variable: GetY C:\xampp\htdocs\unlock\appspj\appspj\modules\report\controllers\Report.php 559
+DEBUG - 2015-12-13 17:50:11 --> Final output sent to browser
+DEBUG - 2015-12-13 17:50:11 --> Total execution time: 0.1090
+ERROR - 2015-12-13 17:51:19 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:51:19 --> Config Class Initialized
+DEBUG - 2015-12-13 17:51:19 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:51:19 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:51:19 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:51:19 --> URI Class Initialized
+DEBUG - 2015-12-13 17:51:19 --> Router Class Initialized
+DEBUG - 2015-12-13 17:51:19 --> Output Class Initialized
+DEBUG - 2015-12-13 17:51:19 --> Security Class Initialized
+DEBUG - 2015-12-13 17:51:19 --> Input Class Initialized
+DEBUG - 2015-12-13 17:51:19 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:51:19 --> Language Class Initialized
+ERROR - 2015-12-13 17:51:20 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:51:20 --> Config Class Initialized
+DEBUG - 2015-12-13 17:51:20 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:51:20 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:51:20 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:51:20 --> URI Class Initialized
+DEBUG - 2015-12-13 17:51:20 --> Router Class Initialized
+DEBUG - 2015-12-13 17:51:20 --> Output Class Initialized
+DEBUG - 2015-12-13 17:51:20 --> Security Class Initialized
+DEBUG - 2015-12-13 17:51:20 --> Input Class Initialized
+DEBUG - 2015-12-13 17:51:20 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:51:20 --> Language Class Initialized
+ERROR - 2015-12-13 17:51:32 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:51:32 --> Config Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:51:32 --> URI Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> Router Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> Output Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> Security Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> Input Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:51:32 --> Language Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:51:32 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:51:32 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:51:32 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:51:32 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:51:32 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:51:32 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:51:32 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:51:32 --> Session Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:51:32 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:51:32 --> Session routines successfully run
+DEBUG - 2015-12-13 17:51:32 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> Model Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> Model Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> Language Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> Config Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:51:32 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:51:32 --> Model Class Initialized
+DEBUG - 2015-12-13 17:51:32 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:51:32 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:51:32 --> Upload Class Initialized
+ERROR - 2015-12-13 17:51:32 --> Severity: Notice  --> Undefined variable: koorY C:\xampp\htdocs\unlock\appspj\appspj\modules\report\controllers\Report.php 401
+ERROR - 2015-12-13 17:51:32 --> Severity: Notice  --> Undefined variable: GetY C:\xampp\htdocs\unlock\appspj\appspj\modules\report\controllers\Report.php 559
+DEBUG - 2015-12-13 17:51:32 --> Final output sent to browser
+DEBUG - 2015-12-13 17:51:32 --> Total execution time: 0.1120
+ERROR - 2015-12-13 17:52:04 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:52:04 --> Config Class Initialized
+DEBUG - 2015-12-13 17:52:04 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:52:04 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:52:04 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:52:04 --> URI Class Initialized
+DEBUG - 2015-12-13 17:52:04 --> Router Class Initialized
+DEBUG - 2015-12-13 17:52:04 --> Output Class Initialized
+DEBUG - 2015-12-13 17:52:04 --> Security Class Initialized
+DEBUG - 2015-12-13 17:52:04 --> Input Class Initialized
+DEBUG - 2015-12-13 17:52:04 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:52:04 --> Language Class Initialized
+ERROR - 2015-12-13 17:52:05 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:52:05 --> Config Class Initialized
+DEBUG - 2015-12-13 17:52:05 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:52:05 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:52:05 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:52:05 --> URI Class Initialized
+DEBUG - 2015-12-13 17:52:05 --> Router Class Initialized
+DEBUG - 2015-12-13 17:52:05 --> Output Class Initialized
+DEBUG - 2015-12-13 17:52:05 --> Security Class Initialized
+DEBUG - 2015-12-13 17:52:05 --> Input Class Initialized
+DEBUG - 2015-12-13 17:52:05 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:52:05 --> Language Class Initialized
+ERROR - 2015-12-13 17:52:11 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:52:11 --> Config Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:52:11 --> URI Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> Router Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> Output Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> Security Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> Input Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:52:11 --> Language Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:52:11 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:52:11 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:52:11 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:52:11 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:52:11 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:52:11 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:52:11 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:52:11 --> Session Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:52:11 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:52:11 --> Session garbage collection performed.
+DEBUG - 2015-12-13 17:52:11 --> Session routines successfully run
+DEBUG - 2015-12-13 17:52:11 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> Model Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> Model Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> Language Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> Config Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:52:11 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:52:11 --> Model Class Initialized
+DEBUG - 2015-12-13 17:52:11 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:52:11 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:52:11 --> Upload Class Initialized
+ERROR - 2015-12-13 17:52:11 --> Severity: Notice  --> Undefined variable: koorY C:\xampp\htdocs\unlock\appspj\appspj\modules\report\controllers\Report.php 401
+ERROR - 2015-12-13 17:52:11 --> Severity: Notice  --> Undefined variable: GetY C:\xampp\htdocs\unlock\appspj\appspj\modules\report\controllers\Report.php 559
+DEBUG - 2015-12-13 17:52:11 --> Final output sent to browser
+DEBUG - 2015-12-13 17:52:11 --> Total execution time: 0.1320
+ERROR - 2015-12-13 17:53:22 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:53:22 --> Config Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:53:22 --> URI Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> Router Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> Output Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> Security Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> Input Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:53:22 --> Language Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:53:22 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:53:22 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:53:22 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:53:22 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:53:22 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:53:22 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:53:22 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:53:22 --> Session Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:53:22 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:53:22 --> Session routines successfully run
+DEBUG - 2015-12-13 17:53:22 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> Language Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> Config Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> Master MX_Controller Initialized
+DEBUG - 2015-12-13 17:53:22 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:53:22 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:53:22 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:53:22 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:22 --> File loaded: appspj/views/header.php
+DEBUG - 2015-12-13 17:53:22 --> File loaded: appspj/views/main.php
+DEBUG - 2015-12-13 17:53:22 --> File loaded: appspj/modules/master/views/ViewMaster.php
+DEBUG - 2015-12-13 17:53:22 --> File loaded: appspj/views/footer.php
+DEBUG - 2015-12-13 17:53:22 --> Final output sent to browser
+DEBUG - 2015-12-13 17:53:22 --> Total execution time: 0.1720
+ERROR - 2015-12-13 17:53:29 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:53:29 --> Config Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:53:29 --> URI Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> Router Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> Output Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> Security Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> Input Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:53:29 --> Language Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:53:29 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:53:29 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:53:29 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:53:29 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:53:29 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:53:29 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:53:29 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:53:29 --> Session Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:53:29 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:53:29 --> Session routines successfully run
+DEBUG - 2015-12-13 17:53:29 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> Language Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> Config Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> Master MX_Controller Initialized
+DEBUG - 2015-12-13 17:53:29 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:53:29 --> Helper loaded: date_format_helper
+ERROR - 2015-12-13 17:53:29 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 300 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:53:29 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+ERROR - 2015-12-13 17:53:29 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 302 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:53:29 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+DEBUG - 2015-12-13 17:53:29 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:53:29 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:29 --> File loaded: appspj/views/header.php
+DEBUG - 2015-12-13 17:53:29 --> File loaded: appspj/views/main.php
+DEBUG - 2015-12-13 17:53:29 --> File loaded: appspj/modules/master/views/ViewMaster.php
+DEBUG - 2015-12-13 17:53:29 --> File loaded: appspj/views/footer.php
+DEBUG - 2015-12-13 17:53:29 --> Final output sent to browser
+DEBUG - 2015-12-13 17:53:29 --> Total execution time: 0.1910
+ERROR - 2015-12-13 17:53:31 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:53:31 --> Config Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:53:31 --> URI Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> Router Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> Output Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> Security Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> Input Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:53:31 --> Language Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:53:31 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:53:31 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:53:31 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:53:31 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:53:31 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:53:31 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:53:31 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:53:31 --> Session Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:53:31 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:53:31 --> Session routines successfully run
+DEBUG - 2015-12-13 17:53:31 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> Language Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> Config Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> Master MX_Controller Initialized
+DEBUG - 2015-12-13 17:53:31 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:53:31 --> Helper loaded: date_format_helper
+ERROR - 2015-12-13 17:53:31 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 300 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:53:31 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+ERROR - 2015-12-13 17:53:31 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 302 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:53:31 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+DEBUG - 2015-12-13 17:53:31 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:53:31 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:31 --> File loaded: appspj/views/header.php
+DEBUG - 2015-12-13 17:53:31 --> File loaded: appspj/views/main.php
+DEBUG - 2015-12-13 17:53:31 --> File loaded: appspj/modules/master/views/ViewMaster.php
+DEBUG - 2015-12-13 17:53:31 --> File loaded: appspj/views/footer.php
+DEBUG - 2015-12-13 17:53:31 --> Final output sent to browser
+DEBUG - 2015-12-13 17:53:31 --> Total execution time: 0.1200
+ERROR - 2015-12-13 17:53:51 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:53:51 --> Config Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:53:51 --> URI Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Router Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Output Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Security Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Input Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:53:51 --> Language Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:53:51 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:53:51 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:53:51 --> Session Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:53:51 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:53:51 --> Session routines successfully run
+DEBUG - 2015-12-13 17:53:51 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Language Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Config Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Master MX_Controller Initialized
+DEBUG - 2015-12-13 17:53:51 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: date_format_helper
+ERROR - 2015-12-13 17:53:51 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 300 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:53:51 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+ERROR - 2015-12-13 17:53:51 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 302 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:53:51 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+DEBUG - 2015-12-13 17:53:51 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Language file loaded: language/english/form_validation_lang.php
+ERROR - 2015-12-13 17:53:51 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:53:51 --> Config Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:53:51 --> URI Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Router Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Output Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Security Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Input Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:53:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:53:51 --> Language Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:53:51 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:53:51 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:53:51 --> Session Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:53:51 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:53:51 --> Session routines successfully run
+DEBUG - 2015-12-13 17:53:51 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Language Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Config Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Master MX_Controller Initialized
+DEBUG - 2015-12-13 17:53:51 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: date_format_helper
+ERROR - 2015-12-13 17:53:51 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 300 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:53:51 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+ERROR - 2015-12-13 17:53:51 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 302 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:53:51 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+DEBUG - 2015-12-13 17:53:51 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Language file loaded: language/english/form_validation_lang.php
+ERROR - 2015-12-13 17:53:51 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:53:51 --> Config Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:53:51 --> URI Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Router Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Output Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Security Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Input Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:53:51 --> Language Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:53:51 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:53:51 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:53:51 --> Session Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:53:51 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:53:51 --> Session routines successfully run
+DEBUG - 2015-12-13 17:53:51 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Language Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Config Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Master MX_Controller Initialized
+DEBUG - 2015-12-13 17:53:51 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: date_format_helper
+ERROR - 2015-12-13 17:53:51 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 300 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:53:51 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+ERROR - 2015-12-13 17:53:51 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 302 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:53:51 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+DEBUG - 2015-12-13 17:53:51 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> File loaded: appspj/views/header.php
+DEBUG - 2015-12-13 17:53:51 --> File loaded: appspj/views/main.php
+DEBUG - 2015-12-13 17:53:51 --> File loaded: appspj/modules/master/views/ViewMaster.php
+DEBUG - 2015-12-13 17:53:51 --> File loaded: appspj/views/footer.php
+DEBUG - 2015-12-13 17:53:51 --> Final output sent to browser
+DEBUG - 2015-12-13 17:53:51 --> Total execution time: 0.2060
+ERROR - 2015-12-13 17:53:51 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+ERROR - 2015-12-13 17:53:51 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:53:51 --> Config Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Config Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:53:51 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:53:51 --> URI Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> URI Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Router Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Router Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Output Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Output Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Security Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Security Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Input Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Input Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:53:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:53:51 --> Language Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Language Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:53:51 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:53:51 --> Database Driver Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:53:51 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+ERROR - 2015-12-13 17:53:51 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:53:51 --> Session Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Session Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:53:51 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:53:51 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:53:51 --> Session routines successfully run
+DEBUG - 2015-12-13 17:53:51 --> Session routines successfully run
+DEBUG - 2015-12-13 17:53:51 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Language Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Config Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Master MX_Controller Initialized
+DEBUG - 2015-12-13 17:53:51 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Language Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Config Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Master MX_Controller Initialized
+DEBUG - 2015-12-13 17:53:51 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:53:51 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: date_format_helper
+ERROR - 2015-12-13 17:53:51 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 300 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+DEBUG - 2015-12-13 17:53:51 --> Helper loaded: date_format_helper
+ERROR - 2015-12-13 17:53:51 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+ERROR - 2015-12-13 17:53:51 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 300 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:53:51 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 302 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:53:51 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+ERROR - 2015-12-13 17:53:51 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+ERROR - 2015-12-13 17:53:51 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 302 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:53:51 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+DEBUG - 2015-12-13 17:53:51 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:53:51 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:51 --> File loaded: appspj/views/header.php
+DEBUG - 2015-12-13 17:53:51 --> File loaded: appspj/views/header.php
+DEBUG - 2015-12-13 17:53:51 --> File loaded: appspj/views/main.php
+DEBUG - 2015-12-13 17:53:51 --> File loaded: appspj/views/main.php
+DEBUG - 2015-12-13 17:53:51 --> File loaded: appspj/modules/master/views/ViewMaster.php
+DEBUG - 2015-12-13 17:53:51 --> File loaded: appspj/modules/master/views/ViewMaster.php
+DEBUG - 2015-12-13 17:53:51 --> File loaded: appspj/views/footer.php
+DEBUG - 2015-12-13 17:53:51 --> File loaded: appspj/views/footer.php
+DEBUG - 2015-12-13 17:53:51 --> Final output sent to browser
+DEBUG - 2015-12-13 17:53:51 --> Total execution time: 0.2420
+DEBUG - 2015-12-13 17:53:51 --> Final output sent to browser
+DEBUG - 2015-12-13 17:53:51 --> Total execution time: 0.2420
+ERROR - 2015-12-13 17:53:54 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:53:54 --> Config Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:53:54 --> URI Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> Router Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> Output Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> Security Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> Input Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:53:54 --> Language Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:53:54 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:53:54 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:53:54 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:53:54 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:53:54 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:53:54 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:53:54 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:53:54 --> Session Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:53:54 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:53:54 --> Session routines successfully run
+DEBUG - 2015-12-13 17:53:54 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> Language Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> Config Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:53:54 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:53:54 --> Model Class Initialized
+DEBUG - 2015-12-13 17:53:54 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:53:54 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:53:54 --> Upload Class Initialized
+ERROR - 2015-12-13 17:53:54 --> Severity: Notice  --> Undefined variable: GetY C:\xampp\htdocs\unlock\appspj\appspj\modules\report\controllers\Report.php 2714
+DEBUG - 2015-12-13 17:53:54 --> Final output sent to browser
+DEBUG - 2015-12-13 17:53:54 --> Total execution time: 0.1150
+ERROR - 2015-12-13 17:54:21 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:54:21 --> Config Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:54:21 --> URI Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> Router Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> Output Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> Security Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> Input Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:54:21 --> Language Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:54:21 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:54:21 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:54:21 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:54:21 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:54:21 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:54:21 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:54:21 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:54:21 --> Session Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:54:21 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:54:21 --> Session routines successfully run
+DEBUG - 2015-12-13 17:54:21 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> Model Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> Model Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> Language Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> Config Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:54:21 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:54:21 --> Model Class Initialized
+DEBUG - 2015-12-13 17:54:21 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:54:21 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:54:21 --> Upload Class Initialized
+ERROR - 2015-12-13 17:54:21 --> Severity: Notice  --> Undefined variable: GetY C:\xampp\htdocs\unlock\appspj\appspj\modules\report\controllers\Report.php 2714
+DEBUG - 2015-12-13 17:54:21 --> Final output sent to browser
+DEBUG - 2015-12-13 17:54:21 --> Total execution time: 0.1290
+ERROR - 2015-12-13 17:55:18 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:55:18 --> Config Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:55:18 --> URI Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> Router Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> Output Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> Security Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> Input Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:55:18 --> Language Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:55:18 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:55:18 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:55:18 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:55:18 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:55:18 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:55:18 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:55:18 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:55:18 --> Session Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:55:18 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:55:18 --> Session routines successfully run
+DEBUG - 2015-12-13 17:55:18 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> Model Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> Model Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> Language Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> Config Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:55:18 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:55:18 --> Model Class Initialized
+DEBUG - 2015-12-13 17:55:18 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:55:18 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:55:18 --> Upload Class Initialized
+ERROR - 2015-12-13 17:55:18 --> Severity: Notice  --> Undefined variable: GetY C:\xampp\htdocs\unlock\appspj\appspj\modules\report\controllers\Report.php 2714
+DEBUG - 2015-12-13 17:55:18 --> Final output sent to browser
+DEBUG - 2015-12-13 17:55:18 --> Total execution time: 0.1280
+ERROR - 2015-12-13 17:57:25 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:57:25 --> Config Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:57:25 --> URI Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> Router Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> Output Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> Security Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> Input Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:57:25 --> Language Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:57:25 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:57:25 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:57:25 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:57:25 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:57:25 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:57:25 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:57:25 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:57:25 --> Session Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:57:25 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:57:25 --> Session routines successfully run
+DEBUG - 2015-12-13 17:57:25 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> Language Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> Config Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> Master MX_Controller Initialized
+DEBUG - 2015-12-13 17:57:25 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:57:25 --> Helper loaded: date_format_helper
+ERROR - 2015-12-13 17:57:25 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 300 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:57:25 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+ERROR - 2015-12-13 17:57:25 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 302 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:57:25 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+DEBUG - 2015-12-13 17:57:25 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:57:25 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:25 --> File loaded: appspj/views/header.php
+DEBUG - 2015-12-13 17:57:25 --> File loaded: appspj/views/main.php
+DEBUG - 2015-12-13 17:57:25 --> File loaded: appspj/modules/master/views/ViewMaster.php
+DEBUG - 2015-12-13 17:57:25 --> File loaded: appspj/views/footer.php
+DEBUG - 2015-12-13 17:57:25 --> Final output sent to browser
+DEBUG - 2015-12-13 17:57:25 --> Total execution time: 0.1840
+ERROR - 2015-12-13 17:57:29 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:57:29 --> Config Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:57:29 --> URI Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Router Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Output Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Security Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Input Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:57:29 --> Language Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:57:29 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:57:29 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:57:29 --> Session Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:57:29 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:57:29 --> Session routines successfully run
+DEBUG - 2015-12-13 17:57:29 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Language Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Config Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Master MX_Controller Initialized
+DEBUG - 2015-12-13 17:57:29 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: date_format_helper
+ERROR - 2015-12-13 17:57:29 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 300 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:57:29 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+ERROR - 2015-12-13 17:57:29 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 302 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:57:29 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+DEBUG - 2015-12-13 17:57:29 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:57:29 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Language file loaded: language/english/form_validation_lang.php
+ERROR - 2015-12-13 17:57:29 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:57:29 --> Config Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:57:29 --> URI Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Router Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Output Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Security Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Input Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> XSS Filtering completed
+DEBUG - 2015-12-13 17:57:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:57:29 --> Language Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:57:29 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:57:29 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:57:29 --> Session Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:57:29 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:57:29 --> Session routines successfully run
+DEBUG - 2015-12-13 17:57:29 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Language Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Config Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Master MX_Controller Initialized
+DEBUG - 2015-12-13 17:57:29 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: date_format_helper
+ERROR - 2015-12-13 17:57:29 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 300 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:57:29 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+ERROR - 2015-12-13 17:57:29 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 302 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:57:29 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+DEBUG - 2015-12-13 17:57:29 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:57:29 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Language file loaded: language/english/form_validation_lang.php
+ERROR - 2015-12-13 17:57:29 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:57:29 --> Config Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:57:29 --> URI Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Router Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Output Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Security Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Input Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:57:29 --> Language Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:57:29 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:57:29 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:57:29 --> Session Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:57:29 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:57:29 --> Session routines successfully run
+DEBUG - 2015-12-13 17:57:29 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Language Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Config Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Master MX_Controller Initialized
+DEBUG - 2015-12-13 17:57:29 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:57:29 --> Helper loaded: date_format_helper
+ERROR - 2015-12-13 17:57:29 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 300 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:57:29 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+ERROR - 2015-12-13 17:57:29 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 302 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:57:29 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+DEBUG - 2015-12-13 17:57:29 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:57:29 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> File loaded: appspj/views/header.php
+DEBUG - 2015-12-13 17:57:29 --> File loaded: appspj/views/main.php
+DEBUG - 2015-12-13 17:57:29 --> File loaded: appspj/modules/master/views/ViewMaster.php
+DEBUG - 2015-12-13 17:57:29 --> File loaded: appspj/views/footer.php
+DEBUG - 2015-12-13 17:57:29 --> Final output sent to browser
+DEBUG - 2015-12-13 17:57:29 --> Total execution time: 0.2210
+ERROR - 2015-12-13 17:57:29 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+ERROR - 2015-12-13 17:57:29 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:57:29 --> Config Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Config Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:57:29 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:57:29 --> URI Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> URI Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Router Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Router Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Output Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Output Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Security Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Security Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Input Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Input Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:57:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:57:29 --> Language Class Initialized
+DEBUG - 2015-12-13 17:57:29 --> Language Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:57:30 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:57:30 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:57:30 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:57:30 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:57:30 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:57:30 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:57:30 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:57:30 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:57:30 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:57:30 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:57:30 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:57:30 --> Database Driver Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:57:30 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+ERROR - 2015-12-13 17:57:30 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:57:30 --> Session Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Session Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:57:30 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:57:30 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:57:30 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:57:30 --> Session routines successfully run
+DEBUG - 2015-12-13 17:57:30 --> Session routines successfully run
+DEBUG - 2015-12-13 17:57:30 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Language Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Config Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Master MX_Controller Initialized
+DEBUG - 2015-12-13 17:57:30 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Language Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Config Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Master MX_Controller Initialized
+DEBUG - 2015-12-13 17:57:30 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:57:30 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:57:30 --> Helper loaded: date_format_helper
+ERROR - 2015-12-13 17:57:30 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 300 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:57:30 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+DEBUG - 2015-12-13 17:57:30 --> Helper loaded: date_format_helper
+ERROR - 2015-12-13 17:57:30 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 302 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:57:30 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 300 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+ERROR - 2015-12-13 17:57:30 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+ERROR - 2015-12-13 17:57:30 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+ERROR - 2015-12-13 17:57:30 --> Severity: Warning  --> Missing argument 2 for Grocery_CRUD::field_type(), called in C:\xampp\htdocs\unlock\appspj\appspj\modules\master\controllers\Master.php on line 302 and defined C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3494
+DEBUG - 2015-12-13 17:57:30 --> Config file loaded: appspj/config/grocery_crud.php
+ERROR - 2015-12-13 17:57:30 --> Severity: Notice  --> Undefined variable: type C:\xampp\htdocs\unlock\appspj\appspj\libraries\Grocery_CRUD.php 3496
+DEBUG - 2015-12-13 17:57:30 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:57:30 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:30 --> File loaded: appspj/views/header.php
+DEBUG - 2015-12-13 17:57:30 --> File loaded: appspj/views/header.php
+DEBUG - 2015-12-13 17:57:30 --> File loaded: appspj/views/main.php
+DEBUG - 2015-12-13 17:57:30 --> File loaded: appspj/views/main.php
+DEBUG - 2015-12-13 17:57:30 --> File loaded: appspj/modules/master/views/ViewMaster.php
+DEBUG - 2015-12-13 17:57:30 --> File loaded: appspj/modules/master/views/ViewMaster.php
+DEBUG - 2015-12-13 17:57:30 --> File loaded: appspj/views/footer.php
+DEBUG - 2015-12-13 17:57:30 --> File loaded: appspj/views/footer.php
+DEBUG - 2015-12-13 17:57:30 --> Final output sent to browser
+DEBUG - 2015-12-13 17:57:30 --> Total execution time: 0.2320
+DEBUG - 2015-12-13 17:57:30 --> Final output sent to browser
+DEBUG - 2015-12-13 17:57:30 --> Total execution time: 0.2300
+ERROR - 2015-12-13 17:57:31 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:57:31 --> Config Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:57:31 --> URI Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> Router Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> Output Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> Security Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> Input Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:57:31 --> Language Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:57:31 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:57:31 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:57:31 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:57:31 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:57:31 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:57:31 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:57:31 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:57:31 --> Session Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:57:31 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:57:31 --> Session routines successfully run
+DEBUG - 2015-12-13 17:57:31 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> Language Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> Config Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:57:31 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:57:31 --> Model Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:57:31 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:57:31 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:57:31 --> Final output sent to browser
+DEBUG - 2015-12-13 17:57:31 --> Total execution time: 0.1380
+ERROR - 2015-12-13 17:58:05 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:58:05 --> Config Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:58:05 --> URI Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> Router Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> Output Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> Security Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> Input Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:58:05 --> Language Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:58:05 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:58:05 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:58:05 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:58:05 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:58:05 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:58:05 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:58:05 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:58:05 --> Session Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:58:05 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:58:05 --> Session routines successfully run
+DEBUG - 2015-12-13 17:58:05 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> Model Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> Model Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> Language Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> Config Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:58:05 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:58:05 --> Model Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:58:05 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:58:05 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:58:05 --> Final output sent to browser
+DEBUG - 2015-12-13 17:58:05 --> Total execution time: 0.1140
+ERROR - 2015-12-13 17:59:47 --> Severity: Notice  --> Only variable references should be returned by reference C:\xampp\htdocs\unlock\appspj\system\core\Common.php 257
+DEBUG - 2015-12-13 17:59:47 --> Config Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> Hooks Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> Utf8 Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> UTF-8 Support Enabled
+DEBUG - 2015-12-13 17:59:47 --> URI Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> Router Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> Output Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> Security Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> Input Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-12-13 17:59:47 --> Language Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> Config file loaded: appspj/config/grocery_crud.php
+DEBUG - 2015-12-13 17:59:47 --> Helper loaded: url_helper
+DEBUG - 2015-12-13 17:59:47 --> Helper loaded: file_helper
+DEBUG - 2015-12-13 17:59:47 --> Helper loaded: security_helper
+DEBUG - 2015-12-13 17:59:47 --> Helper loaded: form_helper
+DEBUG - 2015-12-13 17:59:47 --> Helper loaded: download_helper
+DEBUG - 2015-12-13 17:59:47 --> Database Driver Class Initialized
+ERROR - 2015-12-13 17:59:47 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\unlock\appspj\system\database\drivers\mysql\mysql_driver.php 73
+DEBUG - 2015-12-13 17:59:47 --> Session Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> Helper loaded: string_helper
+DEBUG - 2015-12-13 17:59:47 --> A session cookie was not found.
+DEBUG - 2015-12-13 17:59:47 --> Session routines successfully run
+DEBUG - 2015-12-13 17:59:47 --> XML-RPC Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> Form Validation Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> Model Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> Model Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> Controller Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> Language Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> Config Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> Report MX_Controller Initialized
+DEBUG - 2015-12-13 17:59:47 --> Loader Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> File loaded: appspj/modules/report/models/modelreport.php
+DEBUG - 2015-12-13 17:59:47 --> Model Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> Helper loaded: date_format_helper
+DEBUG - 2015-12-13 17:59:47 --> File loaded: appspj/modules/master/models/modelmaster.php
+DEBUG - 2015-12-13 17:59:47 --> Upload Class Initialized
+DEBUG - 2015-12-13 17:59:47 --> Final output sent to browser
+DEBUG - 2015-12-13 17:59:47 --> Total execution time: 0.1240

@@ -250,7 +250,7 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(9.7,6.8);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(10.2,6.8);
-		$this->fpdf->MultiCell(9.3,0.5,'KEPALA BALAI BESAR PENGUJIAN PERANGKAT TELEKOMUNIKASI','');
+		$this->fpdf->MultiCell(9.3,0.5,'KEPALA BALAI BESAR PENGUJIAN PERANGKAT TELEKOMUNIKASI','','L');
 		
 		$this->fpdf->setXY(2.6,7.8);
 		$this->fpdf->MultiCell(0.6,0.5,'B.','');
@@ -299,17 +299,17 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(13,$y1);
 		$this->fpdf->MultiCell(2,0.5,$mak1);
 		$this->fpdf->setXY(15,$y1);
-		$this->fpdf->MultiCell(5.5,0.5,$mak1_ket);
+		$this->fpdf->MultiCell(5.5,0.5,$mak1_ket,'','L');
 		$y2 = $this->fpdf->GetY();
 		$this->fpdf->setXY(13,$y2);
 		$this->fpdf->MultiCell(2,0.5,$mak2);
 		$this->fpdf->setXY(15,$y2);
-		$this->fpdf->MultiCell(5.5,0.5,$mak2_ket);
+		$this->fpdf->MultiCell(5.5,0.5,$mak2_ket,'','L');
 		$y3 = $this->fpdf->GetY();
 		$this->fpdf->setXY(13,$y3);
 		$this->fpdf->MultiCell(2,0.5,$mak3);
 		$this->fpdf->setXY(15,$y3);
-		$this->fpdf->MultiCell(5.5,0.5,$mak3_ket);		
+		$this->fpdf->MultiCell(5.5,0.5,$mak3_ket,'','L');		
 		
 		//for Single Staff
 		$y3 = $this->fpdf->GetY();
@@ -344,7 +344,7 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(12.7,$y6);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(13,$y6);
-		$this->fpdf->MultiCell(7.5,0.5,$tentangNotaDinas);
+		$this->fpdf->MultiCell(7.5,0.5,$tentangNotaDinas,'','L');
 		$this->fpdf->Ln();
 		
 		/**
@@ -476,7 +476,7 @@ class Report extends MX_Controller{
 			$this->fpdf->Text(3.25,$koorY,'3. Untuk');
 			$this->fpdf->Text(8,$koorY,':');
 			$this->fpdf->SetXY(8.2,$koorY-0.35);
-			$this->fpdf->MultiCell(11.3,0.5,$this->mr->getMaksud().'.','');
+			$this->fpdf->MultiCell(11.3,0.5,$this->mr->getMaksud().'.','','L');
 			$rt = 0.6;
 			
 			if (empty($tiket1)){
@@ -750,7 +750,7 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(9.7,6.8);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(10.2,6.8);
-		$this->fpdf->MultiCell(9.3,0.5,'KEPALA BALAI BESAR PENGUJIAN PERANGKAT TELEKOMUNIKASI','');
+		$this->fpdf->MultiCell(9.3,0.5,'KEPALA BALAI BESAR PENGUJIAN PERANGKAT TELEKOMUNIKASI','','L');
 		
 		$this->fpdf->setXY(2.6,7.8);
 		$this->fpdf->MultiCell(0.6,0.5,'B.','');
@@ -799,17 +799,17 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(13,$y1);
 		$this->fpdf->MultiCell(2,0.5,$mak1);
 		$this->fpdf->setXY(15,$y1);
-		$this->fpdf->MultiCell(5.5,0.5,$mak1_ket);
+		$this->fpdf->MultiCell(4.6,0.5,$mak1_ket,'','L');
 		$y2 = $this->fpdf->GetY();
 		$this->fpdf->setXY(13,$y2);
 		$this->fpdf->MultiCell(2,0.5,$mak2);
 		$this->fpdf->setXY(15,$y2);
-		$this->fpdf->MultiCell(5.5,0.5,$mak2_ket);
+		$this->fpdf->MultiCell(4.6,0.5,$mak2_ket,'','L');
 		$y3 = $this->fpdf->GetY();
 		$this->fpdf->setXY(13,$y3);
 		$this->fpdf->MultiCell(2,0.5,$mak3);
 		$this->fpdf->setXY(15,$y3);
-		$this->fpdf->MultiCell(5.5,0.5,$mak3_ket);	
+		$this->fpdf->MultiCell(4.6,0.5,$mak3_ket,'','L');	
 		
 		//for Multi Staff
 		$y3 = $this->fpdf->GetY();
@@ -844,7 +844,7 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(12.7,$y6);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(13,$y6);
-		$this->fpdf->MultiCell(7.5,0.5,$tentangNotaDinas);
+		$this->fpdf->MultiCell(7.5,0.5,$tentangNotaDinas,'','L');
 		$this->fpdf->Ln();
 		
 		/**
@@ -1007,7 +1007,7 @@ class Report extends MX_Controller{
 			$this->fpdf->SetXY(7.9,$koorY);
 			$this->fpdf->Cell(1,0.5,':');			
 			$this->fpdf->SetXY(8.2,$koorY);
-			$this->fpdf->MultiCell(10.5,0.5,$this->mr->getMaksud(),'');
+			$this->fpdf->MultiCell(10.5,0.5,$this->mr->getMaksud(),'','L');
 			$GetY= $this->fpdf->GetY(); //
 			
 			$rr = 0.5;
@@ -2404,7 +2404,7 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(9.7,6.8);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(10.2,6.8);
-		$this->fpdf->MultiCell(9.3,0.5,'KEPALA BALAI BESAR PENGUJIAN PERANGKAT TELEKOMUNIKASI','');
+		$this->fpdf->MultiCell(9.3,0.5,'KEPALA BALAI BESAR PENGUJIAN PERANGKAT TELEKOMUNIKASI','','L');
 		
 		$this->fpdf->setXY(2.6,7.8);
 		$this->fpdf->MultiCell(0.6,0.5,'B.','');
@@ -2453,17 +2453,17 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(13,$y1);
 		$this->fpdf->MultiCell(2,0.5,$mak1);
 		$this->fpdf->setXY(15,$y1);
-		$this->fpdf->MultiCell(5.5,0.5,$mak1_ket);
+		$this->fpdf->MultiCell(5.5,0.5,$mak1_ket,'','L');
 		$y2 = $this->fpdf->GetY();
 		$this->fpdf->setXY(13,$y2);
 		$this->fpdf->MultiCell(2,0.5,$mak2);
 		$this->fpdf->setXY(15,$y2);
-		$this->fpdf->MultiCell(5.5,0.5,$mak2_ket);
+		$this->fpdf->MultiCell(5.5,0.5,$mak2_ket,'','L');
 		$y3 = $this->fpdf->GetY();
 		$this->fpdf->setXY(13,$y3);
 		$this->fpdf->MultiCell(2,0.5,$mak3);
 		$this->fpdf->setXY(15,$y3);
-		$this->fpdf->MultiCell(5.5,0.5,$mak3_ket);	
+		$this->fpdf->MultiCell(5.5,0.5,$mak3_ket,'','L');	
 		
 		//for Single Staff
 		$y3 = $this->fpdf->GetY();
@@ -2498,7 +2498,7 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(12.7,$y6);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(13,$y6);
-		$this->fpdf->MultiCell(7.5,0.5,$tentangNotaDinas);
+		$this->fpdf->MultiCell(7.5,0.5,$tentangNotaDinas,'','L');
 		$this->fpdf->Ln();
 		
 		/**
@@ -2632,7 +2632,7 @@ class Report extends MX_Controller{
 			$this->fpdf->Text(3.25,$koorY,'3. Untuk');
 			$this->fpdf->Text(8,$koorY,':');
 			$this->fpdf->SetXY(8.2,$koorY-0.35);
-			$this->fpdf->MultiCell(11.3,0.5,$this->mr->getMaksud().'.','');
+			$this->fpdf->MultiCell(11.3,0.5,$this->mr->getMaksud().'.','','L');
 			$rt = 0.6;
 			
 			if (empty($tiket1)){
@@ -2903,10 +2903,10 @@ class Report extends MX_Controller{
 		$this->fpdf->MultiCell(0.6,0.5,'A.','');
 		$this->fpdf->setXY(3.3,6.8);
 		$this->fpdf->MultiCell(6.5,0.5,'Pejabat Pemberi Tugas','');
-		$this->fpdf->setXY(8.5,6.8);
+		$this->fpdf->setXY(9.7,6.8);
 		$this->fpdf->MultiCell(0.5,0.5,':');
-		$this->fpdf->setXY(9.2,6.8);
-		$this->fpdf->MultiCell(9.3,0.5,'KEPALA BALAI BESAR PENGUJIAN PERANGKAT TELEKOMUNIKASI','');
+		$this->fpdf->setXY(10.2,6.8);
+		$this->fpdf->MultiCell(9.3,0.5,'KEPALA BALAI BESAR PENGUJIAN PERANGKAT TELEKOMUNIKASI','','L');
 		
 		$this->fpdf->setXY(2.6,7.8);
 		$this->fpdf->MultiCell(0.6,0.5,'B.','');
@@ -2955,17 +2955,17 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(13,$y1);
 		$this->fpdf->MultiCell(2,0.5,$mak1);
 		$this->fpdf->setXY(15,$y1);
-		$this->fpdf->MultiCell(5.5,0.5,$mak1_ket);
+		$this->fpdf->MultiCell(5.5,0.5,$mak1_ket,'','L');
 		$y2 = $this->fpdf->GetY();
 		$this->fpdf->setXY(13,$y2);
 		$this->fpdf->MultiCell(2,0.5,$mak2);
 		$this->fpdf->setXY(15,$y2);
-		$this->fpdf->MultiCell(5.5,0.5,$mak2_ket);
+		$this->fpdf->MultiCell(5.5,0.5,$mak2_ket,'','L');
 		$y3 = $this->fpdf->GetY();
 		$this->fpdf->setXY(13,$y3);
 		$this->fpdf->MultiCell(2,0.5,$mak3);
 		$this->fpdf->setXY(15,$y3);
-		$this->fpdf->MultiCell(5.5,0.5,$mak3_ket);	
+		$this->fpdf->MultiCell(5.5,0.5,$mak3_ket,'','L');	
 		
 		//for Multi Staff
 		$y3 = $this->fpdf->GetY();
@@ -3000,7 +3000,7 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(12.7,$y6);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(13,$y6);
-		$this->fpdf->MultiCell(7.5,0.5,$tentangNotaDinas);
+		$this->fpdf->MultiCell(7.5,0.5,$tentangNotaDinas,'','L');
 		$this->fpdf->Ln();
 		
 		/**
@@ -3163,7 +3163,7 @@ class Report extends MX_Controller{
 			$this->fpdf->SetXY(7.9,$koorY);
 			$this->fpdf->Cell(1,0.5,':');			
 			$this->fpdf->SetXY(8.2,$koorY);
-			$this->fpdf->MultiCell(10.5,0.5,$this->mr->getMaksud(),'');
+			$this->fpdf->MultiCell(10.5,0.5,$this->mr->getMaksud(),'','L');
 			$GetY= $this->fpdf->GetY(); //
 			
 			$rr = 0.5;
