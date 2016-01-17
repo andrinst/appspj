@@ -1,6 +1,5 @@
 <div id="header-container">
 	</br>
-	<?php	//print_r($userdata);	?>
 	<ul id="sidebar">
 			<li><a href="<?php	echo base_url();?>master/pangkat">Pangkat</a></li>
 			<li><a href="<?php	echo base_url();?>master/staff">Staff</a></li>			
@@ -26,8 +25,6 @@
 <div id="container">
 	<div id="content-area">	
 		<?php echo $output; ?>
-		<?php /*	$user_data = $this->session->userdata('username');
-				echo $user_data;*/
-		?>
+		
 	</div>
 </div>

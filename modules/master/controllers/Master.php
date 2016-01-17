@@ -5,12 +5,15 @@
  * @author Guntar 4/09/2013
  */
 class Master extends MX_Controller {
+	
 	function __construct() {
 		parent::__construct();		
-		$this -> load -> library('grocery_CRUD');		
+		$this -> load -> library('grocery_CRUD');	
+		$this -> load -> library('session');			
 		$this -> load -> model('ModelMaster','mm',TRUE);
 		$this -> load -> helper('date_format_helper');
 		$this -> output -> enable_profiler(FALSE);
+		
 	}
 	public function _master_output($output = NULL, $judul = NULL) {
 		$data = array('title' => 'BBPPT | Master', 
@@ -22,22 +25,53 @@ class Master extends MX_Controller {
 		$this -> load -> view('footer', $data);
 	}
 	function index() {
-		/*if($this->session->userdata('logged_in') == ''){ redirect('home',TRUE); }
-		$this -> _master_output((object) array('output' => '', 'js_files' => array(), 'css_files' => array()));*/
-		$this -> staff();
+		$sess = $this->session->userdata('logged_in');
+		if($sess == FALSE){
+			redirect('Home',TRUE); 
+		}else{
+			$this -> staff();
+		}
+		
+		
+		
 	}
-	function pangkat() {
+	function pangkat() {	
 		try {
 			$crud = new grocery_CRUD();			
-			$crud -> set_theme('datatables')//twitter-bootstrap
-				  -> set_table('pangkat')
-				  -> set_subject('Pangkat')				 				  
-				  -> required_fields('pangkat')
-				  -> columns('golongan', 'pangkat')
-				  -> unset_export()
-				  -> unset_print()
-				  -> unset_delete()
-				  -> unset_add();			
+			$role = $this->session->userdata['role'];
+			switch($role){
+				case "Administrator":
+					$crud -> set_theme('datatables')//twitter-bootstrap
+					  -> set_table('pangkat')
+					  -> set_subject('Pangkat')				 				  
+					  -> required_fields('pangkat')
+					  -> columns('golongan', 'pangkat')
+					  -> unset_export()
+					  -> unset_print();
+					break;
+				case "Direktur":
+					$crud -> set_theme('datatables')//twitter-bootstrap
+					  -> set_table('pangkat')
+					  -> set_subject('Pangkat')				 				  
+					  -> required_fields('pangkat')
+					  -> columns('golongan', 'pangkat')
+					  -> unset_export()
+					  -> unset_print()
+					  -> unset_delete();
+					break;
+				case "User":
+					$crud -> set_theme('datatables')//twitter-bootstrap
+					  -> set_table('pangkat')
+					  -> set_subject('Pangkat')				 				  
+					  -> required_fields('pangkat')
+					  -> columns('golongan', 'pangkat')
+					  -> unset_export()
+					  -> unset_print()
+					  -> unset_delete()
+					  -> unset_edit()
+					  -> unset_add();
+					break;
+			}			
 			$judul = "List Pangkat";
 			$output = $crud -> render();
 			$this->_master_output($output,$judul);
@@ -48,16 +82,47 @@ class Master extends MX_Controller {
 	function kota() {
 		try {
 			$crud = new grocery_CRUD();
-			$crud -> set_theme('datatables')
-				  -> set_relation('provinsi', 'provinsi', '{nama_provinsi}')
-				  -> set_table('kota')
-				  -> order_by('id')
-				  -> set_subject('Kota')
-				  -> required_fields('id')
-				  -> columns('id', 'kota', 'provinsi')
-				  -> display_as('id', 'ID')				  
-				  -> unset_print()
-				  -> unset_delete();
+			$role = $this->session->userdata['role'];
+			switch($role){
+				case "Administrator":
+					$crud -> set_theme('datatables')
+						  -> set_relation('provinsi', 'provinsi', '{nama_provinsi}')
+						  -> set_table('kota')
+						  -> order_by('id')
+						  -> set_subject('Kota')
+						  -> required_fields('id')
+						  -> columns('id', 'kota', 'provinsi')
+						  -> display_as('id', 'ID')				  
+						  -> unset_print();
+					break;
+				case "Direktur":
+					$crud -> set_theme('datatables')
+						  -> set_relation('provinsi', 'provinsi', '{nama_provinsi}')
+						  -> set_table('kota')
+						  -> order_by('id')
+						  -> set_subject('Kota')
+						  -> required_fields('id')
+						  -> columns('id', 'kota', 'provinsi')
+						  -> display_as('id', 'ID')				  
+						  -> unset_print()
+						  -> unset_delete();
+					break;
+				case "User":
+					$crud -> set_theme('datatables')
+						  -> set_relation('provinsi', 'provinsi', '{nama_provinsi}')
+						  -> set_table('kota')
+						  -> order_by('id')
+						  -> set_subject('Kota')
+						  -> required_fields('id')
+						  -> columns('id', 'kota', 'provinsi')
+						  -> display_as('id', 'ID')				  
+						  -> unset_print()
+						  -> unset_delete()
+						  -> unset_edit()
+						  -> unset_add();
+					break;
+			}		
+			
 			$output = $crud -> render();
 			$judul = "List Kota ";
 			$this->_master_output($output,$judul);
@@ -68,16 +133,47 @@ class Master extends MX_Controller {
 	function provinsi() {
 		try {
 			$crud = new grocery_CRUD();
-			$crud -> set_theme('datatables')
-				  -> set_table('provinsi')
-				  -> order_by('nama_provinsi','DESC')				  
-				  -> set_subject('Provinsi')
-				  -> required_fields('id')
-				  -> required_fields('nama_provinsi')
-				  -> columns('nama_provinsi')				  
-				  -> display_as('nama_provinsi', 'Nama Provinsi')
-				  -> unset_print()
-				  -> unset_delete();
+			$role = $this->session->userdata['role'];
+			switch($role){
+				case "Administrator":
+					$crud -> set_theme('datatables')
+						  -> set_table('provinsi')
+						  -> order_by('nama_provinsi','DESC')				  
+						  -> set_subject('Provinsi')
+						  -> required_fields('id')
+						  -> required_fields('nama_provinsi')
+						  -> columns('nama_provinsi')				  
+						  -> display_as('nama_provinsi', 'Nama Provinsi')
+						  -> unset_print();
+					break;
+				case "Direktur":
+					$crud -> set_theme('datatables')
+						  -> set_table('provinsi')
+						  -> order_by('nama_provinsi','DESC')				  
+						  -> set_subject('Provinsi')
+						  -> required_fields('id')
+						  -> required_fields('nama_provinsi')
+						  -> columns('nama_provinsi')				  
+						  -> display_as('nama_provinsi', 'Nama Provinsi')
+						  -> unset_print()
+						  -> unset_delete();
+					break;
+				case "User":
+					$crud -> set_theme('datatables')
+						  -> set_table('provinsi')
+						  -> order_by('nama_provinsi','DESC')				  
+						  -> set_subject('Provinsi')
+						  -> required_fields('id')
+						  -> required_fields('nama_provinsi')
+						  -> columns('nama_provinsi')				  
+						  -> display_as('nama_provinsi', 'Nama Provinsi')
+						  -> unset_print()
+						  -> unset_delete()
+						  -> unset_edit()
+						  -> unset_add();
+					break;
+			}
+			
 			$output = $crud -> render();
 			$judul = "List Provinsi";
 			$this -> _master_output($output);
@@ -88,22 +184,65 @@ class Master extends MX_Controller {
 	function sbuPenginapan() {
 		try {
 			$crud = new grocery_CRUD();
-			$crud -> set_theme('datatables')
-				  -> set_relation('provinsi', 'provinsi', '{nama_provinsi}')
-				  -> set_table('sbu_penginapan')
-				  -> set_subject('SBU Penginapan')
-				  -> columns('provinsi', 'suite', 'star4', 'star3', 'star2', 'star1')
-				  -> display_as('star4', 'Star 4')
-				  -> display_as('star3', 'Star 3')
-				  -> display_as('star2', 'Star 2')
-				  -> display_as('star1', 'Star 1')
-				  -> callback_column('suite', array($this, 'valueToRupiah'))				  
-				  -> callback_column('star4', array($this, 'valueToRupiah'))
-				  -> callback_column('star3', array($this, 'valueToRupiah'))
-				  -> callback_column('star2', array($this, 'valueToRupiah'))
-				  -> callback_column('star1', array($this, 'valueToRupiah'))
-				  -> unset_print()
-				  -> unset_delete();
+			$role = $this->session->userdata['role'];
+			switch($role){
+				case "Administrator":
+					$crud -> set_theme('datatables')
+						  -> set_relation('provinsi', 'provinsi', '{nama_provinsi}')
+						  -> set_table('sbu_penginapan')
+						  -> set_subject('SBU Penginapan')
+						  -> columns('provinsi', 'suite', 'star4', 'star3', 'star2', 'star1')
+						  -> display_as('star4', 'Star 4')
+						  -> display_as('star3', 'Star 3')
+						  -> display_as('star2', 'Star 2')
+						  -> display_as('star1', 'Star 1')
+						  -> callback_column('suite', array($this, 'valueToRupiah'))				  
+						  -> callback_column('star4', array($this, 'valueToRupiah'))
+						  -> callback_column('star3', array($this, 'valueToRupiah'))
+						  -> callback_column('star2', array($this, 'valueToRupiah'))
+						  -> callback_column('star1', array($this, 'valueToRupiah'))
+						  -> unset_print();
+					break;
+				case "Direktur":
+					$crud -> set_theme('datatables')
+						  -> set_relation('provinsi', 'provinsi', '{nama_provinsi}')
+						  -> set_table('sbu_penginapan')
+						  -> set_subject('SBU Penginapan')
+						  -> columns('provinsi', 'suite', 'star4', 'star3', 'star2', 'star1')
+						  -> display_as('star4', 'Star 4')
+						  -> display_as('star3', 'Star 3')
+						  -> display_as('star2', 'Star 2')
+						  -> display_as('star1', 'Star 1')
+						  -> callback_column('suite', array($this, 'valueToRupiah'))				  
+						  -> callback_column('star4', array($this, 'valueToRupiah'))
+						  -> callback_column('star3', array($this, 'valueToRupiah'))
+						  -> callback_column('star2', array($this, 'valueToRupiah'))
+						  -> callback_column('star1', array($this, 'valueToRupiah'))
+						  -> unset_print()
+						  -> unset_delete();
+					break;	
+				case "User":
+					$crud -> set_theme('datatables')
+						  -> set_relation('provinsi', 'provinsi', '{nama_provinsi}')
+						  -> set_table('sbu_penginapan')
+						  -> set_subject('SBU Penginapan')
+						  -> columns('provinsi', 'suite', 'star4', 'star3', 'star2', 'star1')
+						  -> display_as('star4', 'Star 4')
+						  -> display_as('star3', 'Star 3')
+						  -> display_as('star2', 'Star 2')
+						  -> display_as('star1', 'Star 1')
+						  -> callback_column('suite', array($this, 'valueToRupiah'))				  
+						  -> callback_column('star4', array($this, 'valueToRupiah'))
+						  -> callback_column('star3', array($this, 'valueToRupiah'))
+						  -> callback_column('star2', array($this, 'valueToRupiah'))
+						  -> callback_column('star1', array($this, 'valueToRupiah'))
+						  -> unset_print()
+						  -> unset_delete()
+						  -> unset_edit()
+						  -> unset_add();
+					break;
+			}
+			
 			$output = $crud -> render();
 			$judul = "List SBU Penginapan";
 			$this->_master_output($output,$judul);
@@ -114,15 +253,44 @@ class Master extends MX_Controller {
 	function sbuTaxi() {
 		try {
 			$crud = new grocery_CRUD();
-			$crud -> set_theme('datatables')
-				  -> set_table('sbu_taxi')
-				  -> set_relation('provinsi', 'provinsi', '{nama_provinsi}')
-				  -> set_subject('SBU Taxi')
-				  -> columns('provinsi', 'taxi')
-				  -> display_as('provinsi', 'Provinsi')
-				  -> callback_column('taxi', array($this, 'valueToRupiah'))
-				  -> unset_print()
-				  -> unset_delete();
+			$role = $this->session->userdata['role'];
+			switch($role){
+				case "Administrator":
+					$crud -> set_theme('datatables')
+						  -> set_table('sbu_taxi')
+						  -> set_relation('provinsi', 'provinsi', '{nama_provinsi}')
+						  -> set_subject('SBU Taxi')
+						  -> columns('provinsi', 'taxi')
+						  -> display_as('provinsi', 'Provinsi')
+						  -> callback_column('taxi', array($this, 'valueToRupiah'))
+						  -> unset_print();
+					break;
+				case "Direktur":
+					$crud -> set_theme('datatables')
+						  -> set_table('sbu_taxi')
+						  -> set_relation('provinsi', 'provinsi', '{nama_provinsi}')
+						  -> set_subject('SBU Taxi')
+						  -> columns('provinsi', 'taxi')
+						  -> display_as('provinsi', 'Provinsi')
+						  -> callback_column('taxi', array($this, 'valueToRupiah'))
+						  -> unset_print()
+						  -> unset_delete();
+					break;
+				case "User":
+					$crud -> set_theme('datatables')
+						  -> set_table('sbu_taxi')
+						  -> set_relation('provinsi', 'provinsi', '{nama_provinsi}')
+						  -> set_subject('SBU Taxi')
+						  -> columns('provinsi', 'taxi')
+						  -> display_as('provinsi', 'Provinsi')
+						  -> callback_column('taxi', array($this, 'valueToRupiah'))
+						  -> unset_print()
+						  -> unset_delete()
+						  -> unset_edit()
+						  -> unset_add();
+					break;	
+			}
+			
 			$output = $crud -> render();
 			$judul = "List SBU Taxi";
 			$this->_master_output($output,$judul);
@@ -133,20 +301,59 @@ class Master extends MX_Controller {
 	function sbuPesawat() {
 		try {
 			$crud = new grocery_CRUD();
-			$crud -> set_theme('datatables')
-				  -> set_relation('asal', 'kota', '{kota}')
-				  -> set_relation('tujuan', 'kota', '{kota}')
-				  -> set_table('sbu_pesawat')
-				  -> set_subject('SBU Pesawat')
-				  -> columns('asal', 'tujuan', 'bisnis', 'ekonomi')
-				  -> display_as('asal', 'Departure City')
-				  -> display_as('tujuan', 'Destination City')
-				  -> display_as('ekonomi', 'Economy Class')
-				  -> display_as('bisnis', 'Bussiness Class')
-				  -> callback_column('bisnis', array($this, 'valueToRupiah'))
-				  -> callback_column('ekonomi', array($this, 'valueToRupiah'))
-				  -> unset_print()
-				  -> unset_delete();
+			$role = $this->session->userdata['role'];
+			switch($role){
+				case "Administrator":
+					$crud -> set_theme('datatables')
+						  -> set_relation('asal', 'kota', '{kota}')
+						  -> set_relation('tujuan', 'kota', '{kota}')
+						  -> set_table('sbu_pesawat')
+						  -> set_subject('SBU Pesawat')
+						  -> columns('asal', 'tujuan', 'bisnis', 'ekonomi')
+						  -> display_as('asal', 'Departure City')
+						  -> display_as('tujuan', 'Destination City')
+						  -> display_as('ekonomi', 'Economy Class')
+						  -> display_as('bisnis', 'Bussiness Class')
+						  -> callback_column('bisnis', array($this, 'valueToRupiah'))
+						  -> callback_column('ekonomi', array($this, 'valueToRupiah'))
+						  -> unset_print();
+					break;
+				case "Direktur":
+					$crud -> set_theme('datatables')
+						  -> set_relation('asal', 'kota', '{kota}')
+						  -> set_relation('tujuan', 'kota', '{kota}')
+						  -> set_table('sbu_pesawat')
+						  -> set_subject('SBU Pesawat')
+						  -> columns('asal', 'tujuan', 'bisnis', 'ekonomi')
+						  -> display_as('asal', 'Departure City')
+						  -> display_as('tujuan', 'Destination City')
+						  -> display_as('ekonomi', 'Economy Class')
+						  -> display_as('bisnis', 'Bussiness Class')
+						  -> callback_column('bisnis', array($this, 'valueToRupiah'))
+						  -> callback_column('ekonomi', array($this, 'valueToRupiah'))
+						  -> unset_print()
+						  -> unset_delete();
+					break;
+				case "User":
+					$crud -> set_theme('datatables')
+						  -> set_relation('asal', 'kota', '{kota}')
+						  -> set_relation('tujuan', 'kota', '{kota}')
+						  -> set_table('sbu_pesawat')
+						  -> set_subject('SBU Pesawat')
+						  -> columns('asal', 'tujuan', 'bisnis', 'ekonomi')
+						  -> display_as('asal', 'Departure City')
+						  -> display_as('tujuan', 'Destination City')
+						  -> display_as('ekonomi', 'Economy Class')
+						  -> display_as('bisnis', 'Bussiness Class')
+						  -> callback_column('bisnis', array($this, 'valueToRupiah'))
+						  -> callback_column('ekonomi', array($this, 'valueToRupiah'))
+						  -> unset_print()
+						  -> unset_delete()
+						  -> unset_edit()
+						  -> unset_add();
+					break;	
+			}
+			
 			$output = $crud -> render();
 			$judul = "List SBU Pesawat";
 			$this->_master_output($output,$judul);
@@ -157,20 +364,59 @@ class Master extends MX_Controller {
 	function staff() {
 		try {
 			$crud = new grocery_CRUD();
-			$crud -> set_theme('datatables')
-				  -> set_table('staff')
-				  -> set_subject('Staff SDPPI')
-				  -> set_relation('id_subdit','subdit','{subdit}')
-				  //-> set_relation('id_eselon','eselon','{eselon}')
-				  -> set_relation('golongan','pangkat','{golongan}')
-				  -> columns('nama', 'golongan', 'nip', 'jabatan','id_subdit')
-				  -> field_type('id_eselon','hidden')
-				  -> display_as('nip', 'NIP')
-				  -> display_as('nama', 'Nama Pegawai')
-				  -> display_as('id_subdit', 'Sub Direktorat')
-				  -> unset_export()
-				  -> unset_print()
-				  -> unset_delete();
+			$role = $this->session->userdata['role'];
+			switch($role){
+				case "Administrator":
+					$crud -> set_theme('datatables')
+						  -> set_table('staff')
+						  -> set_subject('Staff SDPPI')
+						  -> set_relation('id_subdit','subdit','{subdit}')
+						  //-> set_relation('id_eselon','eselon','{eselon}')
+						  -> set_relation('golongan','pangkat','{golongan}')
+						  -> columns('nama', 'golongan', 'nip', 'jabatan','id_subdit')
+						  -> field_type('id_eselon','hidden')
+						  -> display_as('nip', 'NIP')
+						  -> display_as('nama', 'Nama Pegawai')
+						  -> display_as('id_subdit', 'Sub Direktorat')
+						  -> unset_export()
+						  -> unset_print();
+					break;
+				case "Direktur":
+					$crud -> set_theme('datatables')
+							  -> set_table('staff')
+							  -> set_subject('Staff SDPPI')
+							  -> set_relation('id_subdit','subdit','{subdit}')
+							  //-> set_relation('id_eselon','eselon','{eselon}')
+							  -> set_relation('golongan','pangkat','{golongan}')
+							  -> columns('nama', 'golongan', 'nip', 'jabatan','id_subdit')
+							  -> field_type('id_eselon','hidden')
+							  -> display_as('nip', 'NIP')
+							  -> display_as('nama', 'Nama Pegawai')
+							  -> display_as('id_subdit', 'Sub Direktorat')
+							  -> unset_export()
+							  -> unset_print()
+							  -> unset_delete();
+					break;
+				case "User":
+					$crud -> set_theme('datatables')
+							  -> set_table('staff')
+							  -> set_subject('Staff SDPPI')
+							  -> set_relation('id_subdit','subdit','{subdit}')
+							  //-> set_relation('id_eselon','eselon','{eselon}')
+							  -> set_relation('golongan','pangkat','{golongan}')
+							  -> columns('nama', 'golongan', 'nip', 'jabatan','id_subdit')
+							  -> field_type('id_eselon','hidden')
+							  -> display_as('nip', 'NIP')
+							  -> display_as('nama', 'Nama Pegawai')
+							  -> display_as('id_subdit', 'Sub Direktorat')
+							  -> unset_export()
+							  -> unset_print()
+							  -> unset_delete()
+							  -> unset_edit()
+							  -> unset_add();
+					break;
+			}
+			
 			$judul = 'Staff Management';			
 			$output = $crud -> render();
 			$this -> _master_output($output, $judul);
@@ -181,22 +427,65 @@ class Master extends MX_Controller {
 	function sbuUangSaku() {
 		try {
 			$crud = new grocery_CRUD();
-			$crud -> set_theme('datatables')
-				  -> set_relation('provinsi', 'provinsi', '{nama_provinsi}')
-				  -> set_table('sbu_uang_saku')
-				  -> set_subject('SBU Uang Saku')
-				  -> columns('provinsi', 'fullboard_luar', 'fullboard_dalam', 'fullday_dalam', 'uang_saku_murni')		
-				  -> callback_column('fullboard_luar', array($this, 'valueToRupiah'))
-				  -> callback_column('fullboard_dalam', array($this, 'valueToRupiah'))
-				  -> callback_column('fullday_dalam', array($this, 'valueToRupiah'))
-				  -> callback_column('uang_saku_murni', array($this, 'valueToRupiah'))				  
-				  -> display_as('fullboard_luar', 'Fullboard Luar')				  
-				  -> display_as('fullboard_dalam', 'Fullboard Dalam')				  
-				  -> display_as('fullday_dalam', 'Fullday Dalam')
-				  -> display_as('uang_saku_murni', 'Uang Saku Murni')				  
-				  -> unset_print()
-				  -> unset_delete()				  
-				  -> unset_read();				  
+			$role = $this->session->userdata['role'];
+			switch($role){
+				case "Administrator":
+					$crud -> set_theme('datatables')
+					  -> set_relation('provinsi', 'provinsi', '{nama_provinsi}')
+					  -> set_table('sbu_uang_saku')
+					  -> set_subject('SBU Uang Saku')
+					  -> columns('provinsi', 'fullboard_luar', 'fullboard_dalam', 'fullday_dalam', 'uang_saku_murni')		
+					  -> callback_column('fullboard_luar', array($this, 'valueToRupiah'))
+					  -> callback_column('fullboard_dalam', array($this, 'valueToRupiah'))
+					  -> callback_column('fullday_dalam', array($this, 'valueToRupiah'))
+					  -> callback_column('uang_saku_murni', array($this, 'valueToRupiah'))				  
+					  -> display_as('fullboard_luar', 'Fullboard Luar')				  
+					  -> display_as('fullboard_dalam', 'Fullboard Dalam')				  
+					  -> display_as('fullday_dalam', 'Fullday Dalam')
+					  -> display_as('uang_saku_murni', 'Uang Saku Murni')				  
+					  -> unset_print()				  
+					  -> unset_read();	
+					break;
+				case "Direktur":
+					$crud -> set_theme('datatables')
+					  -> set_relation('provinsi', 'provinsi', '{nama_provinsi}')
+					  -> set_table('sbu_uang_saku')
+					  -> set_subject('SBU Uang Saku')
+					  -> columns('provinsi', 'fullboard_luar', 'fullboard_dalam', 'fullday_dalam', 'uang_saku_murni')		
+					  -> callback_column('fullboard_luar', array($this, 'valueToRupiah'))
+					  -> callback_column('fullboard_dalam', array($this, 'valueToRupiah'))
+					  -> callback_column('fullday_dalam', array($this, 'valueToRupiah'))
+					  -> callback_column('uang_saku_murni', array($this, 'valueToRupiah'))				  
+					  -> display_as('fullboard_luar', 'Fullboard Luar')				  
+					  -> display_as('fullboard_dalam', 'Fullboard Dalam')				  
+					  -> display_as('fullday_dalam', 'Fullday Dalam')
+					  -> display_as('uang_saku_murni', 'Uang Saku Murni')				  
+					  -> unset_print()	
+					  -> unset_read()
+					  -> unset_delete();
+					break;	
+				case "User":
+					$crud -> set_theme('datatables')
+					  -> set_relation('provinsi', 'provinsi', '{nama_provinsi}')
+					  -> set_table('sbu_uang_saku')
+					  -> set_subject('SBU Uang Saku')
+					  -> columns('provinsi', 'fullboard_luar', 'fullboard_dalam', 'fullday_dalam', 'uang_saku_murni')		
+					  -> callback_column('fullboard_luar', array($this, 'valueToRupiah'))
+					  -> callback_column('fullboard_dalam', array($this, 'valueToRupiah'))
+					  -> callback_column('fullday_dalam', array($this, 'valueToRupiah'))
+					  -> callback_column('uang_saku_murni', array($this, 'valueToRupiah'))				  
+					  -> display_as('fullboard_luar', 'Fullboard Luar')				  
+					  -> display_as('fullboard_dalam', 'Fullboard Dalam')				  
+					  -> display_as('fullday_dalam', 'Fullday Dalam')
+					  -> display_as('uang_saku_murni', 'Uang Saku Murni')				  
+					  -> unset_print()				  
+					  -> unset_read()
+					  -> unset_delete()
+					  -> unset_edit()
+					  -> unset_add();
+					break;	
+			}
+						  
 			$output = $crud -> render();
 			$judul = 'List SBU Uang Saku';
 			$this->_master_output($output,$judul);
@@ -208,32 +497,96 @@ class Master extends MX_Controller {
 		try {
 			$today= date('Y-m-d h:i:s');
 			$crud = new grocery_CRUD();
-			$crud -> set_theme('datatables') 
-				  -> set_table('dinas')
-				  -> set_subject('Dinas SDPPI')
-				  -> set_relation('kota_asal', 'kota', '{kota}')
-				  -> set_relation('kota_tujuan', 'kota', '{kota}')
-				  -> set_relation('id_subdit', 'subdit', '{subdit}')
-				  -> set_relation('nota_dinas', 'nota_dinas', '{nomor}')
-				  -> set_relation('nota_dinas_1', 'jenis_surat', '{nomor}')
-				  -> set_relation('alokasi_anggaran', 'alokasi_anggaran', '{nomor}')
-				  -> columns('maksud', 'berangkat', 'kembali','id_subdit','kota_tujuan')
-				  -> required_fields('maksud', 'alokasi_anggaran', 'nota_dinas', 'id_subdit','berangkat','kembali','kota_asal','kota_tujuan')
-				  -> field_type('create_date', 'hidden',$today)
-				  -> field_type('update_date', 'hidden',$today)
-				  -> display_as('maksud', 'Maksud Dinas')
-				  -> display_as('berangkat', 'Berangkat')
-				  -> display_as('kembali', 'Kembali')
-				  -> display_as('id_subdit', 'Subdit Kegiatan')
-				  -> display_as('nota_dinas_1','Nota Extra')
-				  -> display_as('nota_dinas','Nota Dinas')
-				  -> display_as('kota_asal', 'Departure')
-				  -> display_as('kota_tujuan', 'Destination')
-				  -> order_by('id','DESC')
-				  -> callback_column('kembali', array($this, 'day'))
-				  -> callback_column('berangkat', array($this, 'day'))
-				  -> callback_before_insert(array($this,'callback_insert_date'))
-				  -> callback_before_update(array($this,'callback_update_date'));				  				  
+			$role = $this->session->userdata['role'];
+			switch($role){
+				case "Administrator":
+					$crud -> set_theme('datatables') 
+						  -> set_table('dinas')
+						  -> set_subject('Dinas SDPPI')
+						  -> set_relation('kota_asal', 'kota', '{kota}')
+						  -> set_relation('kota_tujuan', 'kota', '{kota}')
+						  -> set_relation('id_subdit', 'subdit', '{subdit}')
+						  -> set_relation('nota_dinas', 'nota_dinas', '{nomor}')
+						  -> set_relation('nota_dinas_1', 'jenis_surat', '{nomor}')
+						  -> set_relation('alokasi_anggaran', 'alokasi_anggaran', '{nomor}')
+						  -> columns('maksud', 'berangkat', 'kembali','id_subdit','kota_tujuan')
+						  -> required_fields('maksud', 'alokasi_anggaran', 'nota_dinas', 'id_subdit','berangkat','kembali','kota_asal','kota_tujuan')
+						  -> field_type('create_date', 'hidden',$today)
+						  -> field_type('update_date', 'hidden',$today)
+						  -> display_as('maksud', 'Maksud Dinas')
+						  -> display_as('berangkat', 'Berangkat')
+						  -> display_as('kembali', 'Kembali')
+						  -> display_as('id_subdit', 'Subdit Kegiatan')
+						  -> display_as('nota_dinas_1','Nota Extra')
+						  -> display_as('nota_dinas','Nota Dinas')
+						  -> display_as('kota_asal', 'Departure')
+						  -> display_as('kota_tujuan', 'Destination')
+						  -> order_by('id','DESC')
+						  -> callback_column('kembali', array($this, 'day'))
+						  -> callback_column('berangkat', array($this, 'day'))
+						  -> callback_before_insert(array($this,'callback_insert_date'))
+						  -> callback_before_update(array($this,'callback_update_date'));
+					break;
+				case "Direktur":
+					$crud -> set_theme('datatables') 
+						  -> set_table('dinas')
+						  -> set_subject('Dinas SDPPI')
+						  -> set_relation('kota_asal', 'kota', '{kota}')
+						  -> set_relation('kota_tujuan', 'kota', '{kota}')
+						  -> set_relation('id_subdit', 'subdit', '{subdit}')
+						  -> set_relation('nota_dinas', 'nota_dinas', '{nomor}')
+						  -> set_relation('nota_dinas_1', 'jenis_surat', '{nomor}')
+						  -> set_relation('alokasi_anggaran', 'alokasi_anggaran', '{nomor}')
+						  -> columns('maksud', 'berangkat', 'kembali','id_subdit','kota_tujuan')
+						  -> required_fields('maksud', 'alokasi_anggaran', 'nota_dinas', 'id_subdit','berangkat','kembali','kota_asal','kota_tujuan')
+						  -> field_type('create_date', 'hidden',$today)
+						  -> field_type('update_date', 'hidden',$today)
+						  -> display_as('maksud', 'Maksud Dinas')
+						  -> display_as('berangkat', 'Berangkat')
+						  -> display_as('kembali', 'Kembali')
+						  -> display_as('id_subdit', 'Subdit Kegiatan')
+						  -> display_as('nota_dinas_1','Nota Extra')
+						  -> display_as('nota_dinas','Nota Dinas')
+						  -> display_as('kota_asal', 'Departure')
+						  -> display_as('kota_tujuan', 'Destination')
+						  -> order_by('id','DESC')
+						  -> callback_column('kembali', array($this, 'day'))
+						  -> callback_column('berangkat', array($this, 'day'))
+						  -> callback_before_insert(array($this,'callback_insert_date'))
+						  -> callback_before_update(array($this,'callback_update_date'))
+						  -> unset_delete();
+					break;
+				case "User":
+					$crud -> set_theme('datatables') 
+						  -> set_table('dinas')
+						  -> set_subject('Dinas SDPPI')
+						  -> set_relation('kota_asal', 'kota', '{kota}')
+						  -> set_relation('kota_tujuan', 'kota', '{kota}')
+						  -> set_relation('id_subdit', 'subdit', '{subdit}')
+						  -> set_relation('nota_dinas', 'nota_dinas', '{nomor}')
+						  -> set_relation('nota_dinas_1', 'jenis_surat', '{nomor}')
+						  -> set_relation('alokasi_anggaran', 'alokasi_anggaran', '{nomor}')
+						  -> columns('maksud', 'berangkat', 'kembali','id_subdit','kota_tujuan')
+						  -> required_fields('maksud', 'alokasi_anggaran', 'nota_dinas', 'id_subdit','berangkat','kembali','kota_asal','kota_tujuan')
+						  -> field_type('create_date', 'hidden',$today)
+						  -> field_type('update_date', 'hidden',$today)
+						  -> display_as('maksud', 'Maksud Dinas')
+						  -> display_as('berangkat', 'Berangkat')
+						  -> display_as('kembali', 'Kembali')
+						  -> display_as('id_subdit', 'Subdit Kegiatan')
+						  -> display_as('nota_dinas_1','Nota Extra')
+						  -> display_as('nota_dinas','Nota Dinas')
+						  -> display_as('kota_asal', 'Departure')
+						  -> display_as('kota_tujuan', 'Destination')
+						  -> order_by('id','DESC')
+						  -> callback_column('kembali', array($this, 'day'))
+						  -> callback_column('berangkat', array($this, 'day'))
+						  -> callback_before_insert(array($this,'callback_insert_date'))
+						  -> callback_before_update(array($this,'callback_update_date'))
+						  -> unset_delete();
+					break;		
+			}
+							  				  
 			$output= $crud -> render();	
 			$judul = 'List Dinas';		
 			$this->_master_output($output,$judul);			
@@ -253,16 +606,50 @@ class Master extends MX_Controller {
 	function kegiatan() {
 		try {
 			$crud = new grocery_CRUD();
-			$crud -> set_theme('datatables')
-				  -> set_table('kegiatan')
-				  -> set_subject('Kegiatan')
-				  -> set_relation('id_subdit','subdit','{subdit}')
-				  -> fields('nama_kegiatan', 'pagu', 'tahun','id_subdit')
-				  -> required_fields('nama_kegiatan','tahun')
-				  -> display_as('nama_kegiatan', 'Nama Kegiatan')
-				  -> display_as('id_subdit', 'Sub Direktorat')
-				  -> unset_export()
-				  -> unset_print();
+			$role = $this->session->userdata['role'];
+			switch($role){
+				case "Administrator":
+					$crud -> set_theme('datatables')
+						  -> set_table('kegiatan')
+						  -> set_subject('Kegiatan')
+						  -> set_relation('id_subdit','subdit','{subdit}')
+						  -> fields('nama_kegiatan', 'pagu', 'tahun','id_subdit')
+						  -> required_fields('nama_kegiatan','tahun')
+						  -> display_as('nama_kegiatan', 'Nama Kegiatan')
+						  -> display_as('id_subdit', 'Sub Direktorat')
+						  -> unset_export()
+						  -> unset_print();
+					break;
+				case "Direktur":
+					$crud -> set_theme('datatables')
+						  -> set_table('kegiatan')
+						  -> set_subject('Kegiatan')
+						  -> set_relation('id_subdit','subdit','{subdit}')
+						  -> fields('nama_kegiatan', 'pagu', 'tahun','id_subdit')
+						  -> required_fields('nama_kegiatan','tahun')
+						  -> display_as('nama_kegiatan', 'Nama Kegiatan')
+						  -> display_as('id_subdit', 'Sub Direktorat')
+						  -> unset_export()
+						  -> unset_print()
+						  -> unset_delete();
+					break;
+				case "User":
+					$crud -> set_theme('datatables')
+						  -> set_table('kegiatan')
+						  -> set_subject('Kegiatan')
+						  -> set_relation('id_subdit','subdit','{subdit}')
+						  -> fields('nama_kegiatan', 'pagu', 'tahun','id_subdit')
+						  -> required_fields('nama_kegiatan','tahun')
+						  -> display_as('nama_kegiatan', 'Nama Kegiatan')
+						  -> display_as('id_subdit', 'Sub Direktorat')
+						  -> unset_export()
+						  -> unset_print()
+						  -> unset_delete()
+						  -> unset_edit()
+						  -> unset_add();
+					break;
+			}
+			
 			$output = $crud -> render();
 			$judul = 'List Kegiatan';
 			$this->_master_output($output,$judul);
@@ -280,41 +667,123 @@ class Master extends MX_Controller {
 		try {			
 			$status = 'Declined';
 			$crud = new grocery_CRUD();
-			$crud -> set_theme('datatables')
-				  -> set_table('perjalanan_multi')				  
-				  -> set_subject('Perjalanan Dinas Multi Personel')			
-				  -> set_relation('dinas', 'dinas', '{maksud}')
-				  //-> set_relation('kegiatan', 'kegiatan', '{nama_kegiatan}') // not_use now
-				  -> set_relation('tiket1', 'v_tiket', '{dinas}')
-				  -> set_primary_key('id', 'v_tiket')				 			   
-				  -> set_relation_n_n('personel','perjalanan_multi_detail','staff', 'id_perjalanan', 'personil','nama')
-				  -> where('status LIKE','%Declined%')
-				  -> order_by('id','desc')	  
-				  -> columns('dinas','personel','status','tiket1')
-				  -> required_fields('dinas','uang_saku', 'personel', 'tgl_spt')  
-				  -> field_type('create_date', 'hidden')
-				  -> field_type('update_date', 'hidden')
-				  -> field_type('status', 'hidden',$status) //http://www.grocerycrud.com/documentation/options_functions/field_type				  
-				  -> field_type('tgl_approval', 'hidden')				  
-				  -> field_type('kegiatan', 'hidden')
-				  -> field_type('airport_tax_tujuan')
-            //,'hidden')
-				  -> field_type('airport_tax_asal')//, 'hidden')
-				  -> display_as('tiket1', 'Tiket')
-				  -> display_as('tiket_manual', 'Nominal Manual Tiket')
-				  -> display_as('tiket2', 'Non Pesawat')
-				  -> display_as('type1', 'Type')				  
-				  -> display_as('tgl_spt', 'Tanggal SPT')				  
-				  -> display_as('uang_saku', 'Jenis Uang Saku')				
-				  -> display_as('airport_tax_tujuan', ' Airport Tax Kota Tujuan')
-				  -> display_as('airport_tax_asal', ' Airport Tax Kota Asal')
-				  -> add_action('Approve','../assets/images/approved.png','report/approveSPJ')
-				  -> add_action('Review','../assets/images/pdf.png','report/cetakReviewSppt')
-				  -> callback_column('tgl_approval', array($this, 'day'))
-				  -> callback_column('tgl_spt', array($this, 'day'))				  
-				  //-> unset_delete()
-				  -> unset_print()
-				  -> unset_export();							  						
+			$role = $this->session->userdata['role'];
+			switch($role){
+				case "Administrator":
+				$crud -> set_theme('datatables')
+					  -> set_table('perjalanan_multi')				  
+					  -> set_subject('Perjalanan Dinas Multi Personel')			
+					  -> set_relation('dinas', 'dinas', '{maksud}')
+					  //-> set_relation('kegiatan', 'kegiatan', '{nama_kegiatan}') // not_use now
+					  -> set_relation('tiket1', 'v_tiket', '{dinas}')
+					  -> set_primary_key('id', 'v_tiket')				 			   
+					  -> set_relation_n_n('personel','perjalanan_multi_detail','staff', 'id_perjalanan', 'personil','nama')
+					  -> where('status LIKE','%Declined%')
+					  -> order_by('id','desc')	  
+					  -> columns('dinas','personel','status','tiket1')
+					  -> required_fields('dinas','uang_saku', 'personel', 'tgl_spt')  
+					  -> field_type('create_date', 'hidden')
+					  -> field_type('update_date', 'hidden')
+					  -> field_type('status', 'hidden',$status) //http://www.grocerycrud.com/documentation/options_functions/field_type				  
+					  -> field_type('tgl_approval', 'hidden')				  
+					  -> field_type('kegiatan', 'hidden')
+					  -> field_type('airport_tax_tujuan')
+				//,'hidden')
+					  -> field_type('airport_tax_asal')//, 'hidden')
+					  -> display_as('tiket1', 'Tiket')
+					  -> display_as('tiket_manual', 'Nominal Manual Tiket')
+					  -> display_as('tiket2', 'Non Pesawat')
+					  -> display_as('type1', 'Type')				  
+					  -> display_as('tgl_spt', 'Tanggal SPT')				  
+					  -> display_as('uang_saku', 'Jenis Uang Saku')				
+					  -> display_as('airport_tax_tujuan', ' Airport Tax Kota Tujuan')
+					  -> display_as('airport_tax_asal', ' Airport Tax Kota Asal')
+					  -> add_action('Approve','../assets/images/approved.png','report/approveSPJ')
+					  -> add_action('Review','../assets/images/pdf.png','report/cetakReviewSppt')
+					  -> callback_column('tgl_approval', array($this, 'day'))
+					  -> callback_column('tgl_spt', array($this, 'day'))				  
+					  //-> unset_delete()
+					  -> unset_print()
+					  -> unset_export();
+					break;
+				case "Direktur":
+					$crud -> set_theme('datatables')
+						  -> set_table('perjalanan_multi')				  
+						  -> set_subject('Perjalanan Dinas Multi Personel')			
+						  -> set_relation('dinas', 'dinas', '{maksud}')
+						  //-> set_relation('kegiatan', 'kegiatan', '{nama_kegiatan}') // not_use now
+						  -> set_relation('tiket1', 'v_tiket', '{dinas}')
+						  -> set_primary_key('id', 'v_tiket')				 			   
+						  -> set_relation_n_n('personel','perjalanan_multi_detail','staff', 'id_perjalanan', 'personil','nama')
+						  -> where('status LIKE','%Declined%')
+						  -> order_by('id','desc')	  
+						  -> columns('dinas','personel','status','tiket1')
+						  -> required_fields('dinas','uang_saku', 'personel', 'tgl_spt')  
+						  -> field_type('create_date', 'hidden')
+						  -> field_type('update_date', 'hidden')
+						  -> field_type('status', 'hidden',$status) //http://www.grocerycrud.com/documentation/options_functions/field_type				  
+						  -> field_type('tgl_approval', 'hidden')				  
+						  -> field_type('kegiatan', 'hidden')
+						  -> field_type('airport_tax_tujuan')
+					//,'hidden')
+						  -> field_type('airport_tax_asal')//, 'hidden')
+						  -> display_as('tiket1', 'Tiket')
+						  -> display_as('tiket_manual', 'Nominal Manual Tiket')
+						  -> display_as('tiket2', 'Non Pesawat')
+						  -> display_as('type1', 'Type')				  
+						  -> display_as('tgl_spt', 'Tanggal SPT')				  
+						  -> display_as('uang_saku', 'Jenis Uang Saku')				
+						  -> display_as('airport_tax_tujuan', ' Airport Tax Kota Tujuan')
+						  -> display_as('airport_tax_asal', ' Airport Tax Kota Asal')
+						  -> add_action('Approve','../assets/images/approved.png','report/approveSPJ')
+						  -> add_action('Review','../assets/images/pdf.png','report/cetakReviewSppt')
+						  -> callback_column('tgl_approval', array($this, 'day'))
+						  -> callback_column('tgl_spt', array($this, 'day'))				  
+						  //-> unset_delete()
+						  -> unset_print()
+						  -> unset_export()
+						  -> unset_delete();
+						break;
+				case "User":
+					$crud -> set_theme('datatables')
+						  -> set_table('perjalanan_multi')				  
+						  -> set_subject('Perjalanan Dinas Multi Personel')			
+						  -> set_relation('dinas', 'dinas', '{maksud}')
+						  //-> set_relation('kegiatan', 'kegiatan', '{nama_kegiatan}') // not_use now
+						  -> set_relation('tiket1', 'v_tiket', '{dinas}')
+						  -> set_primary_key('id', 'v_tiket')				 			   
+						  -> set_relation_n_n('personel','perjalanan_multi_detail','staff', 'id_perjalanan', 'personil','nama')
+						  -> where('status LIKE','%Declined%')
+						  -> order_by('id','desc')	  
+						  -> columns('dinas','personel','status','tiket1')
+						  -> required_fields('dinas','uang_saku', 'personel', 'tgl_spt')  
+						  -> field_type('create_date', 'hidden')
+						  -> field_type('update_date', 'hidden')
+						  -> field_type('status', 'hidden',$status) //http://www.grocerycrud.com/documentation/options_functions/field_type				  
+						  -> field_type('tgl_approval', 'hidden')				  
+						  -> field_type('kegiatan', 'hidden')
+						  -> field_type('airport_tax_tujuan')
+					//,'hidden')
+						  -> field_type('airport_tax_asal')//, 'hidden')
+						  -> display_as('tiket1', 'Tiket')
+						  -> display_as('tiket_manual', 'Nominal Manual Tiket')
+						  -> display_as('tiket2', 'Non Pesawat')
+						  -> display_as('type1', 'Type')				  
+						  -> display_as('tgl_spt', 'Tanggal SPT')				  
+						  -> display_as('uang_saku', 'Jenis Uang Saku')				
+						  -> display_as('airport_tax_tujuan', ' Airport Tax Kota Tujuan')
+						  -> display_as('airport_tax_asal', ' Airport Tax Kota Asal')
+						  //-> add_action('Approve','../assets/images/approved.png','report/approveSPJ')
+						  -> add_action('Review','../assets/images/pdf.png','report/cetakReviewSppt')
+						  -> callback_column('tgl_approval', array($this, 'day'))
+						  -> callback_column('tgl_spt', array($this, 'day'))				  
+						  //-> unset_delete()
+						  -> unset_print()
+						  -> unset_export()
+						  -> unset_delete();
+					break;
+			}
+										  						
 			$output = $crud -> render();
 			$judul = 'List Perjalanan ';
 			$this->_master_output($output,$judul);

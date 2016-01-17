@@ -18,9 +18,9 @@
                 <input type="submit" name="signin" value=" Sign In " id="signin"  />
             </form>
             <?php 
-            	//if($message!= ''){
-                  //      echo '<span class="error-notification">'.$message.'</span>';
-                  //}
+            	if($message!= ''){
+                      echo '<span class="error-notification">'.$message.'</span>';
+                }
              ?>
         </div>
         <div id="content-area"></div>

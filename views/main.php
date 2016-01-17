@@ -7,20 +7,30 @@
 				<span>BALAI BESAR PENGUJIAN PERANGKAT TELEKOMUNIKASI</span>	
 			</div>
 			<?php
-    				if($this->session->userdata('username') == '') {	
+    				if($this->session->userdata('logged_in') == TRUE) {	
     		?>
     			<div>
 					<ul id="menu">
 						<li><a href="<?php	echo base_url(); ?>">Home</a></li>
 						<li><a href="<?php	echo base_url(); ?>master">Master</a></li>
-						<li><a href="<?php	echo base_url(); ?>import">Import</a></li>
 						<li><a href="<?php	echo base_url(); ?>report">Report</a></li>
 						<li><a href="<?php	echo base_url(); ?>user">Administration</a></li>
 						<li><a href="<?php	echo base_url(); ?>logout">Logout</a></li>						
 					</ul>
 				</div>
 			<?php
+				}else{
+    		?>		
+				<div>
+					<ul id="menu">
+						<li><a href="<?php	echo base_url(); ?>">Home</a></li>
+						<li><a href="<?php	echo base_url(); ?>master">Master</a></li>
+						<li><a href="<?php	echo base_url(); ?>report">Report</a></li>
+						<li><a href="<?php	echo base_url(); ?>user">Administration</a></li>
+					</ul>
+				</div>	
+			<?php
 				}
-    		?>					
+			?>	
 		</div>	
 	</div>

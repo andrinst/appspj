@@ -50,9 +50,12 @@ class Report extends MX_Controller{
 		$this -> load -> view('footer', $data);
 	}
 	function index() {
-		//if($this->session->userdata('logged_in') == ''){ redirect('home',TRUE); }
-		$output = $this -> perjalananDinas();
-		//$this -> _report_output((object) array('output' => '', 'js_files' => array(), 'css_files' => array()));
+		$sess = $this->session->userdata('logged_in');
+		if($sess == FALSE){
+			redirect('Home',TRUE); 
+		}else{
+			$output = $this -> perjalananDinas();
+		}
 	}
 	function cetakReviewSppt(){
 		$id = $this->uri->segment(3);
@@ -72,40 +75,122 @@ class Report extends MX_Controller{
 			$status = 'Approved';
 			$no_spt = '';
 			$crud = new grocery_CRUD();
-			$crud -> set_theme('datatables')
-				  -> set_table('perjalanan_multi')				  
-				  -> set_subject('Perjalanan Dinas Multi Personel')			
-				  -> set_relation('dinas', 'dinas', '{maksud}')
-				  //-> set_relation('kegiatan', 'kegiatan', '{nama_kegiatan}')
-				  -> set_relation('tiket1', 'v_tiket', '{dinas}')
-				  -> set_primary_key('id', 'v_tiket')				 			   
-				  -> set_relation_n_n('personel','perjalanan_multi_detail','staff', 'id_perjalanan', 'personil','nama')
-				  -> where('status LIKE','%Approved%')
-				  -> order_by('id','desc')	  
-				  -> columns('dinas','personel','status','tiket1')
-				  -> required_fields('dinas','uang_saku')  
-				  -> field_type('status', 'hidden',$status) //http://www.grocerycrud.com/documentation/options_functions/field_type
-				  -> field_type('kegiatan', 'hidden','')
-				  -> field_type('create_date', 'hidden')
-				  -> field_type('update_date', 'hidden')
-				  -> field_type('airport_tax_tujuan', 'hidden')
-				  -> field_type('airport_tax_asal', 'hidden')
-				  -> display_as('tiket1', 'Tiket')
-				  -> display_as('tiket_manual', 'Nominal Manual Tiket')
-				  -> display_as('tiket2', 'Non Pesawat')
-				  -> display_as('type1', 'Type')
-				  -> display_as('tgl_spt', 'Tanggal SPT')				  
-				  -> display_as('uang_saku', 'Jenis Uang Saku')				
-				  -> display_as('airport_tax_tujuan', ' Airport Tax Kota Tujuan')
-				  -> display_as('airport_tax_asal', ' Airport Tax Kota Asal')
-				  -> add_action('Cetak Surat','assets/images/pdf.png','report/subReport')
-				  //-> callback_after_update('personel',array($this,'callback_check_sum_personel_onchange'))
-				  -> callback_column('tgl_spt', array($this, 'day'))
-				  -> callback_column('tgl_approval', array($this, 'day'))
-				  //-> unset_delete()	  
-				  -> unset_add()
-				  -> unset_print()
-				  -> unset_export();
+			$role = $this->session->userdata['role'];
+			switch($role){
+				case "Administrator":
+					$crud -> set_theme('datatables')
+						  -> set_table('perjalanan_multi')				  
+						  -> set_subject('Perjalanan Dinas Multi Personel')			
+						  -> set_relation('dinas', 'dinas', '{maksud}')
+						  //-> set_relation('kegiatan', 'kegiatan', '{nama_kegiatan}')
+						  -> set_relation('tiket1', 'v_tiket', '{dinas}')
+						  -> set_primary_key('id', 'v_tiket')				 			   
+						  -> set_relation_n_n('personel','perjalanan_multi_detail','staff', 'id_perjalanan', 'personil','nama')
+						  -> where('status LIKE','%Approved%')
+						  -> order_by('id','desc')	  
+						  -> columns('dinas','personel','status','tiket1')
+						  -> required_fields('dinas','uang_saku')  
+						  -> field_type('status', 'hidden',$status) //http://www.grocerycrud.com/documentation/options_functions/field_type
+						  -> field_type('kegiatan', 'hidden','')
+						  -> field_type('create_date', 'hidden')
+						  -> field_type('update_date', 'hidden')
+						  -> field_type('airport_tax_tujuan', 'hidden')
+						  -> field_type('airport_tax_asal', 'hidden')
+						  -> display_as('tiket1', 'Tiket')
+						  -> display_as('tiket_manual', 'Nominal Manual Tiket')
+						  -> display_as('tiket2', 'Non Pesawat')
+						  -> display_as('type1', 'Type')
+						  -> display_as('tgl_spt', 'Tanggal SPT')				  
+						  -> display_as('uang_saku', 'Jenis Uang Saku')				
+						  -> display_as('airport_tax_tujuan', ' Airport Tax Kota Tujuan')
+						  -> display_as('airport_tax_asal', ' Airport Tax Kota Asal')
+						  -> add_action('Cetak Surat','assets/images/pdf.png','report/subReport')
+						  //-> callback_after_update('personel',array($this,'callback_check_sum_personel_onchange'))
+						  -> callback_column('tgl_spt', array($this, 'day'))
+						  -> callback_column('tgl_approval', array($this, 'day'))
+						  //-> unset_delete()	  
+						  -> unset_add()
+						  -> unset_print()
+						  -> unset_export();
+					break;
+				case "Direktur":
+					$crud -> set_theme('datatables')
+						  -> set_table('perjalanan_multi')				  
+						  -> set_subject('Perjalanan Dinas Multi Personel')			
+						  -> set_relation('dinas', 'dinas', '{maksud}')
+						  //-> set_relation('kegiatan', 'kegiatan', '{nama_kegiatan}')
+						  -> set_relation('tiket1', 'v_tiket', '{dinas}')
+						  -> set_primary_key('id', 'v_tiket')				 			   
+						  -> set_relation_n_n('personel','perjalanan_multi_detail','staff', 'id_perjalanan', 'personil','nama')
+						  -> where('status LIKE','%Approved%')
+						  -> order_by('id','desc')	  
+						  -> columns('dinas','personel','status','tiket1')
+						  -> required_fields('dinas','uang_saku')  
+						  -> field_type('status', 'hidden',$status) //http://www.grocerycrud.com/documentation/options_functions/field_type
+						  -> field_type('kegiatan', 'hidden','')
+						  -> field_type('create_date', 'hidden')
+						  -> field_type('update_date', 'hidden')
+						  -> field_type('airport_tax_tujuan', 'hidden')
+						  -> field_type('airport_tax_asal', 'hidden')
+						  -> display_as('tiket1', 'Tiket')
+						  -> display_as('tiket_manual', 'Nominal Manual Tiket')
+						  -> display_as('tiket2', 'Non Pesawat')
+						  -> display_as('type1', 'Type')
+						  -> display_as('tgl_spt', 'Tanggal SPT')				  
+						  -> display_as('uang_saku', 'Jenis Uang Saku')				
+						  -> display_as('airport_tax_tujuan', ' Airport Tax Kota Tujuan')
+						  -> display_as('airport_tax_asal', ' Airport Tax Kota Asal')
+						  -> add_action('Cetak Surat','assets/images/pdf.png','report/subReport')
+						  //-> callback_after_update('personel',array($this,'callback_check_sum_personel_onchange'))
+						  -> callback_column('tgl_spt', array($this, 'day'))
+						  -> callback_column('tgl_approval', array($this, 'day'))
+						  //-> unset_delete()	  
+						  -> unset_add()
+						  -> unset_print()
+						  -> unset_export()
+						  -> unset_delete()
+						  -> unset_edit();
+					break;
+				case "User":
+					$crud -> set_theme('datatables')
+						  -> set_table('perjalanan_multi')				  
+						  -> set_subject('Perjalanan Dinas Multi Personel')			
+						  -> set_relation('dinas', 'dinas', '{maksud}')
+						  //-> set_relation('kegiatan', 'kegiatan', '{nama_kegiatan}')
+						  -> set_relation('tiket1', 'v_tiket', '{dinas}')
+						  -> set_primary_key('id', 'v_tiket')				 			   
+						  -> set_relation_n_n('personel','perjalanan_multi_detail','staff', 'id_perjalanan', 'personil','nama')
+						  -> where('status LIKE','%Approved%')
+						  -> order_by('id','desc')	  
+						  -> columns('dinas','personel','status','tiket1')
+						  -> required_fields('dinas','uang_saku')  
+						  -> field_type('status', 'hidden',$status) //http://www.grocerycrud.com/documentation/options_functions/field_type
+						  -> field_type('kegiatan', 'hidden','')
+						  -> field_type('create_date', 'hidden')
+						  -> field_type('update_date', 'hidden')
+						  -> field_type('airport_tax_tujuan', 'hidden')
+						  -> field_type('airport_tax_asal', 'hidden')
+						  -> display_as('tiket1', 'Tiket')
+						  -> display_as('tiket_manual', 'Nominal Manual Tiket')
+						  -> display_as('tiket2', 'Non Pesawat')
+						  -> display_as('type1', 'Type')
+						  -> display_as('tgl_spt', 'Tanggal SPT')				  
+						  -> display_as('uang_saku', 'Jenis Uang Saku')				
+						  -> display_as('airport_tax_tujuan', ' Airport Tax Kota Tujuan')
+						  -> display_as('airport_tax_asal', ' Airport Tax Kota Asal')
+						  -> add_action('Cetak Surat','assets/images/pdf.png','report/subReport')
+						  //-> callback_after_update('personel',array($this,'callback_check_sum_personel_onchange'))
+						  -> callback_column('tgl_spt', array($this, 'day'))
+						  -> callback_column('tgl_approval', array($this, 'day'))
+						  //-> unset_delete()	  
+						  -> unset_add()
+						  -> unset_print()
+						  -> unset_export()
+						  -> unset_delete()
+						  -> unset_edit();
+					break;
+			}
+			
 			$output = $crud -> render();
 			//$this -> _report_output((object) array('output' => '', 'js_files' => array(), 'css_files' => array()));		
 			$this -> _report_output($output);
@@ -214,6 +299,10 @@ class Report extends MX_Controller{
 			$tglSpt 		= $row->tgl_spt;
 			$tiket1 		= $row->tiket1;
 		}
+		$noSptLen = strlen($noSpt);
+		$noSptPos = strpos($noSpt, '/',0);
+		$len = $noSptLen - $noSptPost;
+		$noSptDisp = substr($noSpt,$noSptPos,$len);
 		//Set variable Id Perjalanan to class ModelReport
 		$this->mr->setIdPerjalanan($idPerjalanan);
 		$resultNotaDinas 	= $this->mr->getNotaDinas();		
@@ -240,7 +329,8 @@ class Report extends MX_Controller{
 		$this->fpdf->SetFont('Arial','U',12);
 		$this->fpdf->Text(6.8,5.3,'SURAT PERINTAH PELAKSANAAN TUGAS');		
 		$this->fpdf->setFont('Arial','',12);
-		$this->fpdf->Text(6.9,5.9,'Nomor :    '.$noSpt,'L');		
+		//$this->fpdf->Text(6.9,5.9,'Nomor :    '.$noSpt,'L');		
+		$this->fpdf->Text(6.9,5.9,'Nomor :        '.$noSptDisp,'L');
 		
 		$this->fpdf->setFont('Arial','',10);
 		$this->fpdf->setXY(2.6,6.8);
@@ -693,7 +783,7 @@ class Report extends MX_Controller{
 						INNER JOIN kota k ON d.kota_tujuan = k.id
 				WHERE
 						pmd.id_perjalanan = '".$id."'
-				ORDER BY pmd.id_detail");
+				ORDER BY s.golongan_id ASC");
 						
 		$query = $this->db->query($sql);
 		$namaStaff 	= array();
@@ -716,6 +806,11 @@ class Report extends MX_Controller{
 			$tglSpt []		= $row->tgl_spt;  	
 			$tiket1 		= $row->tiket1;  	
 		}
+		$noSptLen = strlen($noSpt[0]);
+		$noSptPos = strpos($noSpt[0], '/',0);
+		$len = $noSptLen - $noSptPost;
+		$noSptDisp = substr($noSpt[0],$noSptPos,$len);
+		
 		//Set variable Id Perjalanan to class ModelReport					
 		$resultNotaDinas 	= $this->mr->getNotaDinas();		
 		$nomorNotaDinas		= $resultNotaDinas[0];
@@ -740,7 +835,8 @@ class Report extends MX_Controller{
 		$this->fpdf->SetFont('Arial','U',12);
 		$this->fpdf->Text(6.8,5.3,'SURAT PERINTAH PELAKSANAAN TUGAS');		
 		$this->fpdf->setFont('Arial','',12);
-		$this->fpdf->Text(6.9,5.9,'Nomor :    '.$noSpt[0],'C');		
+		$this->fpdf->Text(6.9,5.9,'Nomor :      '.$noSptDisp,'C');	
+		//$this->fpdf->Text(6.9,5.9,'Nomor :      '.$noSpt[0],'C');
 		
 		$this->fpdf->setFont('Arial','',10);
 		$this->fpdf->setXY(2.6,6.8);
@@ -1718,9 +1814,15 @@ class Report extends MX_Controller{
 				$this->fpdf->Text(7.8,7.7,day($this->mr->getTglSptApprove()),'L');
 				$this->fpdf->Ln();
 				
+				$noSpt = $this->mr->getNoSptApprove();
+				$noSptLen = strlen($noSpt);
+				$noSptPos = strpos($noSpt, '/',0);
+				$len = $noSptLen - $noSptPost;
+				$noSptDisp = substr($noSpt,$noSptPos,$len);
 				$this->fpdf->Text(5.5,8.2,'SPT','L');
 				$this->fpdf->Text(7.4,8.2,':','L');
-				$this->fpdf->Text(7.8,8.2,$this->mr->getNoSptApprove(),'L');
+				$this->fpdf->Text(7.8,8.2,'     '.$noSptDisp,'L');
+				//$this->fpdf->Text(7.8,8.2,'     '.$noSpt,'L');
 				$this->fpdf->Ln();
 		
 		$this->fpdf->Text(1.7,8.7,'Untuk','L');
@@ -1770,7 +1872,8 @@ class Report extends MX_Controller{
 		$this->fpdf->Ln();
 		
 		$this->fpdf->setFont('Arial','B',10);
-		$this->fpdf->Text(6.9,14.9,'SPPD NO. '.$noSpt,'L');
+		$this->fpdf->Text(6.9,14.9,'SPPD NO.        '.$noSptDisp,'L');
+		//$this->fpdf->Text(6.9,14.9,'SPPD NO. '.$noSpt,'L');
 		
 		$this->fpdf->setFont('Arial','B',8.5);
 		$this->fpdf->SetXY(1.7,15.3);	
@@ -1993,6 +2096,27 @@ class Report extends MX_Controller{
 		//$this->fpdf->Output('Kuitansi Perjalanan Dinas_'.ucwords(mb_strtolower($namaStaff)).'_'.date("d_m_Y").'.pdf','D');
 	}
 	//akhir fungsi cetak kwitansi
+	//vcell
+	function vcell($c_width,$c_height,$x_axis,$text){
+	$w_w=$c_height/3;
+	$w_w_1=$w_w+2;
+	$w_w1=$w_w+$w_w+$w_w+3;
+	$len=strlen($text);// check the length of the cell and splits the text into 7 character each and saves in a array 
+	if($len>7){
+		$w_text=str_split($text,7);
+		$this->fpdf->SetX($x_axis);
+		$this->fpdf->Cell($c_width,$w_w_1,$w_text[0],'','','');
+		$this->fpdf->SetX($x_axis);
+		$this->fpdf->Cell($c_width,$w_w1,$w_text[1],'','','');
+		$this->fpdf->SetX($x_axis);
+		$this->fpdf->Cell($c_width,$c_height,'','LTRB',0,'L',0);
+	}
+	else{
+		$this->fpdf->SetX($x_axis);
+		$this->fpdf->Cell($c_width,$c_height,$text,'LTRB',0,'L',0);
+	}
+}
+	//akhir vcell
 	function cetakSppd() {
 		
 		$id = $this->uri->segment(3);
@@ -2003,41 +2127,57 @@ class Report extends MX_Controller{
 		$this->fpdf->Ln();
 		
 		//Header
-		$this->fpdf->setFont('Arial','B',11);
-		$this->fpdf->Text(6.5,1.7,'KEMENTERIAN KOMUNIKASI DAN INFORMATIKA');
-		$this->fpdf->Text(3,2.3,'DIREKTORAT JENDERAL SUMBER DAYA DAN PERANGKAT POS DAN INFORMATIKA');		
+		$this->fpdf->setFont('Arial','B',13);
+		$this->fpdf->Text(1,1.7,'DIREKTORAT  JENDERAL SUMBER DAYA DAN PERANGKAT POS DAN INFORMATIKA');
+		$this->fpdf->Text(5,2.3,'BALAI BESAR PENGUJIAN PERANGKAT TELEKOMUNIKASI');		
 		
 		$this->fpdf->setFont('Verdana','',9);
-		$this->fpdf->Text(4.4,3.2,'Jl. BINTARA RAYA No.17');
-		$this->fpdf->Text(13,3.2,'Lembar ke','L');
-		$this->fpdf->Text(15,3.2,':','L');
-		$this->fpdf->Text(15.3,3.2,'............................','L');
+		$this->fpdf->Text(1,3.2,'Jl. BINTARA RAYA No.17');
+		$this->fpdf->Text(7.5,3.2,'TELEFON');
+		$this->fpdf->Text(9.5,3.2,':','L');
+		$this->fpdf->Text(9.8,3.2,'(021) 86614233','L');
+		$this->fpdf->Text(14.5,3.2,'Lembar ke','L');
+		$this->fpdf->Text(16.5,3.2,':','L');
+		$this->fpdf->Text(16.8,3.2,'............................','L');
 		$this->fpdf->Ln();
-		$this->fpdf->Text(13,3.7,'Kode No','L');
-		$this->fpdf->Text(15,3.7,':','L');
-		$this->fpdf->Text(15.3,3.7,'............................','L');		
-		$this->fpdf->Text(4.4,3.7,'BEKASI BARAT 17134 ');
+		$this->fpdf->Text(14.5,3.7,'Kode No','L');
+		$this->fpdf->Text(16.5,3.7,':','L');
+		$this->fpdf->Text(16.8,3.7,'............................','L');		
+		$this->fpdf->Text(1,3.7,'BEKASI BARAT 17134 ');
+		$this->fpdf->Text(7.5,3.7,'TELEX');
+		$this->fpdf->Text(9.5,3.7,':','L');
+		$this->fpdf->Text(9.8,3.7,'44407IA','L');
+		
 		$this->fpdf->Ln();
-		$this->fpdf->Text(13,4.2,'Nomor','L');		
-		$this->fpdf->Text(15,4.2,':','L');
-		$this->fpdf->Text(15.3,4.2,'............................','L');
+		$this->fpdf->Text(14.5,4.2,'Nomor','L');		
+		$this->fpdf->Text(16.5,4.2,':','L');
+		$this->fpdf->Text(16.8,4.2,'............................','L');
+		$this->fpdf->Text(7.5,4.2,'FAX');
+		$this->fpdf->Text(9.5,4.2,':','L');
+		$this->fpdf->Text(9.8,4.2,'(021)-86611068','L');
 		$this->fpdf->Ln();	
 		
-		$this->fpdf->Image('../appspj/assets/images/header_line.png',3,4.5,16,0.3,'PNG');
+		$this->fpdf->Image('../appspj/assets/images/header_line.png',1,4.5,19,0.3,'PNG');
 		
 		$this->fpdf->setFont('Arial','B',11);
-		$this->fpdf->Text(7.5,5.7,'SURAT PERINTAH PERJALANAN DINAS');
-		$this->fpdf->Text(7.5,5.7,'___________________________________');	
+		$this->fpdf->Text(6.5,5.7,'SURAT PERINTAH PERJALANAN DINAS');
+		$this->fpdf->Text(6.5,5.7,'___________________________________');	
 		
 		//Content
 		$this->fpdf->setFont('Arial','',10);
-		$this->fpdf->SetXY(3,6.5);	
-		$this->fpdf->Cell(0.7,1.3,'1. ',1,0,'L');
-		$this->fpdf->Cell(7.6,1.3,'Pejabat berwenang yang memberi perintah','TBR',0,'L');
+		$this->fpdf->SetXY(1,6.5);	
+		$this->fpdf->Cell(0.7,0.65,'1. ',1,0,'L');
+		$this->fpdf->Cell(7.6,0.65,'Pejabat berwenang yang memberi perintah','TBR',0,'L');
 		$this->fpdf->setFont('Arial','',9.25);
-		$this->fpdf->MultiCell(7.7,0.65,'KEPALA BBPPT, SESUAI SPT NO. '.$this->mr->getNoSptApprove(),'TBR','L');
-		$this->fpdf->Ln();
-		
+		$noSpt =  $this->mr->getNoSptApprove();
+		$noSptLen = strlen($noSpt);
+		$noSptPos = strpos($noSpt, '/',0);
+		$len = $noSptLen - $noSptPost;
+		$noSptDisp = substr($noSpt,$noSptPos,$len);
+		$this->fpdf->MultiCell(10.7,0.65,'KEPALA BBPPT, SESUAI SPT NO.       '.$noSptDisp,'TBR','L');
+		//$this->fpdf->MultiCell(10.7,0.65,'KEPALA BBPPT, SESUAI SPT NO.       '.$noSpt,'TBR','L');
+		//$this->fpdf->Ln();
+		$y1 = $this->fpdf->GetY();
 		$sql = ("SELECT	pmd.id_perjalanan,
 						s.nama,
 						s.nip,
@@ -2082,34 +2222,34 @@ class Report extends MX_Controller{
 		$mak3_ket = $resultAlokasiAnggaran[9];
 		
 		$this->fpdf->setFont('Arial','',10);
-		$this->fpdf->SetXY(3,7.8);	
+		$this->fpdf->SetX(1,$y1);	
 		$this->fpdf->Cell(0.7,0.5,'2. ','LBR',0,'L');
 		$this->fpdf->Cell(7.6,0.5,'Nama pegawai yang diperintahkan','BR',0,'L');
-		$this->fpdf->Cell(7.7,0.5,$namaStaff,'BR',0,'L');
+		$this->fpdf->Cell(10.7,0.5,$namaStaff,'BR',0,'L');
 		$this->fpdf->Ln();
-		
-		$this->fpdf->SetXY(3,8.3);	
+		$y2 = $this->fpdf->GetY();
+		$this->fpdf->SetXY(1,$y2);	
 		$this->fpdf->Cell(0.7,0.5,'3. ','LR',0,'L');
 					$this->fpdf->Cell(7.6,0.5,'a. Pangkat dan golongan menurut PGPS 1968','R',0,'L');
-					$this->fpdf->Cell(7.7,0.5,'a. '.$golongan.' '.$pangkat,'R',0,'L');
+					$this->fpdf->Cell(10.7,0.5,'a. '.$pangkat.' '.$golongan,'R',0,'L');
 					$this->fpdf->Ln();
 					
-					$this->fpdf->SetX(3);
+					$this->fpdf->SetX(1);
 					$this->fpdf->Cell(0.7,0.5,' ','LR',0,'L');
 					$this->fpdf->Cell(7.6,0.5,'b. Jabatan','R',0,'L');
-					$this->fpdf->Cell(7.7,0.5,'b. '.$jabatan,'R',0,'L');
+					$this->fpdf->Cell(10.7,0.5,'b. '.$jabatan,'R',0,'L');
 					$this->fpdf->Ln();
 					
-					$this->fpdf->SetX(3);
+					$this->fpdf->SetX(1);
 					$this->fpdf->Cell(0.7,0.5,' ','L',0,'L');
 					$this->fpdf->Cell(7.6,0.5,'c. Gaji Pokok','LR',0,'L');
-					$this->fpdf->Cell(7.7,0.5,'c. ','R',0,'L');
+					$this->fpdf->Cell(10.7,0.5,'c. ','R',0,'L');
 					$this->fpdf->Ln();
 					
-					$this->fpdf->SetX(3);
+					$this->fpdf->SetX(1);
 					$this->fpdf->Cell(0.7,0.5,' ','LBR',0,'L');
 					$this->fpdf->Cell(7.6,0.5,'d. Pangkat menurut peraturan perjalanan dinas','BR',0,'L');
-					$this->fpdf->Cell(7.7,0.5,'d. ','BR',0,'L');		
+					$this->fpdf->Cell(10.7,0.5,'d. ','BR',0,'L');		
 		$maksud = $this->mr->getMaksud();
 		$w = 1; $x = 1;
 		$inW = array(0.5,1,1.5,2,2.5,3,3.5,4,4.5,5); 
@@ -2123,14 +2263,17 @@ class Report extends MX_Controller{
 		//else if((strlen($maksud)) >= 30  && (strlen($maksud)) < 49 ) {$w = $inW[1] ;} // range
 				
 		$this->fpdf->Ln();
+		$y3 = $this->fpdf->GetY();
 		$this->fpdf->setFont('Arial','',10);			
-		$this->fpdf->SetX(3);	
+		$this->fpdf->SetXY(1,$y3);	
 		$this->fpdf->MultiCell(0.7,$x,'4. ','LR',1);
-		$this->fpdf->SetXY(3.7,10.3);
+		$this->fpdf->SetXY(1.7,$y3);
 		$this->fpdf->MultiCell(7.6,$x,'Maksud perjalanan dinas','','L');
 		$this->fpdf->setFont('Arial','',9.5);
-		$this->fpdf->SetXY(11.3,10.3);
-		$this->fpdf->MultiCell(7.7,$w,$maksud,'LR');
+		$this->fpdf->SetXY(9.3,$y3);
+		$this->fpdf->MultiCell(10.7,$w,$maksud,'LR');
+		
+		$y4 = $this->fpdf->GetY();
 		
 		if ($tiket1 ==''){
 			//if($jabatan == 'KEPALA BALAI BESAR PENGUJIAN PERANGKAT TELEKOMUNIKASI' || $jabatan == 'STAF BAGIAN UMUM')
@@ -2141,22 +2284,22 @@ class Report extends MX_Controller{
 				$this->setTransportasi("Pesawat Udara")
 		);
 		$this->fpdf->setFont('Arial','',10);				
-		$this->fpdf->SetX(3);	
+		$this->fpdf->SetXY(1,$y4);	
 		$this->fpdf->Cell(0.7,0.5,'5. ','LTB',0,'L');
 		$this->fpdf->Cell(7.6,0.5,'Alat angkutan yang dipergunakan','LTB',0,'L');
-		$this->fpdf->Cell(7.7,0.5,$this->getTransportasi(),'LTRB',0,'L');
+		$this->fpdf->Cell(10.7,0.5,$this->getTransportasi(),'LTRB',0,'L');
 		$this->fpdf->Ln();			
-		
-		$this->fpdf->SetX(3);	
+	
+		$this->fpdf->SetX(1);	
 		$this->fpdf->Cell(0.7,0.5,'6. ','LR',0,'L');
 			$this->fpdf->Cell(7.6,0.5,'a. Tempat berangkat','R',0,'L');
-			$this->fpdf->Cell(7.7,0.5,$this->mr->getKotaAsal(),'R',0,'L');
+			$this->fpdf->Cell(10.7,0.5,$this->mr->getKotaAsal(),'R',0,'L');
 			$this->fpdf->Ln();
 			
-			$this->fpdf->SetX(3);	
+			$this->fpdf->SetX(1);	
 			$this->fpdf->Cell(0.7,0.5,'  ','LB',0,'L');
 			$this->fpdf->Cell(7.6,0.5,'b. Tempat tujuan','LB',0,'L');
-			$this->fpdf->Cell(7.7,0.5,$this->mr->getKotaTujuan(),'LBR',0,'L');
+			$this->fpdf->Cell(10.7,0.5,$this->mr->getKotaTujuan(),'LBR',0,'L');
 		$this->fpdf->Ln();				
 		
 		$sql = ("SELECT d.berangkat,d.kembali from perjalanan_multi pm inner join dinas d on pm.dinas = d.id where pm.id = '".$idPerjalanan."'");
@@ -2170,141 +2313,193 @@ class Report extends MX_Controller{
 		
 		$totalHariDinas = $this->mr->getTotalHari($tanggalKembali,$tanggalBerangkat);
 		
-		$this->fpdf->SetX(3);	
+		$this->fpdf->SetX(1);	
 		$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
 			$this->fpdf->Cell(7.6,0.5,'a. Lama perjalanan','R',0,'L');
-			$this->fpdf->Cell(7.7,0.5,'a. '.$totalHariDinas.' ('.$this->mr->terbilang($totalHariDinas).')'.' Hari','R',0,'L');
+			$this->fpdf->Cell(10.7,0.5,'a. '.$totalHariDinas.' ('.$this->mr->terbilang($totalHariDinas).')'.' Hari','R',0,'L');
 			$this->fpdf->Ln();
 			
-			$this->fpdf->SetX(3);	
+			$this->fpdf->SetX(1);	
 			$this->fpdf->Cell(0.7,0.5,'7. ','LR',0,'L');
 			$this->fpdf->Cell(7.6,0.5,'b. Tanggal berangkat','R',0,'L');
-			$this->fpdf->Cell(7.7,0.5,'b. '.day($tanggalBerangkat),'R',0,'L');
+			$this->fpdf->Cell(10.7,0.5,'b. '.day($tanggalBerangkat),'R',0,'L');
 			$this->fpdf->Ln();
 			
-			$this->fpdf->SetX(3);	
+			$this->fpdf->SetX(1);	
 			$this->fpdf->Cell(0.7,0.5,'  ','LBR',0,'L');
 			$this->fpdf->Cell(7.6,0.5,'c. Tanggal kembali','BR',0,'L');
-			$this->fpdf->Cell(7.7,0.5,'c. '.day($tanggalKembali),'BR',0,'L');
+			$this->fpdf->Cell(10.7,0.5,'c. '.day($tanggalKembali),'BR',0,'L');
 		$this->fpdf->Ln();
 							
-		$this->fpdf->SetX(3);	
+		$this->fpdf->SetX(1);	
 		$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
 			$this->fpdf->Cell(7.6,0.5,'Pengikut: Nama Umur Hubungan Keluarga','R',0,'L');
-			$this->fpdf->Cell(7.7,0.5,' ','R',0,'L');
+			$this->fpdf->Cell(10.7,0.5,' ','R',0,'L');
 			$this->fpdf->Ln();
 			
-			$this->fpdf->SetX(3);	
+			$this->fpdf->SetX(1);	
 			$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
 			$this->fpdf->Cell(7.6,0.5,'1. ','R',0,'L');
-			$this->fpdf->Cell(7.7,0.5,' ','R',0,'L');
+			$this->fpdf->Cell(10.7,0.5,' ','R',0,'L');
 			$this->fpdf->Ln();
 			
-			$this->fpdf->SetX(3);	
+			$this->fpdf->SetX(1);	
 			$this->fpdf->Cell(0.7,0.5,'8. ','LR',0,'L');
 			$this->fpdf->Cell(7.6,0.5,'2. ','R',0,'L');
-			$this->fpdf->Cell(7.7,0.5,' ','R',0,'L');
+			$this->fpdf->Cell(10.7,0.5,' ','R',0,'L');
 			$this->fpdf->Ln();
 			
-			$this->fpdf->SetX(3);	
+			$this->fpdf->SetX(1);	
 			$this->fpdf->Cell(0.7,0.5,'  ','LBR',0,'L');
 			$this->fpdf->Cell(7.6,0.5,'3.','BR',0,'L');
-			$this->fpdf->Cell(7.7,0.5,' ','BR',0,'L');
+			$this->fpdf->Cell(10.7,0.5,' ','BR',0,'L');
 		$this->fpdf->Ln();
 			
-		$this->fpdf->SetX(3);	
+		$this->fpdf->SetX(1);	
 		$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
 			$this->fpdf->Cell(7.6,0.5,'Pembebasan Anggaran','R',0,'L');
-			$this->fpdf->Cell(7.7,0.5,'','R',0,'L');
+			$this->fpdf->Cell(10.7,0.5,'','R',0,'L');
 			$this->fpdf->Ln();
 			
-			$this->fpdf->SetX(3);	
+			$this->fpdf->SetX(1);	
 			$this->fpdf->Cell(0.7,0.5,'9. ','LR',0,'L');
 			$this->fpdf->Cell(7.6,0.5,'a. Instansi','R',0,'L');
-			$this->fpdf->Cell(7.7,0.5,'BBPPT - Ditjen SDPPI , BEKASI','R',0,'L');
+			$this->fpdf->Cell(10.7,0.5,'BBPPT - Ditjen SDPPI , BEKASI','R',0,'L');
 			$this->fpdf->Ln();
 			
-			$this->fpdf->SetX(3);	
+			$this->fpdf->SetX(1);	
 			$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
 			$this->fpdf->Cell(7.6,0.5,'b. Mata Anggaran 	','R',0,'L');
-			$this->fpdf->Cell(7.7,0.5,'DIPA Ditjen SDPPI Tahun '.date('Y'),'R',0,'L');
+			$this->fpdf->Cell(10.7,0.5,'DIPA Ditjen SDPPI Tahun '.date('Y'),'R',0,'L');
 			$this->fpdf->Ln();	
 
-			$this->fpdf->SetX(3);	
+			$this->fpdf->SetX(1);	
 			$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
 			$this->fpdf->Cell(7.6,0.5,'c. Nomer dan Tanggal DIPA	','R',0,'L');
-			$this->fpdf->Cell(7.7,0.5,$nomorAnggaran.' tanggal '.$tanggalAnggaran,'R',0,'L');
+			$this->fpdf->Cell(10.7,0.5,$nomorAnggaran.' tanggal '.$tanggalAnggaran,'R',0,'L');
 			$this->fpdf->Ln();
 			
-			$this->fpdf->SetX(3);	
+			$this->fpdf->SetX(1);	
 			$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
 			$this->fpdf->Cell(7.6,0.5,'d. Kode kegiatan / Sub kegiatan / MAK 	','R',0,'L');
-			$this->fpdf->Cell(7.7,0.5,$kodeKegiatanAnggaran,'R',0,'L');
+			$this->fpdf->Cell(10.7,0.5,$kodeKegiatanAnggaran.'-'.$subKegiatanAnggaran,'R',0,'L');
 			$this->fpdf->Ln();
 			
-			$this->fpdf->SetX(3);	
-			$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
-			$this->fpdf->Cell(7.6,0.5,' ','R',0,'L');
-			$this->fpdf->Cell(7.7,0.5,$subKegiatanAnggaran,'R',0,'L');
-			$this->fpdf->Ln();
 			
-			$this->fpdf->SetX(3);	
+			$tY = $this->fpdf->GetY();			
+			$this->fpdf->SetX(1);	
+			$len =strlen($mak1_ket);
+			$newText = explode(" ",$mak1_ket);
 			$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
 			$this->fpdf->Cell(7.6,0.5,' ','R',0,'L');
 			$this->fpdf->Cell(2,0.5,$mak1,'L',0,'L');
-			$this->fpdf->Cell(5.7,0.5,$mak1_ket,'R',0,'L');
-			//$this->fpdf->MultiCell(5.7,0.5,$mak1_ket,'BR','L');
 			$this->fpdf->Ln();
 			
-			$this->fpdf->SetX(3);	
+			$this->fpdf->SetX(1);
+			$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
+			$this->fpdf->Cell(7.6,0.5,' ','R',0,'L');
+			$this->fpdf->Cell(2,0.5,' ','L',0,'L');
+			$this->fpdf->Ln();
+			
+			$this->fpdf->SetX(1);
+			$this->fpdf->Cell(0.7,0.5,'','LR',0,'L');
+			$this->fpdf->Cell(7.6,0.5,'','R',0,'L');
+			$this->fpdf->Cell(2,0.5,'','L',0,'L');
+		
+			
+			$this->fpdf->SetXY(10.6,$tY);
+			$this->fpdf->MultiCell(9.4,0.5,$mak1_ket,'R','L');
+			
+			$tY1 = $this->fpdf->GetY();
+			$this->fpdf->SetX(1);	
 			$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
 			$this->fpdf->Cell(7.6,0.5,' ','R',0,'L');
 			$this->fpdf->Cell(2,0.5,$mak2,'L',0,'L');
-			$this->fpdf->Cell(5.7,0.5,$mak2_ket,'R',0,'L');
 			$this->fpdf->Ln();
 			
-			$this->fpdf->SetX(3);	
+			$this->fpdf->SetX(1);
+			$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
+			$this->fpdf->Cell(7.6,0.5,' ','R',0,'L');
+			$this->fpdf->Cell(2,0.5,' ','L',0,'L');
+			$this->fpdf->Ln();
+			
+			$this->fpdf->SetX(1);
+			$this->fpdf->Cell(0.7,0.5,'','LR',0,'L');
+			$this->fpdf->Cell(7.6,0.5,'','R',0,'L');
+			$this->fpdf->Cell(2,0.5,'','L',0,'L');
+			
+			$this->fpdf->SetXY(10.6,$tY1);
+			$this->fpdf->MultiCell(9.4,0.5,$mak2_ket,'R','L');
+			
+			$tY2 = $this->fpdf->GetY();
+			$this->fpdf->SetX(1);	
 			$this->fpdf->Cell(0.7,0.5,'  ','LBR',0,'L');
 			$this->fpdf->Cell(7.6,0.5,' ','RB',0,'L');
 			$this->fpdf->Cell(2,0.5,$mak3,'LB',0,'L');
-			$this->fpdf->Cell(5.7,0.5,$mak3_ket,'RB',0,'L');
 			$this->fpdf->Ln();
+			
+			/*$this->fpdf->SetX(1);
+			$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
+			$this->fpdf->Cell(7.6,0.5,' ','R',0,'L');
+			$this->fpdf->Cell(2,0.5,' ','L',0,'L');
+			$this->fpdf->Ln();
+			
+			$this->fpdf->SetX(1);
+			$this->fpdf->Cell(0.7,0.5,'','LR',0,'L');
+			$this->fpdf->Cell(7.6,0.5,'','R',0,'L');
+			$this->fpdf->Cell(2,0.5,'','L',0,'L');*/
+			
+			$this->fpdf->SetXY(10.6,$tY2);
+			$this->fpdf->MultiCell(9.4,0.5,$mak3_ket,'RB','L');
 		
-		$this->fpdf->SetX(3);	
-		$this->fpdf->Cell(0.7,1.4,'10. ','LBR',0,'L');
-		$this->fpdf->Cell(7.6,1.4,'Keterangan lain-lain :','BR',0,'L');
-		$this->fpdf->MultiCell(7.7,0.7,$this->KET_SPPD,'BR','L');				
+		$this->fpdf->SetX(1);	
+		$this->fpdf->Cell(0.7,0.5,'10. ','LBR',0,'L');
+		$this->fpdf->Cell(7.6,0.5,'Keterangan lain-lain :','BR',0,'L');
+		$this->fpdf->MultiCell(10.7,0.5,$this->KET_SPPD,'BR','L');				
 		
 		//Footer
 		$this->fpdf->SetX(3);
 		$koorY = $this->fpdf->GetY();
 		$koorY = $koorY+1;
 		$this->fpdf->setFont('Arial','',11);
-		$this->fpdf->Text(10.7,$koorY,'Dikeluarkan di');
-		$this->fpdf->Text(13.5,$koorY,':');
-		$this->fpdf->Text(14.4,$koorY,'B E K A S I');
+		$this->fpdf->Text(12.7,$koorY,'Dikeluarkan di');
+		$this->fpdf->Text(15.5,$koorY,':');
+		$this->fpdf->Text(16.4,$koorY,'B E K A S I');
 		
 		$koorY = $koorY + 0.6;
-		$this->fpdf->Text(10.7,$koorY,'Pada Tanggal');
-		$this->fpdf->Text(13.5,$koorY,':');
-		$this->fpdf->Text(14.4,$koorY,month(date('m')).' '.date('Y'));		
+		$this->fpdf->Text(12.7,$koorY,'Pada Tanggal');
+		$this->fpdf->Text(15.5,$koorY,':');
+		$this->fpdf->Text(16.4,$koorY,month(date('m')).' '.date('Y'));		
 		$koorY = $koorY + 0.1;
-		$this->fpdf->Text(10.7,$koorY,'_________________________________');
+		$this->fpdf->Text(12.7,$koorY,'_________________________________');
 		
 		$koorY = $koorY + 0.6;
 		$this->fpdf->setFont('Arial','B',11);
-		$this->fpdf->Text(10.7,$koorY,'A.N. KUASA PENGGUNA ANGGARAN /');
+		$this->fpdf->Text(12.7,$koorY,'A.N. KUASA PENGGUNA ANGGARAN /');
 		$koorY = $koorY + 0.6;
-		$this->fpdf->Text(11.2,$koorY,'PEJABAT PEMBUAT KOMITMEN');
+		$this->fpdf->Text(13.2,$koorY,'PEJABAT PEMBUAT KOMITMEN');
 		
-		$koorY = $koorY + 1.1;
+		$this->fpdf->Ln();
+		$this->fpdf->Ln();
+		$this->fpdf->Ln();
+		$this->fpdf->Ln();
+		$this->fpdf->Ln();
+		$this->fpdf->Ln();
+		$this->fpdf->Ln();
+		$this->fpdf->Ln();
+		$this->fpdf->Ln();
+		$this->fpdf->Ln();
+		
+		
+		$koorY = $this->fpdf->GetY();
 		$this->fpdf->setFont('Arial','BU',11);
-		$this->fpdf->SetXY(11,$koorY);
+		$this->fpdf->SetXY(13,$koorY);
 		$this->fpdf->Cell(6.5,0.5,$this->NAMA_PPK,0,'','C');		
 		$this->fpdf->setFont('Arial','B',11);
 		
-		$koorY = $koorY + 0.5;
-		$this->fpdf->SetXY(11,$koorY);		
+		$this->fpdf->Ln();
+		$koorY = $this->fpdf->GetY();
+		$this->fpdf->SetXY(13,$koorY);		
 		$this->fpdf->Cell(6.5,0.5,'NIP : '.$this->NIP_PPK,0,'','C');
 		
 			
@@ -2849,7 +3044,7 @@ class Report extends MX_Controller{
 						INNER JOIN kota k ON d.kota_tujuan = k.id
 				WHERE
 						pmd.id_perjalanan = '".$id."'
-				ORDER BY pmd.id_detail");
+				ORDER BY s.golongan_id ASC");
 						
 		$query = $this->db->query($sql);
 		$namaStaff 	= array();

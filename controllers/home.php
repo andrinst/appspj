@@ -17,10 +17,15 @@ class Home extends CI_Controller {
 
 	public function index() {
 		$data = array('title' => 'BBPPT | Application SPJ', 'username' => $this -> session -> userdata('username'));
-
+		$test =$this -> session -> userdata('username');
 		$this -> load -> view('header', $data);
 		$this -> load -> view('main', $data);
-		$this -> load -> view('user/login', $data);
+		if($this->session->userdata('logged_in')==FALSE){
+			$this -> load -> view('user/login', $data);
+		}else{
+			
+			$this -> load -> view('user/welcomeUser', $data);
+		}
 		$this -> load -> view('footer', $data);
 	}
 

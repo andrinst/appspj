@@ -20,25 +20,41 @@ class UserAdministration extends MX_Controller {
 	}	
 	function index() {
 		//if($this->session->userdata('logged_in') == ''){ redirect('home',TRUE); }
-		$this ->_userAdministration_output((object) array('output' => '', 'js_files' => array(), 'css_files' => array()));
+		$sess = $this->session->userdata('logged_in');
+		if($sess == FALSE){
+			redirect('Home',TRUE);
+		}else{
+			$this ->_userAdministration_output((object) array('output' => '', 'js_files' => array(), 'css_files' => array()));	
+		}
+		
 	}
 	public function users(){
 	  	try {
 		  	$crud = new grocery_CRUD();	 
-		    $crud -> set_theme('datatables')//twitter-bootstrap
-		    	  -> set_table('user')			  
-			      -> set_subject('User')
-			      -> required_fields('user_name','user_password')          
-			      -> columns('nama','user_name','role')
-			      -> fields('nama','user_name','user_password','role')
-			 	  -> field_type('user_password', 'password')
-			 	  -> callback_before_insert(array($this,'encrypt_password_callback'))
-			   	  -> callback_before_update(array($this,'encrypt_password_callback'))
-			      -> callback_edit_field('password',array($this,'decrypt_password_callback'))
-				  -> unset_export()
-				  -> unset_print()
-				  -> unset_edit()
-				  -> unset_delete();		 
+			$role = $this->session->userdata['role'];
+			switch($role){
+				case "Administrator":
+					$crud -> set_theme('datatables')//twitter-bootstrap
+						  -> set_table('user')			  
+						  -> set_subject('User')
+						  -> required_fields('user_name','user_password')          
+						  -> columns('nama','user_name','role')
+						  -> fields('nama','user_name','user_password','role')
+						  -> field_type('user_password', 'password')
+						  -> callback_before_insert(array($this,'encrypt_password_callback'))
+						  -> callback_before_update(array($this,'encrypt_password_callback'))
+						  -> callback_edit_field('password',array($this,'decrypt_password_callback'))
+						  -> unset_export()
+						  -> unset_print();
+					break;
+				case "Direktur":
+					redirect('Home',TRUE);
+					break;
+				case "User":
+					redirect('Home',TRUE);
+					break;
+			}
+		    		 
 			$output = $crud->render();
 	    	$this-> _userAdministration_output($output);
 		} catch(Exception $e) {
@@ -48,13 +64,39 @@ class UserAdministration extends MX_Controller {
 	function notaSurat() {
 		try {
 			$crud = new grocery_CRUD();
-			$crud -> set_theme('datatables')
-				  -> set_table('nota_dinas')
-				  -> set_subject('Nota Surat')				  
-				  -> fields('nomor', 'tanggal', 'tentang')
-				  -> required_fields('nomor','tanggal','tentang')				  
-				  -> unset_export()
-				  -> unset_print();
+			$role = $this->session->userdata['role'];
+			switch($role){
+				case "Administrator":
+					$crud -> set_theme('datatables')
+						  -> set_table('nota_dinas')
+						  -> set_subject('Nota Surat')				  
+						  -> fields('nomor', 'tanggal', 'tentang')
+						  -> required_fields('nomor','tanggal','tentang')				  
+						  -> unset_export()
+						  -> unset_print();
+					break;
+				case "Direktur":
+					$crud -> set_theme('datatables')
+						  -> set_table('nota_dinas')
+						  -> set_subject('Nota Surat')				  
+						  -> fields('nomor', 'tanggal', 'tentang')
+						  -> required_fields('nomor','tanggal','tentang')				  
+						  -> unset_export()
+						  -> unset_print()
+						  -> unset_delete();
+					break;
+				case "User":
+					$crud -> set_theme('datatables')
+						  -> set_table('nota_dinas')
+						  -> set_subject('Nota Surat')				  
+						  -> fields('nomor', 'tanggal', 'tentang')
+						  -> required_fields('nomor','tanggal','tentang')				  
+						  -> unset_export()
+						  -> unset_print()
+						  -> unset_delete();
+					break;
+			}
+			
 			$output = $crud -> render();
 			$this->_userAdministration_output($output);			
 		} catch(Exception $e) {
@@ -64,14 +106,42 @@ class UserAdministration extends MX_Controller {
 	function notaSuratExtra() {
 		try {
 			$crud = new grocery_CRUD();
-			$crud -> set_theme('datatables')
-				  -> set_table('jenis_surat')
-				  -> set_subject('Nota Tambahan')				  
-				  -> fields('jenis_undangan','nomor', 'tanggal', 'perihal','penerbit_surat')
-				  -> required_fields('jenis_undangan','nomor', 'tanggal', 'perihal')
-				  -> display_as('jenis_undangan', 'Jenis Nota')				 				 				  
-				  -> unset_export()
-				  -> unset_print();
+			$role = $this->session->userdata['role'];
+			switch($role){
+				case "Administrator":
+					$crud -> set_theme('datatables')
+						  -> set_table('jenis_surat')
+						  -> set_subject('Nota Tambahan')				  
+						  -> fields('jenis_undangan','nomor', 'tanggal', 'perihal','penerbit_surat')
+						  -> required_fields('jenis_undangan','nomor', 'tanggal', 'perihal')
+						  -> display_as('jenis_undangan', 'Jenis Nota')				 				 				  
+						  -> unset_export()
+						  -> unset_print();
+					break;
+				case "Direktur":
+					$crud -> set_theme('datatables')
+						  -> set_table('jenis_surat')
+						  -> set_subject('Nota Tambahan')				  
+						  -> fields('jenis_undangan','nomor', 'tanggal', 'perihal','penerbit_surat')
+						  -> required_fields('jenis_undangan','nomor', 'tanggal', 'perihal')
+						  -> display_as('jenis_undangan', 'Jenis Nota')				 				 				  
+						  -> unset_export()
+						  -> unset_print()
+						  -> unset_delete();
+					break;	
+				case "User":
+					$crud -> set_theme('datatables')
+						  -> set_table('jenis_surat')
+						  -> set_subject('Nota Tambahan')				  
+						  -> fields('jenis_undangan','nomor', 'tanggal', 'perihal','penerbit_surat')
+						  -> required_fields('jenis_undangan','nomor', 'tanggal', 'perihal')
+						  -> display_as('jenis_undangan', 'Jenis Nota')				 				 				  
+						  -> unset_export()
+						  -> unset_print()
+						  -> unset_delete();
+					break;	
+			}
+			
 			$output = $crud -> render();
 			$this->_userAdministration_output($output);			
 		} catch(Exception $e) {
@@ -81,13 +151,39 @@ class UserAdministration extends MX_Controller {
 	function alokasiAnggaran() {
 		try {
 			$crud = new grocery_CRUD();
-			$crud -> set_theme('datatables')
-				  -> set_table('alokasi_anggaran')
-				  -> set_subject('Alokasi Anggaran')				  
-				  -> fields('nomor','tanggal', 'kode_kegiatan', 'sub_kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')
-				  -> required_fields('nomor','tanggal', 'kode_kegiatan', 'sub_kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')			 				 				  
-				  -> unset_export()
-				  -> unset_print();
+			$role = $this->session->userdata['role'];
+			switch($role){
+				case "Administrator":
+					$crud -> set_theme('datatables')
+						  -> set_table('alokasi_anggaran')
+						  -> set_subject('Alokasi Anggaran')				  
+						  -> fields('nomor','tanggal', 'kode_kegiatan', 'sub_kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')
+						  -> required_fields('nomor','tanggal', 'kode_kegiatan', 'sub_kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')			 				 				  
+						  -> unset_export()
+						  -> unset_print();
+					break;
+				case "Direktur":
+					$crud -> set_theme('datatables')
+						  -> set_table('alokasi_anggaran')
+						  -> set_subject('Alokasi Anggaran')				  
+						  -> fields('nomor','tanggal', 'kode_kegiatan', 'sub_kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')
+						  -> required_fields('nomor','tanggal', 'kode_kegiatan', 'sub_kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')			 				 				  
+						  -> unset_export()
+						  -> unset_print()
+						  -> unset_delete();
+					break;
+				case "User":
+					$crud -> set_theme('datatables')
+						  -> set_table('alokasi_anggaran')
+						  -> set_subject('Alokasi Anggaran')				  
+						  -> fields('nomor','tanggal', 'kode_kegiatan', 'sub_kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')
+						  -> required_fields('nomor','tanggal', 'kode_kegiatan', 'sub_kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')			 				 				  
+						  -> unset_export()
+						  -> unset_print()
+						  -> unset_delete();
+					break;
+			}
+
 			$output = $crud -> render();
 			$this->_userAdministration_output($output);			
 		} catch(Exception $e) {
@@ -118,14 +214,42 @@ class UserAdministration extends MX_Controller {
 	function subdit() {
 		try {
 			$crud = new grocery_CRUD();
-			$crud -> set_theme('datatables')
-				  -> set_table('subdit')
-				  -> set_subject('Subdit SDPPI')				  
-				  -> fields('subdit','direktorat')
-				  -> required_fields('subdit','direktorat')				  				  
-				  -> unset_export()
-				  -> unset_print()
-				  -> unset_delete();
+			$role = $this->session->userdata['role'];
+			switch($role){
+				case "Administrator":
+					$crud -> set_theme('datatables')
+						  -> set_table('subdit')
+						  -> set_subject('Subdit SDPPI')				  
+						  -> fields('subdit','direktorat')
+						  -> required_fields('subdit','direktorat')				  				  
+						  -> unset_export()
+						  -> unset_print();
+					break;
+				case "Direktur":
+					$crud -> set_theme('datatables')
+						  -> set_table('subdit')
+						  -> set_subject('Subdit SDPPI')				  
+						  -> fields('subdit','direktorat')
+						  -> required_fields('subdit','direktorat')				  				  
+						  -> unset_export()
+						  -> unset_print()
+						  -> unset_delete();
+					break;
+				case "User":
+					$crud -> set_theme('datatables')
+						  -> set_table('subdit')
+						  -> set_subject('Subdit SDPPI')				  
+						  -> fields('subdit','direktorat')
+						  -> required_fields('subdit','direktorat')				  				  
+						  -> unset_export()
+						  -> unset_print()
+						  -> unset_delete()
+						  -> unset_edit()
+						  -> unset_add();
+					break;
+			}
+
+			
 			$output = $crud -> render();
 			$this->_userAdministration_output($output);			
 		} catch(Exception $e) {

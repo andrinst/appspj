@@ -10,7 +10,12 @@ class ModelUser extends CI_Model {
     public function __construct() { parent::__construct(); }        
     public function login_user($username, $password) {      
         //$sql = "SELECT * FROM user US WHERE US.user_name = '".$username."' AND US.user_password='21232f297a57a5a743894a0e4a801fc3'";        
-		$sql = "SELECT * FROM user US WHERE US.user_name = '".$username."' AND US.user_password='".md5($password)."'";   
+		$this->load->library('encrypt');
+		$key = 'super-secret-key';
+		//$pass = $this->encrypt->encode($password,$key);
+		$pass = md5($password);
+		//$pass1 = "NP+ceq+cX0t42a2lBZhJIRn0a06vGCTmKQRS1hW/5VijLJe+ePnlisajzmjKCzl2vm8cQx1YDo9a7noVRrKT1w==" ;
+		$sql = "SELECT * FROM user US WHERE US.user_name = '".$username."' AND US.user_password='".$pass."'";   
         $query = $this->db->query($sql);               
         return $query;
     }    
