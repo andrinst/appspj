@@ -507,7 +507,7 @@
 	function setNoSpt()	{
 		//Pattern  => NOMOR SPT/DJSDPPI.4/SP.03/TU/month/years		
 		$noSpt = $this->_getIDSpt();		
-		return ($noSpt)."/BBPPT.31/SP.04.06/".date('m')."/".date('Y');
+		return ($noSpt)."/BBPPT.31/".date('m')."/".date('Y');
 	}
 	function saveNoSpt() {
 		$today = date('Y-m-d h-i-s');

@@ -12,9 +12,9 @@
     			<div>
 					<ul id="menu">
 						<li><a href="<?php	echo base_url(); ?>">Home</a></li>
-						<li><a href="<?php	echo base_url(); ?>master">Master</a></li>
-						<li><a href="<?php	echo base_url(); ?>report">Report</a></li>
-						<li><a href="<?php	echo base_url(); ?>user">Administration</a></li>
+						<li><a href="<?php	echo base_url(); ?>user">1. Administration</a></li>
+						<li><a href="<?php	echo base_url(); ?>master">2. Master</a></li>
+						<li><a href="<?php	echo base_url(); ?>report">3. Report</a></li>
 						<li><a href="<?php	echo base_url(); ?>logout">Logout</a></li>						
 					</ul>
 				</div>
@@ -24,9 +24,9 @@
 				<div>
 					<ul id="menu">
 						<li><a href="<?php	echo base_url(); ?>">Home</a></li>
-						<li><a href="<?php	echo base_url(); ?>master">Master</a></li>
-						<li><a href="<?php	echo base_url(); ?>report">Report</a></li>
-						<li><a href="<?php	echo base_url(); ?>user">Administration</a></li>
+						<li><a href="<?php	echo base_url(); ?>user">1. Administration</a></li>
+						<li><a href="<?php	echo base_url(); ?>master">2. Master</a></li>
+						<li><a href="<?php	echo base_url(); ?>report">3. Report</a></li>
 					</ul>
 				</div>	
 			<?php

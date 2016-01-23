@@ -16,9 +16,9 @@ class Report extends MX_Controller{
 	var $KET_SPJ = 'Setelah melaksanakan tugas agar membuat laporan tertulis';
 	var	$KET_SPPD = 'Setelah menjalankan tugas agar membuat Laporan tertulis.';
 	var $NAMA_PPK ='DADI SYAHRIAL RACHMAN';
-	var $NIP_PPK= '19720515.20060404.1.04';
-	var $NAMA_BENDAHARA = 'BUDIYARSO';
-	var $NIP_BENDAHARA = '19660514.200303.1.001';
+	var $NIP_PPK= '19720515.200604.1.004';
+	var $NAMA_BENDAHARA = 'RAUZI ELDI';
+	var $NIP_BENDAHARA = '19820812.200901.1.004';
 	var $REPRESENTATIF = 150000;
 	var $today;
 		
@@ -2251,7 +2251,7 @@ class Report extends MX_Controller{
 					$this->fpdf->Cell(7.6,0.5,'d. Pangkat menurut peraturan perjalanan dinas','BR',0,'L');
 					$this->fpdf->Cell(10.7,0.5,'d. ','BR',0,'L');		
 		$maksud = $this->mr->getMaksud();
-		$w = 1; $x = 1;
+		$w = 0.5; $x = 0.5;
 		$inW = array(0.5,1,1.5,2,2.5,3,3.5,4,4.5,5); 
 			 if((strlen($maksud)) >= 370 && (strlen($maksud)) < 400) {$x = $inW[9] ;$w = $inW[0] ;}
 		else if((strlen($maksud)) >= 300 && (strlen($maksud)) < 370) {$x = $inW[6] ;$w = $inW[0] ;}
