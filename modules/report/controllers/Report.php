@@ -531,7 +531,7 @@ class Report extends MX_Controller{
 		$this->fpdf->Cell(5.5,0.5,' '.'NIP : '.$nip,'LB','L');
 		$this->fpdf->setXY($koorX[4],$y9);
 		if(strlen($jabatan) < 28){
-			$this->fpdf->MultiCell(6,1,$jabatan,'LRB','L');
+			$this->fpdf->MultiCell(6,0.5,$jabatan,'LRB','L');
 		}else{
 			$this->fpdf->MultiCell(6,0.5,$jabatan,'LRB','L');
 		}
@@ -1779,9 +1779,10 @@ class Report extends MX_Controller{
 		
 		//Header
 		$this->fpdf->setFont('Arial','B',12.6);
-		$this->fpdf->Text(4.9,1,'KEMENTERIAN KOMUNIKASI DAN INFORMATIKA','C');
-		$this->fpdf->Text(1.7,1.6,'DIREKTORAT JENDERAL SUMBER DAYA DAN PERANGKAT POS DAN INFORMATIKA');
-		$this->fpdf->Image('../appspj/assets/images/header_line.png',1.7,1.8,18.3,0.3,'PNG');
+		$this->fpdf->Text(4.9,0.9,'KEMENTERIAN KOMUNIKASI DAN INFORMATIKA','C');
+		$this->fpdf->Text(1.7,1.4,'DIREKTORAT JENDERAL SUMBER DAYA DAN PERANGKAT POS DAN INFORMATIKA');
+		$this->fpdf->Text(3.8,1.9,'BALAI BESAR PENGUJIAN PERANGKAT TELEKOMUNIKASI');
+		$this->fpdf->Image('../appspj/assets/images/header_line.png',1.7,2.0,18.3,0.3,'PNG');
 		$this->fpdf->Ln();
 		
 		$this->fpdf->setFont('Arial','',9.5);
@@ -2807,7 +2808,7 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY($koorX[3],$y9 + $rs);
 		$this->fpdf->Cell(5.5,0.5,' '.'NIP : '.$nip,'LB','L');
 		$this->fpdf->setXY($koorX[4],$y9);
-		if(strlen($jabatan) < 28){
+		if(strlen($jabatan) < 27){
 			$this->fpdf->MultiCell(6,1,$jabatan,'LRB','L');
 		}else{
 			$this->fpdf->MultiCell(6,0.5,$jabatan,'LRB','L');
@@ -2819,7 +2820,7 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(2.6,$koorY );
 		$this->fpdf->Cell(0.6,0.5,'E.','');		
 		$this->fpdf->Cell(5.3,0.5,'Maksud dan Tujuan Penugasan','');		
-		$this->fpdf->Cell(0.5,0.5,':');	
+		$this->fpdf->Cell(0.5,0.5,':');		
 		
 		$sql = ("SELECT d.berangkat,d.kembali from perjalanan_multi p inner join dinas d on p.dinas = d.id where p.id = '".$idPerjalanan."'");
 		$query = $this->db->query($sql);
@@ -2863,7 +2864,6 @@ class Report extends MX_Controller{
 		
 			$koorY = $koorY + (2.5 * $rt);	
 			$koorY=$this->fpdf->GetY()+0.5;
-			//$this->fpdf->Ln();
 			$this->fpdf->Text(3.25,$koorY,'4. Alat Transportasi');
 			$this->fpdf->Text(8,$koorY,':');
 			$this->fpdf->Text(8.3,$koorY,$this->TRANSPORTASI);
@@ -2879,17 +2879,22 @@ class Report extends MX_Controller{
 		$this->fpdf->Cell(0.6,0.5,'1.','');
 		$this->fpdf->MultiCell(15.5,0.5,'Melaporkan hasil pelaksanaan tugas selambat-lambatnya 7 (tujuh) hari kerja setelah pelaksanaan dengan melampirkan dokumen pendukung administrasi lainnya sesuai peraturan perundang - undangan yang berlaku.','');
 		$rt = 2;
-		$koorY = $koorY+$rt;
+		//$koorY = $koorY+$rt;
+		$koorY = $this->fpdf->GetY();
 		$this->fpdf->setXY(3.2,$koorY);
 		$this->fpdf->Cell(0.6,0.5,'2.','');
 		$this->fpdf->MultiCell(15.5,0.5,'Para nama pegawai yang ditugaskan agar melaksanakan tugas ini dengan penuh tanggung jawab dan berlaku sejak tanggal ditetapkan.','');
-		$koorY = $koorY+$rt;
-		$this->fpdf->setXY(3.2,$koorY-0.5);
+		//$koorY = $koorY+$rt;
+		//$this->fpdf->setXY(3.2,$koorY-0.5);
+		$this->fpdf->Ln();
+		$yX = $this->fpdf->GetY();
+		$this->fpdf->setXY(3.2,$yX);
 		$this->fpdf->Cell(0.6,0.5,'3.','');
 		$this->fpdf->MultiCell(15.5,0.5,'Segala biaya yang dikeluarkan berkenaan dengan pelaksanaan kegiatan ini dibebankan pada kegiatan tersebut diatas.','');
 		//Footer
 		/*$this->fpdf->AddPage();
 		$this->fpdf->Ln();
+		
 		$this->fpdf->setFont('Arial','',11);
 		$this->fpdf->Text(12,3,'Ditetapkan');
 		$this->fpdf->Text(15,3,':');
@@ -2911,8 +2916,7 @@ class Report extends MX_Controller{
 		}else{
 			$this->fpdf->Text(12.2,4.5,substr($JAB_PLT,0,28));
 			$this->fpdf->Text(12.5,5.0,substr($JAB_PLT,29));
-		}	
-		
+		}		
 		$this->fpdf->SetXY(12.5,6.7);
 		$this->fpdf->Cell(5.5,0.5,$TTD,0,'','C');
 		
@@ -2925,12 +2929,13 @@ class Report extends MX_Controller{
 		$this->fpdf->Text(2.6,9,'1. Yth. Sdr Kabag TU BBPPT,');
 		$this->fpdf->Text(3,9.5,'Mohon menyiapkan SPPD/DOP bagi ybs');
 		$this->fpdf->Text(2.6,10,'2. Yth. Sdr Bendahara BBPPT,');		
-		$this->fpdf->Text(3,10.5,'usulan pendanaan bagi ybs');*/
+		$this->fpdf->Text(3,10.5,'usulan pendanaan bagi ybs');
+		*/
 		$rr = 1;
 		$GetYCur  = $this->fpdf->GetY();
 		$koorY = $GetY + $rr;
 			if ($GetYCur  > 17){
-				$this->fpdf->AddPage();
+				//$this->fpdf->AddPage();
 				$koorY = $this->fpdf->GetY();;
 				$rr = 3;
 				$koorY = $rr;
@@ -3006,7 +3011,6 @@ class Report extends MX_Controller{
 		$rr = 3;
 		$koorY = $GetY + $rr;		
 		$this->fpdf->Text(3,$koorY,'usulan pendanaan bagi ybs');
-		
 		/*****
 		//Insert Page Number
 		$this->fpdf->setFont('Arial','',7);				
