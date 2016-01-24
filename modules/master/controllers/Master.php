@@ -773,7 +773,7 @@ class Master extends MX_Controller {
 						  -> display_as('uang_saku', 'Jenis Uang Saku')				
 						  -> display_as('airport_tax_tujuan', ' Airport Tax Kota Tujuan')
 						  -> display_as('airport_tax_asal', ' Airport Tax Kota Asal')
-						  //-> add_action('Approve','../assets/images/approved.png','report/approveSPJ')
+						  -> add_action('Approve','../assets/images/approved.png','report/approveSPJ')
 						  -> add_action('Review','../assets/images/pdf.png','report/cetakReviewSppt')
 						  -> callback_column('tgl_approval', array($this, 'day'))
 						  -> callback_column('tgl_spt', array($this, 'day'))				  
