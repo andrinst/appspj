@@ -316,13 +316,14 @@ class Report extends MX_Controller{
 		$nomorAnggaran = $resultAlokasiAnggaran[0];
 		$tanggalAnggaran = $resultAlokasiAnggaran[1];
 		$kodeKegiatanAnggaran = $resultAlokasiAnggaran[2];
-		$subKegiatanAnggaran = $resultAlokasiAnggaran[3];
-		$mak1 = $resultAlokasiAnggaran[4];
-		$mak1_ket = $resultAlokasiAnggaran[5];
-		$mak2 = $resultAlokasiAnggaran[6];
-		$mak2_ket = $resultAlokasiAnggaran[7];
-		$mak3 = $resultAlokasiAnggaran[8];
-		$mak3_ket = $resultAlokasiAnggaran[9];
+		$subKodeKegiatanAnggaran = $resultAlokasiAnggaran[3];
+		$kegiatanAnggaran = $resultAlokasiAnggaran[4];
+		$mak1 = $resultAlokasiAnggaran[5];
+		$mak1_ket = $resultAlokasiAnggaran[6];
+		$mak2 = $resultAlokasiAnggaran[7];
+		$mak2_ket = $resultAlokasiAnggaran[8];
+		$mak3 = $resultAlokasiAnggaran[9];
+		$mak3_ket = $resultAlokasiAnggaran[10];
 		
 		
 		$this->fpdf->SetTextColor(0, 0, 0);
@@ -373,13 +374,13 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(12.7,9.4);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(13,9.4);
-		$this->fpdf->MultiCell(8,0.5,$kodeKegiatanAnggaran);
+		$this->fpdf->MultiCell(8,0.5,$kodeKegiatanAnggaran.' - '.$subKodeKegiatanAnggaran);
 		$this->fpdf->setXY(10.2,9.9);
 		$this->fpdf->MultiCell(7.5,0.5,'Sub Kegiatan');
 		$this->fpdf->setXY(12.7,9.9);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(13,9.9);
-		$this->fpdf->MultiCell(5.5,0.5,$subKegiatanAnggaran);
+		$this->fpdf->MultiCell(5.5,0.5,$kegiatanAnggaran);
 		//$this->fpdf->Ln();
 		$y1 = $this->fpdf->GetY();
 		$this->fpdf->setXY(10.2,$y1);
@@ -426,7 +427,11 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(12.7,$y5);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(13,$y5);
-		$this->fpdf->MultiCell(8,0.5,day($tanggalNotaDinas));
+		if($tanggalNotaDinas == ''){
+			$this->fpdf->MultiCell(8,0.5,'-');
+		} else {
+			$this->fpdf->MultiCell(8,0.5,day($tanggalNotaDinas));
+		}
 		
 		$y6 = $this->fpdf->GetY();
 		$this->fpdf->setXY(10.2,$y6);
@@ -600,8 +605,11 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(3.2,$koorY);
 		$this->fpdf->Cell(0.6,0.5,'2.','');
 		$this->fpdf->MultiCell(15.5,0.5,'Para nama pegawai yang ditugaskan agar melaksanakan tugas ini dengan penuh tanggung jawab dan berlaku sejak tanggal ditetapkan.','');
-		$koorY = $koorY+$rt;
-		$this->fpdf->setXY(3.2,$koorY-0.5);
+		//$koorY = $koorY+$rt;
+		//$this->fpdf->setXY(3.2,$koorY-0.5);
+		$this->fpdf->Ln();
+		$yX = $this->fpdf->GetY();
+		$this->fpdf->setXY(3.2,$yX);
 		$this->fpdf->Cell(0.6,0.5,'3.','');
 		$this->fpdf->MultiCell(15.5,0.5,'Segala biaya yang dikeluarkan berkenaan dengan pelaksanaan kegiatan ini dibebankan pada kegiatan tersebut diatas.','');
 		//Footer
@@ -648,7 +656,7 @@ class Report extends MX_Controller{
 		$GetYCur  = $this->fpdf->GetY();
 		$koorY = $GetY + $rr;
 			if ($GetYCur  > 17){
-				$this->fpdf->AddPage();
+				//$this->fpdf->AddPage();
 				$koorY = $this->fpdf->GetY();;
 				$rr = 3;
 				$koorY = $rr;
@@ -823,13 +831,14 @@ class Report extends MX_Controller{
 		$nomorAnggaran = $resultAlokasiAnggaran[0];
 		$tanggalAnggaran = $resultAlokasiAnggaran[1];
 		$kodeKegiatanAnggaran = $resultAlokasiAnggaran[2];
-		$subKegiatanAnggaran = $resultAlokasiAnggaran[3];
-		$mak1 = $resultAlokasiAnggaran[4];
-		$mak1_ket = $resultAlokasiAnggaran[5];
-		$mak2 = $resultAlokasiAnggaran[6];
-		$mak2_ket = $resultAlokasiAnggaran[7];
-		$mak3 = $resultAlokasiAnggaran[8];
-		$mak3_ket = $resultAlokasiAnggaran[9];
+		$subKodeKegiatanAnggaran = $resultAlokasiAnggaran[3];
+		$kegiatanAnggaran = $resultAlokasiAnggaran[4];
+		$mak1 = $resultAlokasiAnggaran[5];
+		$mak1_ket = $resultAlokasiAnggaran[6];
+		$mak2 = $resultAlokasiAnggaran[7];
+		$mak2_ket = $resultAlokasiAnggaran[8];
+		$mak3 = $resultAlokasiAnggaran[9];
+		$mak3_ket = $resultAlokasiAnggaran[10];
 				
 		$this->fpdf->SetTextColor(0, 0, 0);
 		$this->fpdf->SetFont('Arial','U',12);
@@ -879,13 +888,13 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(12.7,9.4);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(13,9.4);
-		$this->fpdf->MultiCell(8,0.5,$kodeKegiatanAnggaran);
+		$this->fpdf->MultiCell(8,0.5,$kodeKegiatanAnggaran.' - '.$subKodeKegiatanAnggaran);
 		$this->fpdf->setXY(10.2,9.9);
 		$this->fpdf->MultiCell(7.5,0.5,'Sub Kegiatan');
 		$this->fpdf->setXY(12.7,9.9);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(13,9.9);
-		$this->fpdf->MultiCell(5.5,0.5,$subKegiatanAnggaran);
+		$this->fpdf->MultiCell(5.5,0.5,$kegiatanAnggaran);
 		//$this->fpdf->Ln();
 		$y1 = $this->fpdf->GetY();
 		$this->fpdf->setXY(10.2,$y1);
@@ -932,7 +941,12 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(12.7,$y5);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(13,$y5);
-		$this->fpdf->MultiCell(8,0.5,day($tanggalNotaDinas));
+		if($tanggalNotaDinas == ''){
+			$this->fpdf->MultiCell(8,0.5,'-');
+		}else {
+			$this->fpdf->MultiCell(8,0.5,day($tanggalNotaDinas));
+		}
+		
 
 		$y6 = $this->fpdf->GetY();
 		$this->fpdf->setXY(10.2,$y6);
@@ -2213,13 +2227,14 @@ class Report extends MX_Controller{
 		$nomorAnggaran = $resultAlokasiAnggaran[0];
 		$tanggalAnggaran = $resultAlokasiAnggaran[1];
 		$kodeKegiatanAnggaran = $resultAlokasiAnggaran[2];
-		$subKegiatanAnggaran = $resultAlokasiAnggaran[3];
-		$mak1 = $resultAlokasiAnggaran[4];
-		$mak1_ket = $resultAlokasiAnggaran[5];
-		$mak2 = $resultAlokasiAnggaran[6];
-		$mak2_ket = $resultAlokasiAnggaran[7];
-		$mak3 = $resultAlokasiAnggaran[8];
-		$mak3_ket = $resultAlokasiAnggaran[9];
+		$subKodeKegiatanAnggaran = $resultAlokasiAnggaran[3];
+		$kegiatanAnggaran = $resultAlokasiAnggaran[4];
+		$mak1 = $resultAlokasiAnggaran[5];
+		$mak1_ket = $resultAlokasiAnggaran[6];
+		$mak2 = $resultAlokasiAnggaran[7];
+		$mak2_ket = $resultAlokasiAnggaran[8];
+		$mak3 = $resultAlokasiAnggaran[9];
+		$mak3_ket = $resultAlokasiAnggaran[10];
 		
 		$this->fpdf->setFont('Arial','',10);
 		$this->fpdf->SetX(1,$y1);	
@@ -2376,13 +2391,13 @@ class Report extends MX_Controller{
 			$this->fpdf->SetX(1);	
 			$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
 			$this->fpdf->Cell(7.6,0.5,'c. Nomer dan Tanggal DIPA	','R',0,'L');
-			$this->fpdf->Cell(10.7,0.5,$nomorAnggaran.' tanggal '.$tanggalAnggaran,'R',0,'L');
+			$this->fpdf->Cell(10.7,0.5,$nomorAnggaran.' tanggal '.day($tanggalAnggaran),'R',0,'L');
 			$this->fpdf->Ln();
 			
 			$this->fpdf->SetX(1);	
 			$this->fpdf->Cell(0.7,0.5,'  ','LR',0,'L');
 			$this->fpdf->Cell(7.6,0.5,'d. Kode kegiatan / Sub kegiatan / MAK 	','R',0,'L');
-			$this->fpdf->Cell(10.7,0.5,$kodeKegiatanAnggaran.'-'.$subKegiatanAnggaran,'R',0,'L');
+			$this->fpdf->Cell(10.7,0.5,$kodeKegiatanAnggaran.' '.$subKodeKegiatanAnggaran.' - '.$kegiatanAnggaran,'R',0,'L');
 			$this->fpdf->Ln();
 			
 			
@@ -2577,13 +2592,14 @@ class Report extends MX_Controller{
 		$nomorAnggaran = $resultAlokasiAnggaran[0];
 		$tanggalAnggaran = $resultAlokasiAnggaran[1];
 		$kodeKegiatanAnggaran = $resultAlokasiAnggaran[2];
-		$subKegiatanAnggaran = $resultAlokasiAnggaran[3];
-		$mak1 = $resultAlokasiAnggaran[4];
-		$mak1_ket = $resultAlokasiAnggaran[5];
-		$mak2 = $resultAlokasiAnggaran[6];
-		$mak2_ket = $resultAlokasiAnggaran[7];
-		$mak3 = $resultAlokasiAnggaran[8];
-		$mak3_ket = $resultAlokasiAnggaran[9];
+		$subKodeKegiatanAnggaran = $resultAlokasiAnggaran[3];
+		$kegiatanAnggaran = $resultAlokasiAnggaran[4];
+		$mak1 = $resultAlokasiAnggaran[5];
+		$mak1_ket = $resultAlokasiAnggaran[6];
+		$mak2 = $resultAlokasiAnggaran[7];
+		$mak2_ket = $resultAlokasiAnggaran[8];
+		$mak3 = $resultAlokasiAnggaran[9];
+		$mak3_ket = $resultAlokasiAnggaran[10];
 		
 		$this->fpdf->SetTextColor(0, 0, 0);
 		$this->fpdf->SetFont('Arial','U',12);
@@ -2632,13 +2648,13 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(12.7,9.4);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(13,9.4);
-		$this->fpdf->MultiCell(8,0.5,$kodeKegiatanAnggaran);
+		$this->fpdf->MultiCell(8,0.5,$kodeKegiatanAnggaran.' - '.$subKodeKegiatanAnggaran);
 		$this->fpdf->setXY(10.2,9.9);
 		$this->fpdf->MultiCell(7.5,0.5,'Sub Kegiatan');
 		$this->fpdf->setXY(12.7,9.9);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(13,9.9);
-		$this->fpdf->MultiCell(5.5,0.5,$subKegiatanAnggaran);
+		$this->fpdf->MultiCell(5.5,0.5,$kegiatanAnggaran);
 		//$this->fpdf->Ln();
 		$y1 = $this->fpdf->GetY();
 		$this->fpdf->setXY(10.2,$y1);
@@ -2685,7 +2701,12 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(12.7,$y5);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(13,$y5);
-		$this->fpdf->MultiCell(8,0.5,day($tanggalNotaDinas));
+		if($tanggalNotaDinas == ''){
+			$this->fpdf->MultiCell(8,0.5,'-');
+		}else{
+			$this->fpdf->MultiCell(8,0.5,day($tanggalNotaDinas));
+		}
+		
 
 		$y6 = $this->fpdf->GetY();
 		$this->fpdf->setXY(10.2,$y6);
@@ -2699,6 +2720,7 @@ class Report extends MX_Controller{
 		/**
 		 * add nota tambahan(Rutin/Undangan [Internal or Eksternal],Rutin,)Kontrak , SK TIM)
 		 */
+		 /*
 		$headerNote = '';
 		if(!empty($isExtraNotes))
 		{
@@ -2744,7 +2766,7 @@ class Report extends MX_Controller{
 		}else{
 			$koorY = 10.9;
 			$rs = 0.5;
-		}
+		}*/
 		$rs = 1;
 		$koorY = $koorY +$rs;//15.9;
 		$rr = 2.5;		
@@ -3079,13 +3101,14 @@ class Report extends MX_Controller{
 		$nomorAnggaran = $resultAlokasiAnggaran[0];
 		$tanggalAnggaran = $resultAlokasiAnggaran[1];
 		$kodeKegiatanAnggaran = $resultAlokasiAnggaran[2];
-		$subKegiatanAnggaran = $resultAlokasiAnggaran[3];
-		$mak1 = $resultAlokasiAnggaran[4];
-		$mak1_ket = $resultAlokasiAnggaran[5];
-		$mak2 = $resultAlokasiAnggaran[6];
-		$mak2_ket = $resultAlokasiAnggaran[7];
-		$mak3 = $resultAlokasiAnggaran[8];
-		$mak3_ket = $resultAlokasiAnggaran[9];
+		$subKodeKegiatanAnggaran = $resultAlokasiAnggaran[3];
+		$kegiatanAnggaran = $resultAlokasiAnggaran[4];
+		$mak1 = $resultAlokasiAnggaran[5];
+		$mak1_ket = $resultAlokasiAnggaran[6];
+		$mak2 = $resultAlokasiAnggaran[7];
+		$mak2_ket = $resultAlokasiAnggaran[8];
+		$mak3 = $resultAlokasiAnggaran[9];
+		$mak3_ket = $resultAlokasiAnggaran[10];
 				
 		$this->fpdf->SetTextColor(0, 0, 0);
 		$this->fpdf->SetFont('Arial','U',12);
@@ -3134,13 +3157,13 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(12.7,9.4);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(13,9.4);
-		$this->fpdf->MultiCell(8,0.5,$kodeKegiatanAnggaran);
+		$this->fpdf->MultiCell(8,0.5,$kodeKegiatanAnggaran.' - '.$subKodeKegiatanAnggaran);
 		$this->fpdf->setXY(10.2,9.9);
 		$this->fpdf->MultiCell(7.5,0.5,'Sub Kegiatan');
 		$this->fpdf->setXY(12.7,9.9);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(13,9.9);
-		$this->fpdf->MultiCell(5.5,0.5,$subKegiatanAnggaran);
+		$this->fpdf->MultiCell(5.5,0.5,$kegiatanAnggaran);
 		//$this->fpdf->Ln();
 		$y1 = $this->fpdf->GetY();
 		$this->fpdf->setXY(10.2,$y1);
@@ -3187,7 +3210,11 @@ class Report extends MX_Controller{
 		$this->fpdf->setXY(12.7,$y5);
 		$this->fpdf->MultiCell(0.5,0.5,':');
 		$this->fpdf->setXY(13,$y5);
-		$this->fpdf->MultiCell(8,0.5,day($tanggalNotaDinas));
+		if ($tanggalNotaDinas == ''){
+			$this->fpdf->MultiCell(8,0.5,'-');
+		}else{
+			$this->fpdf->MultiCell(8,0.5,day($tanggalNotaDinas));
+		}
 
 		$y6 = $this->fpdf->GetY();
 		$this->fpdf->setXY(10.2,$y6);

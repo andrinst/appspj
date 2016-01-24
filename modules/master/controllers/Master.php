@@ -369,7 +369,7 @@ class Master extends MX_Controller {
 				case "Administrator":
 					$crud -> set_theme('datatables')
 						  -> set_table('staff')
-						  -> set_subject('Staff SDPPI')
+						  -> set_subject('Staff BBPPT')
 						  -> set_relation('id_subdit','subdit','{subdit}')
 						  //-> set_relation('id_eselon','eselon','{eselon}')
 						  -> set_relation('golongan','pangkat','{golongan}')
@@ -384,7 +384,7 @@ class Master extends MX_Controller {
 				case "Direktur":
 					$crud -> set_theme('datatables')
 							  -> set_table('staff')
-							  -> set_subject('Staff SDPPI')
+							  -> set_subject('Staff BBPPT')
 							  -> set_relation('id_subdit','subdit','{subdit}')
 							  //-> set_relation('id_eselon','eselon','{eselon}')
 							  -> set_relation('golongan','pangkat','{golongan}')
@@ -400,7 +400,7 @@ class Master extends MX_Controller {
 				case "User":
 					$crud -> set_theme('datatables')
 							  -> set_table('staff')
-							  -> set_subject('Staff SDPPI')
+							  -> set_subject('Staff BBPPT')
 							  -> set_relation('id_subdit','subdit','{subdit}')
 							  //-> set_relation('id_eselon','eselon','{eselon}')
 							  -> set_relation('golongan','pangkat','{golongan}')
@@ -502,13 +502,13 @@ class Master extends MX_Controller {
 				case "Administrator":
 					$crud -> set_theme('datatables') 
 						  -> set_table('dinas')
-						  -> set_subject('Dinas SDPPI')
+						  -> set_subject('Dinas BBPPT')
 						  -> set_relation('kota_asal', 'kota', '{kota}')
 						  -> set_relation('kota_tujuan', 'kota', '{kota}')
 						  -> set_relation('id_subdit', 'subdit', '{subdit}')
-						  -> set_relation('nota_dinas', 'nota_dinas', '{nomor}')
+						  -> set_relation('nota_dinas', 'nota_dinas', '{tentang}')
 						  -> set_relation('nota_dinas_1', 'jenis_surat', '{nomor}')
-						  -> set_relation('alokasi_anggaran', 'alokasi_anggaran', '{nomor}')
+						  -> set_relation('alokasi_anggaran', 'alokasi_anggaran', '{mak2_ket}')
 						  -> columns('maksud', 'berangkat', 'kembali','id_subdit','kota_tujuan')
 						  -> required_fields('maksud', 'alokasi_anggaran', 'nota_dinas', 'id_subdit','berangkat','kembali','kota_asal','kota_tujuan')
 						  -> field_type('create_date', 'hidden',$today)
@@ -530,7 +530,7 @@ class Master extends MX_Controller {
 				case "Direktur":
 					$crud -> set_theme('datatables') 
 						  -> set_table('dinas')
-						  -> set_subject('Dinas SDPPI')
+						  -> set_subject('Dinas BBPPT')
 						  -> set_relation('kota_asal', 'kota', '{kota}')
 						  -> set_relation('kota_tujuan', 'kota', '{kota}')
 						  -> set_relation('id_subdit', 'subdit', '{subdit}')
@@ -559,7 +559,7 @@ class Master extends MX_Controller {
 				case "User":
 					$crud -> set_theme('datatables') 
 						  -> set_table('dinas')
-						  -> set_subject('Dinas SDPPI')
+						  -> set_subject('Dinas BBPPT')
 						  -> set_relation('kota_asal', 'kota', '{kota}')
 						  -> set_relation('kota_tujuan', 'kota', '{kota}')
 						  -> set_relation('id_subdit', 'subdit', '{subdit}')

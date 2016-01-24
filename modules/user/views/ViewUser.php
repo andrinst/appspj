@@ -7,6 +7,7 @@
 				<li><a href="<?php	echo base_url();?>user/userAdministration/subdit">Set Bagian/Bidang</a></li>
 				<?php if ($this->session->userdata['role'] == 'Administrator'){?>
 				<li><a href="<?php	echo base_url();?>user/userAdministration/users">Set User</a></li>
+				<li><a href="<?php	echo base_url();?>user/userAdministration/no_tanggal_alokasiAnggaran">Set Nomor Anggaran</a></li>
 				<?php } ?>
 		</ul>
 	</div>	

@@ -71,7 +71,7 @@ class UserAdministration extends MX_Controller {
 						  -> set_table('nota_dinas')
 						  -> set_subject('Nota Surat')				  
 						  -> fields('nomor', 'tanggal', 'tentang')
-						  -> required_fields('nomor','tanggal','tentang')				  
+						  -> required_fields('nomor','tentang')				  
 						  -> unset_export()
 						  -> unset_print();
 					break;
@@ -80,7 +80,7 @@ class UserAdministration extends MX_Controller {
 						  -> set_table('nota_dinas')
 						  -> set_subject('Nota Surat')				  
 						  -> fields('nomor', 'tanggal', 'tentang')
-						  -> required_fields('nomor','tanggal','tentang')				  
+						  -> required_fields('nomor','tentang')				  
 						  -> unset_export()
 						  -> unset_print()
 						  -> unset_delete();
@@ -90,7 +90,7 @@ class UserAdministration extends MX_Controller {
 						  -> set_table('nota_dinas')
 						  -> set_subject('Nota Surat')				  
 						  -> fields('nomor', 'tanggal', 'tentang')
-						  -> required_fields('nomor','tanggal','tentang')				  
+						  -> required_fields('nomor','tentang')				  
 						  -> unset_export()
 						  -> unset_print()
 						  -> unset_delete();
@@ -148,36 +148,63 @@ class UserAdministration extends MX_Controller {
 			show_error($e -> getMessage() . ' --- ' . $e -> getTraceAsString());
 		}
 	}
+	function no_tanggal_alokasiAnggaran(){
+		try {
+			$crud = new grocery_CRUD();
+			$role = $this->session->userdata['role'];
+			if ($role == 'Administrator'){
+				$crud -> set_theme('datatables')
+						  -> set_table('no_tgl_anggaran')
+						  -> set_subject('Nomor Alokasi Anggaran')				  
+						  -> fields('nomor','tanggal')
+						  -> required_fields('nomor','tanggal')			 				 				  
+						  -> unset_export()
+						  -> unset_print();
+			}
+			$output = $crud -> render();
+			$this->_userAdministration_output($output);
+		} catch(Exception $e) {
+			show_error($e -> getMessage() . ' --- ' . $e -> getTraceAsString());
+		}	
+	}
 	function alokasiAnggaran() {
 		try {
 			$crud = new grocery_CRUD();
 			$role = $this->session->userdata['role'];
 			switch($role){
 				case "Administrator":
-					$crud -> set_theme('datatables')
+					$crud -> set_theme('flexigrid')
 						  -> set_table('alokasi_anggaran')
+						  -> set_relation('nomor', 'no_tgl_anggaran', '{nomor}')
+						  //-> set_relation('tanggal', 'no_tgl_anggaran', '{tanggal}')
 						  -> set_subject('Alokasi Anggaran')				  
-						  -> fields('nomor','tanggal', 'kode_kegiatan', 'sub_kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')
-						  -> required_fields('nomor','tanggal', 'kode_kegiatan', 'sub_kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')			 				 				  
+						  -> fields('nomor','kode_kegiatan', 'sub_kode_kegiatan','kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')
+						  -> required_fields('nomor','kode_kegiatan', 'sub_kode_kegiatan','kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')			 				 				  
+						 // -> display_as('kode_kegiatan','Test')
+						 // -> display_as('sub_kode_kegiatan','Andri')
 						  -> unset_export()
 						  -> unset_print();
 					break;
 				case "Direktur":
-					$crud -> set_theme('datatables')
+					$crud -> set_theme('flexigrid')
 						  -> set_table('alokasi_anggaran')
+						  -> set_relation('nomor','no_tgl_anggaran', '{nomor}')
+						 // -> set_relation('tanggal', 'no_tgl_anggaran', '{tanggal}')
 						  -> set_subject('Alokasi Anggaran')				  
-						  -> fields('nomor','tanggal', 'kode_kegiatan', 'sub_kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')
-						  -> required_fields('nomor','tanggal', 'kode_kegiatan', 'sub_kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')			 				 				  
+						  -> fields('nomor','kode_kegiatan', 'sub_kode_kegiatan','kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')
+						  -> required_fields('nomor','kode_kegiatan', 'sub_kode_kegiatan','kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')			 				 				  			 				 				  
 						  -> unset_export()
 						  -> unset_print()
 						  -> unset_delete();
 					break;
 				case "User":
-					$crud -> set_theme('datatables')
+					$crud -> set_theme('flexigrid')
 						  -> set_table('alokasi_anggaran')
+						  -> set_relation('nomor', 'no_tgl_anggaran', '{nomor}')
+						 // -> set_relation('tanggal', 'no_tgl_anggaran', '{tanggal}')
 						  -> set_subject('Alokasi Anggaran')				  
-						  -> fields('nomor','tanggal', 'kode_kegiatan', 'sub_kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')
-						  -> required_fields('nomor','tanggal', 'kode_kegiatan', 'sub_kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')			 				 				  
+						  -> fields('nomor','kode_kegiatan', 'sub_kode_kegiatan','kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')
+						  -> required_fields('nomor','kode_kegiatan', 'sub_kode_kegiatan','kegiatan','mak1','mak1_ket', 'mak2', 'mak2_ket', 'mak3', 'mak3_ket')			 				 				  	 				 				  
 						  -> unset_export()
 						  -> unset_print()
 						  -> unset_delete();

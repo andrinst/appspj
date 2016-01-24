@@ -1,0 +1,24 @@
+select s.id from staff s, perjalanan_multi_detail pmd,
+perjalanan_multi pm, dinas d where
+s.id = pmd.personil and
+pm.id = pmd.id_perjalanan and
+d.id = pm.dinas  and
+d.berangkat = CURRENT_DATE;
+
+
+select d.id from dinas d where d.berangkat =2016-01-07;
+
+update staff s,perjalanan_multi_detail pmd,
+perjalanan_multi pm, dinas d
+set s.status = 'ready' where s.id = pmd.personil and
+pm.id = pmd.id_perjalanan and
+d.id = pm.dinas  and
+d.berangkat = '2016-01-15';
+
+
+CREATE DEFINER=`root`@`localhost` EVENT `event_berangkat` ON SCHEDULE EVERY 5 MINUTE STARTS '2016-01-24 14:07:00' ON COMPLETION NOT PRESERVE ENABLE DO update staff s,perjalanan_multi_detail pmd,
+perjalanan_multi pm, dinas d
+set s.status = 'not ready' where s.id = pmd.personil and
+pm.id = pmd.id_perjalanan and
+d.id = pm.dinas  and
+d.berangkat = '2016-01-15'

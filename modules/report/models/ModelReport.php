@@ -79,10 +79,11 @@
 		return $result;
 	}
 	function getAlokasiAnggaran() {
-		$sql 	= ("SELECT aa.nomor,aa.tanggal,aa.kode_kegiatan,aa.sub_kegiatan,aa.mak1,aa.mak1_ket,aa.mak2,aa.mak2_ket,aa.mak3,aa.mak3_ket
-					FROM perjalanan_multi pm, dinas d, alokasi_anggaran aa
+		$sql 	= ("SELECT no.nomor,no.tanggal,aa.kode_kegiatan,aa.sub_kode_kegiatan,aa.kegiatan,aa.mak1,aa.mak1_ket,aa.mak2,aa.mak2_ket,aa.mak3,aa.mak3_ket
+					FROM perjalanan_multi pm, dinas d, alokasi_anggaran aa, no_tgl_anggaran no
 					WHERE 
 					aa.id = d.alokasi_anggaran and
+					aa.nomor = no.id and
 					d.id = pm.dinas and
 					pm.id = '".$this->ID_PERJALANAN."'");
 		$query 	= $this->db->query($sql);
@@ -91,13 +92,14 @@
 			$result [0]	= $row['nomor'];
 			$result	[1]	= $row['tanggal'];
 			$result	[2]	= $row['kode_kegiatan'];
-			$result	[3]	= $row['sub_kegiatan'];
-			$result	[4]	= $row['mak1'];
-			$result	[5]	= $row['mak1_ket'];
-			$result	[6]	= $row['mak2'];
-			$result	[7]	= $row['mak2_ket'];
-			$result	[8]	= $row['mak3'];
-			$result	[9]	= $row['mak3_ket'];
+			$result	[3]	= $row['sub_kode_kegiatan'];
+			$result	[4]	= $row['kegiatan'];
+			$result	[5]	= $row['mak1'];
+			$result	[6]	= $row['mak1_ket'];
+			$result	[7]	= $row['mak2'];
+			$result	[8]	= $row['mak2_ket'];
+			$result	[9]	= $row['mak3'];
+			$result	[10]	= $row['mak3_ket'];
 		}		
 		return $result;
 	}
@@ -163,18 +165,22 @@
 		$idProv			= $this->getIdProvTujuan();
 		$golongan		= $this->getGolongan();			
 		if(!empty($golongan) && !empty($type) && !empty($idProv)){			
-				if($type == 'Fullboard_Luar'){
+				if($type == 'Fullboard_Luar_Kota'){
 					$sql 		= ("SELECT sbu.fullboard_luar FROM sbu_uang_saku sbu WHERE sbu.provinsi = '".$idProv."'");
 					$typeField 	= 'fullboard_luar';						
-				}else if($type == 'Fullboard_Dalam'){
+				}else if($type == 'Fullboard_Dalam_Kota'){
 					$sql 		= ("SELECT sbu.fullboard_dalam FROM sbu_uang_saku sbu WHERE sbu.provinsi = '".$idProv."'");
 					$typeField 	= 'fullboard_dalam';
-				}else if($type == 'Fullday_Dalam'){
+				}else if($type == 'Fullday_Dalam_Kota'){
 					$sql 		= ("SELECT sbu.fullday_dalam FROM sbu_uang_saku sbu WHERE sbu.provinsi = '".$idProv."'");
 					$typeField 	= 'fullday_dalam';
 				}else if($type == 'Uang_Saku_Murni'){
 					$sql 		= ("SELECT sbu.uang_saku_murni FROM sbu_uang_saku sbu WHERE sbu.provinsi = '".$idProv."'");
 					$typeField 	= 'uang_saku_murni';
+				}else if($type == 'Meeting_Campuran'){
+					//$sql 		= ("SELECT sbu.uang_saku_murni FROM sbu_uang_saku sbu WHERE sbu.provinsi = '".$idProv."'");
+					$sql		= ("select sum(a.uang_saku_murni + a.fullboard_luar)meeting_campuran from sbu_uang_saku a where a.provinsi = '".$idProv."' group by a.id");
+					$typeField 	= 'meeting_campuran';
 				}else {
 					print("Wrong assignment type decision UANG SAKU Staff for Decision Path"); 
 				}
@@ -191,10 +197,10 @@
 		$type 			= $this->getTypeUangSaku();		
 		$uangSaku 		= $this->getUangSaku();
 		$taxUangSaku	= $this->getTaxUangSaku();		
-		if($type =='Fullboard_Dalam'){
+		if($type =='Fullboard_Dalam_Kota'){
 			$sumTax			= ($totalHari) * ($uangSaku) * ($taxUangSaku);
 			$sumUangSaku  	= ($uangSaku * $totalHari) - ($sumTax);			
-		}else if($type=='Fullday_Dalam'){
+		}else if($type=='Fullday_Dalam_Kota'){
 			$sumTax			= ($uangSaku) * ($taxUangSaku);
 			$sumUangSaku  	= ($uangSaku) - ($sumTax);		
 		}else { $sumUangSaku= ($uangSaku * $totalHari); }			
@@ -210,11 +216,11 @@
 		$type		= $this->getTypeUangSaku();
 		$golongan	= $this->getGolongan();
 		$tax 		= 0;		
-		if($type =='Fullboard_Dalam' || $type =='Fullday_Dalam' && ($golongan =='III/a'|| 
+		if($type =='Fullboard_Dalam_Kota' || $type =='Fullday_Dalam' && ($golongan =='III/a'|| 
 		   $golongan =='III/b' || $golongan =='III/c' || $golongan =='III/d'||$golongan =='II/a'||
-		   $golongan =='II/b'|| $golongan =='II/c'|| $golongan =='II/d' ))
+		   $golongan =='II/b'|| $golongan =='II/c'|| $golongan =='II/d' || $golongan =='Honorer'))
 		{ $tax = 0.05; }
-		else if($type =='Fullboard_Dalam' || $type =='Fullday_Dalam' && ($golongan =='IV/a'||
+		else if($type =='Fullboard_Dalam_Kota' || $type =='Fullday_Dalam' && ($golongan =='IV/a'||
 			    $golongan =='IV/b' || $golongan =='IV/c' || $golongan =='IV/d'))
 		{ $tax = 0.15;}			
 		return $tax;
@@ -428,7 +434,7 @@
 	}	
 	function getTransportDalam() {
 		$typeUangSaku = $this->getTypeUangSaku();		
-		if($typeUangSaku =='Fullboard_Dalam' || $typeUangSaku == 'Fullday_Dalam'){ $transportDalam = 55000; }
+		if($typeUangSaku =='Fullboard_Dalam_Kota' || $typeUangSaku == 'Fullday_Dalam_Kota'){ $transportDalam = 55000; }
 		else { $transportDalam = 0;}
 		return ($transportDalam);
 	}
